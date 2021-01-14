@@ -1,0 +1,39 @@
+
+**Exercise 11**
+
+START
+DATA:
+   real total=0;
+   integer worknum;
+   real salph;
+   
+ALGORITHM:
+
+ WRITE ("Salary per hour");
+ READ salph;
+ WRITE ("Number of workers: ");
+ READ worknum;
+
+FOR i = 0 to i<worknum 
+    integer daysaweek=0;
+     
+   integer hours=0;
+      
+  real sal=0;
+
+  WRITE("Worker %d days a week: ",i+1")
+  READ daysaweek;
+FOR j=0 to j<daysaweek
+ WRITE("Worker %d hours of day %d: ",i+1,j+1);
+ READ hours
+sal=sal+(hours*salph);
+
+ENDFOR
+ WRITE("Worker %d salary: %.2lf\n",i+1,sal);
+total=total+sal;
+ENDFOR
+ WRITE("Total: %.2lf\n",total);
+ 
+
+ENDALGORITHM
+

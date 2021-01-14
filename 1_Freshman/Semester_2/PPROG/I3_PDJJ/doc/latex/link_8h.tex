@@ -1,0 +1,310 @@
+\hypertarget{link_8h}{}\section{link.\+h File Reference}
+\label{link_8h}\index{link.\+h@{link.\+h}}
+
+
+It defines the header of link.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for link.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{link_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{link_8h_a660ed1ec8604982002a0d6eced0e0367}\label{link_8h_a660ed1ec8604982002a0d6eced0e0367}} 
+\#define \hyperlink{link_8h_a660ed1ec8604982002a0d6eced0e0367}{M\+A\+X\+\_\+\+L\+I\+N\+KS}~100
+\begin{DoxyCompactList}\small\item\em defines max number of links \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{link_8h_a4afa5d7ec0095eb4bc86093f4139e86e}\label{link_8h_a4afa5d7ec0095eb4bc86093f4139e86e}} 
+\#define \hyperlink{link_8h_a4afa5d7ec0095eb4bc86093f4139e86e}{F\+I\+R\+S\+T\+\_\+\+L\+I\+NK}~1
+\begin{DoxyCompactList}\small\item\em defines first link \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{link_8h_ae3b299941e67be6971bfd64a25505eff}\label{link_8h_ae3b299941e67be6971bfd64a25505eff}} 
+typedef struct \hyperlink{struct__Link}{\+\_\+\+Link} \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}
+\begin{DoxyCompactList}\small\item\em defines the link structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}{link\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em create the link in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a85c4dd77887bf31f651ea1162144d712}{link\+\_\+destroy} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em destroy the link in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}{link\+\_\+get\+\_\+id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em get a specific link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a6c7a3bd7a856288c377edbcd045912e6}{link\+\_\+set\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em set a name to the link \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{link_8h_aaab4c9c7d5492873cafd9e11dc0f8059}{link\+\_\+get\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em get the name of the link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_aae5fe19ad2512430e52cf78968b52bf1}{link\+\_\+set\+\_\+space1} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the space of the link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a7a703edf730484b48e951754f754bd94}{link\+\_\+get\+\_\+space1} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em get the id space of the link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a153c76eec748e402ea66cc13f2725131}{link\+\_\+set\+\_\+space2} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the space2 of the link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_afefc169db63bad1b3660ba1d0ee14095}{link\+\_\+get\+\_\+space2} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em get the id space2 of the link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a50c965bf689275b417e41af09624eaf5}{link\+\_\+set\+\_\+status} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} st)
+\begin{DoxyCompactList}\small\item\em set the status of the link(open or close) \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8h_a95a921af642475d6953548f01ba16775}{link\+\_\+get\+\_\+status} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em get the status of the link(open or close) \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8h_a95ea756dad592e65440a33dfbe47edcf}{link\+\_\+print} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em prints the link \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the header of link. 
+
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+27-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}\label{link_8h_a8090d7f529cfd6a2fc5df3dd379fe514}} 
+\index{link.\+h@{link.\+h}!link\+\_\+create@{link\+\_\+create}}
+\index{link\+\_\+create@{link\+\_\+create}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+create()}{link\_create()}}
+{\footnotesize\ttfamily \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}$\ast$ link\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+create the link in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+link or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a85c4dd77887bf31f651ea1162144d712}\label{link_8h_a85c4dd77887bf31f651ea1162144d712}} 
+\index{link.\+h@{link.\+h}!link\+\_\+destroy@{link\+\_\+destroy}}
+\index{link\+\_\+destroy@{link\+\_\+destroy}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+destroy()}{link\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+destroy the link in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}\label{link_8h_a2bbd320f995a72b2ea7ea639b1c81892}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}}
+\index{link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+id()}{link\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+get a specific link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+link or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_aaab4c9c7d5492873cafd9e11dc0f8059}\label{link_8h_aaab4c9c7d5492873cafd9e11dc0f8059}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}}
+\index{link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+name()}{link\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ link\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+get the name of the link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name or in case of Error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a7a703edf730484b48e951754f754bd94}\label{link_8h_a7a703edf730484b48e951754f754bd94}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+space1@{link\+\_\+get\+\_\+space1}}
+\index{link\+\_\+get\+\_\+space1@{link\+\_\+get\+\_\+space1}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+space1()}{link\_get\_space1()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+space1 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+get the id space of the link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_afefc169db63bad1b3660ba1d0ee14095}\label{link_8h_afefc169db63bad1b3660ba1d0ee14095}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+space2@{link\+\_\+get\+\_\+space2}}
+\index{link\+\_\+get\+\_\+space2@{link\+\_\+get\+\_\+space2}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+space2()}{link\_get\_space2()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+space2 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+get the id space2 of the link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a95a921af642475d6953548f01ba16775}\label{link_8h_a95a921af642475d6953548f01ba16775}} 
+\index{link.\+h@{link.\+h}!link\+\_\+get\+\_\+status@{link\+\_\+get\+\_\+status}}
+\index{link\+\_\+get\+\_\+status@{link\+\_\+get\+\_\+status}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+status()}{link\_get\_status()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+get the status of the link(open or close) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a95ea756dad592e65440a33dfbe47edcf}\label{link_8h_a95ea756dad592e65440a33dfbe47edcf}} 
+\index{link.\+h@{link.\+h}!link\+\_\+print@{link\+\_\+print}}
+\index{link\+\_\+print@{link\+\_\+print}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+print()}{link\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+prints the link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a6c7a3bd7a856288c377edbcd045912e6}\label{link_8h_a6c7a3bd7a856288c377edbcd045912e6}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}}
+\index{link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+name()}{link\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+set a name to the link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_aae5fe19ad2512430e52cf78968b52bf1}\label{link_8h_aae5fe19ad2512430e52cf78968b52bf1}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+space1@{link\+\_\+set\+\_\+space1}}
+\index{link\+\_\+set\+\_\+space1@{link\+\_\+set\+\_\+space1}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+space1()}{link\_set\_space1()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+space1 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the space of the link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a153c76eec748e402ea66cc13f2725131}\label{link_8h_a153c76eec748e402ea66cc13f2725131}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+space2@{link\+\_\+set\+\_\+space2}}
+\index{link\+\_\+set\+\_\+space2@{link\+\_\+set\+\_\+space2}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+space2()}{link\_set\_space2()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+space2 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the space2 of the link 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8h_a50c965bf689275b417e41af09624eaf5}\label{link_8h_a50c965bf689275b417e41af09624eaf5}} 
+\index{link.\+h@{link.\+h}!link\+\_\+set\+\_\+status@{link\+\_\+set\+\_\+status}}
+\index{link\+\_\+set\+\_\+status@{link\+\_\+set\+\_\+status}!link.\+h@{link.\+h}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+status()}{link\_set\_status()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{st }\end{DoxyParamCaption})}
+
+
+
+set the status of the link(open or close) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & \\
+\hline
+{\em st} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+

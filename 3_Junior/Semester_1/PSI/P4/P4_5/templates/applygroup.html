@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %} Apply Group {% endblock%} {% block body %} {% if date is False %}
+<h3>Group selection is not active</h3>
+{% elif group_user is None%}
+<p>In this page you can choose which lab group you would like to be part of. Take into acount that if you have already a valid pair then your partner will automatically be added to the group you select too. Lab groups have limited space so take that into
+    account too.</p>
+<form id="group_form" method="post" action="{% url 'core:applygroup' %}" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <!-- Display each form -->
+    {{ group_form.as_p }}
+
+    <!-- Provide a button to click to submit the form. -->
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
+{% else %}
+<h3>You belong to group <b>{{group_user}}</b></h3>
+{% endif %} {% endblock %}

@@ -1,0 +1,128 @@
+\hypertarget{die_8c}{}\section{die.\+c File Reference}
+\label{die_8c}\index{die.\+c@{die.\+c}}
+
+
+It defines the module of die to obtain a number to go forware in the game.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}die.\+h\char`\"{}}\newline
+Include dependency graph for die.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{die_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Die}{\+\_\+\+Die}
+\begin{DoxyCompactList}\small\item\em defines structure of die \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$ \hyperlink{die_8c_a413bced882cd5cadbb1d8feaf367ed3f}{die\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em create a Die \end{DoxyCompactList}\item 
+void \hyperlink{die_8c_a0155d7ec003966bace47f3e032a368e8}{die\+\_\+destroy} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em destroy a Die \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_a06289514edbedf660c4b043f78e859fc}{die\+\_\+roll} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em roll a Die \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_a2dbbc4fa2cb5dca61e2f86dbfc66ff4d}{die\+\_\+get\+\_\+value} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em get value of die \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the module of die to obtain a number to go forware in the game. 
+
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{die_8c_a413bced882cd5cadbb1d8feaf367ed3f}\label{die_8c_a413bced882cd5cadbb1d8feaf367ed3f}} 
+\index{die.\+c@{die.\+c}!die\+\_\+create@{die\+\_\+create}}
+\index{die\+\_\+create@{die\+\_\+create}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+create()}{die\_create()}}
+{\footnotesize\ttfamily \hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}$\ast$ die\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+create a Die 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+die n or in case of error it returns E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a0155d7ec003966bace47f3e032a368e8}\label{die_8c_a0155d7ec003966bace47f3e032a368e8}} 
+\index{die.\+c@{die.\+c}!die\+\_\+destroy@{die\+\_\+destroy}}
+\index{die\+\_\+destroy@{die\+\_\+destroy}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+destroy()}{die\_destroy()}}
+{\footnotesize\ttfamily void die\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+destroy a Die 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a2dbbc4fa2cb5dca61e2f86dbfc66ff4d}\label{die_8c_a2dbbc4fa2cb5dca61e2f86dbfc66ff4d}} 
+\index{die.\+c@{die.\+c}!die\+\_\+get\+\_\+value@{die\+\_\+get\+\_\+value}}
+\index{die\+\_\+get\+\_\+value@{die\+\_\+get\+\_\+value}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+get\+\_\+value()}{die\_get\_value()}}
+{\footnotesize\ttfamily int die\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+get value of die 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int die number,in case of error -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a06289514edbedf660c4b043f78e859fc}\label{die_8c_a06289514edbedf660c4b043f78e859fc}} 
+\index{die.\+c@{die.\+c}!die\+\_\+roll@{die\+\_\+roll}}
+\index{die\+\_\+roll@{die\+\_\+roll}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+roll()}{die\_roll()}}
+{\footnotesize\ttfamily int die\+\_\+roll (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+roll a Die 
+
+
+\begin{DoxyParams}{Parameters}
+{\em die} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int die number,in case of error -\/1 
+\end{DoxyReturn}
+

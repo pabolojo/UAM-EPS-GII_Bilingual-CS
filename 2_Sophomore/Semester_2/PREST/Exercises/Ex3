@@ -1,0 +1,9 @@
+e3<- read.spss(file="/home/pabolojo/Descargas/Exercise03.sav", to.data.frame=TRUE)
+hist(e3$Michelson,breaks=seq(600,1100,by=50),main="Michelson",xlab="C Offsets")
+hist(e3$Newcomb,breaks=seq(550,1100,by=50),main="Newcomb",xlab="C Offsets")
+mean(e3$Michelson) [1] 896.6667
+mean(e3$Newcomb) [1] 763.1333
+sqrt((15-1)/15)*sd(e3$Michelson) [1] 108.1152
+sqrt((15-1)/15)*sd(e3$Newcomb) [1] 115.4134
+
+Michelson is more homogeneous than Newcomb

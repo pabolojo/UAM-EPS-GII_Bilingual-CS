@@ -1,0 +1,10 @@
+set xlabel "Dictionary Size";
+set ylabel "Average Time (s)";
+set key right bottom;
+set title "Comparison of the Average Time between Linear Search and Binary Search";
+f(x)= a*x+d;
+g(x)= b*(log(x)/log(2))+c;
+fit f(x) 'LinearSearch.log' using 1:2 via a,d;
+fit g(x) 'BinarySearch.log' using 1:2 via b,c;
+plot f(x) title "1.30e-09x-1.3392e-07",'LinearSearch.log' using 1:2  title "Average Time Linear Search", 'BinarySearch.log' using 1:2 title "Average Time Binary Search", g(x) title "8.59e-9log_2x+3.98e-08";
+

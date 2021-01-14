@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock%}
+
+{% block body %}
+<div class="container">
+
+    {% if user.is_authenticated %}
+    Summary page for <b>{{user.first_name}} {{user.last_name}}</b>,
+
+    {% if user.theoryGroup != null %}
+    (your theory group is {{user.theoryGroup}})
+    {%endif%}
+
+    <h3>Convalidation</h3>
+    {% if user.convalidationGranted %}
+    <p>Your lab assignments have been convalidated.</p>
+    {% else %}
+    <p>Your lab assignments have NOT been convalidated.</p>
+    <p>(If you wish to request a convalidation press the "convalidation" button.)</p>
+    {% endif %}
+
+    <h3>Pair Status</h3>
+    {% if pair is not None %}
+    You are part of the following pair
+    <ul>
+        <li>{{pair.student1}}</li>
+        <li>{{pair.student2}}</li>
+    </ul>
+    {% if pair.is_validated %}
+    La pareja está activada
+    {% else %}
+    La pareja no esta activada
+    {% endif %}
+    {%else%}
+    You are not part of any pair yet.
+    {%endif%}
+
+
+
+    <h3>Selected Group</h3>
+    {% if user.labGroup != null %}
+    Your Lab Group is: {{user.labGroup}}
+    {%else%}
+    You are not part of a Lab Group yet.
+    If you want to
+    {%endif%}
+
+    {% else %}
+    This web site allows EDAT students to select which laboratory group
+    they wish to enroll in. Please follow the steps below
+    <ol>
+        <li>Login</li>
+        <li>Apply for convalidation if appropriate</li>
+        <li>Select partner</li>
+        <li>Select group</li>
+    </ol>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+Grupo: 1392
+Pareja: 5
+
+-Script:
+Cálculo de porcentajes por protocolos: Realizado
+Obtención del top de puertos: Realizado
+Obtención del top de direcciones IP: Realizado
+Cálculo del caudal/throughput/tasa/ancho de banda por sentido: Realizado
+Obtención de la ECDF del tamaño de paquetes : Realizado
+Obtención de la ECDF de los interarrivals/intervalos de los flujos indicados por el generador de PCAP: Realizado
+
+-Memoria:
+Porcentajes por protocolos: Realizado
+Top de puertos: Realizado
+Top de direcciones IP: Realizado
+Series temporales del caudal/throughput/tasa/ancho de banda por sentido: Realizado
+ECDFs del tamaño de paquetes: Realizado
+ECDFs de los interarrivals/intervalos de los flujos indicados por el generador de PCAP: Realizado
+
+Para realizar esta práctica primero aprendimos a utilizar tshark y las herramientas de scripting
+que se nos proponía en el pdf de apoyo.
+A continuación realizamos el script practica3.py y a la vez que ibamos obteniendo resultados,
+fuimos completando la memoria con ellos y explicando como los habíamos obtenido.
+
+La justificación a cada uno de los apartados se puede consultar en practica3_memoria.pdf
+Para realizar el cálculo de los porcentajes de paquetes IP y noIP hemos seleccionado aquello paquetes
+con ethernet type igual a 0x0800, como se nos indicaba en el enunciado.
+

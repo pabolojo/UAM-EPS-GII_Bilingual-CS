@@ -1,0 +1,8 @@
+next
+back
+Roll
+pick lantern
+drop lantern
+Right
+Left
+exit

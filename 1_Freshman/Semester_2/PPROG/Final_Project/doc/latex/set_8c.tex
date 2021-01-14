@@ -1,0 +1,232 @@
+\hypertarget{set_8c}{\section{src/set.c File Reference}
+\label{set_8c}\index{src/set.\+c@{src/set.\+c}}
+}
+
+
+It implements the set.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/set.\+h\char`\"{}}\\*
+Include dependency graph for set.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{set_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Set}{\+\_\+\+Set}
+\begin{DoxyCompactList}\small\item\em Estructura del set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}{set\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Funcion encargada de reservar memoria para un conjunto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}{set\+\_\+destroy} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de liberar la memoria reservada para el conjunto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{set_8c_a9150dde4dfbdd1f0780caa45f40b6beb}{set\+\_\+get\+\_\+\+Id} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, int i)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos el id que hay en una posicion del conjunto. \end{DoxyCompactList}\item 
+int \hyperlink{set_8c_ab947cfbbfb44a8ccc56bc356e74aa26f}{set\+\_\+get\+\_\+n\+Id} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos el numero de elementos del conjunto. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{set_8c_a14115742a0e470616959ea6c72bb3f2c}{set\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion encargada devolver el tamaño del set en memoria. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{set_8c_a214235069ee276ad9bceb2c66e56bfe1}{set\+\_\+add} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de añadir ids al conjunto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{set_8c_a766d123b18af5298d23b51bc1ed433e6}{set\+\_\+del} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de eliminar ids del conjunto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{set_8c_a8db105a25618f0ae56fe171acce1efec}{set\+\_\+print} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos toda la informacion de un conjunto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the set. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon y Miguel Rodriguez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/02-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{set_8c_a214235069ee276ad9bceb2c66e56bfe1}{\index{set.\+c@{set.\+c}!set\+\_\+add@{set\+\_\+add}}
+\index{set\+\_\+add@{set\+\_\+add}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} set\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{set_8c_a214235069ee276ad9bceb2c66e56bfe1}
+
+
+Funcion encargada de añadir ids al conjunto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & conjunto al que se le va a añadir alguna id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha añadido correctamente la id y E\+R\+R\+O\+R en caso de error 
+\end{DoxyReturn}
+\hypertarget{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}{\index{set.\+c@{set.\+c}!set\+\_\+create@{set\+\_\+create}}
+\index{set\+\_\+create@{set\+\_\+create}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ set\+\_\+create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}
+
+
+Funcion encargada de reservar memoria para un conjunto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+conjunto que se ha creado 
+\end{DoxyReturn}
+\hypertarget{set_8c_a766d123b18af5298d23b51bc1ed433e6}{\index{set.\+c@{set.\+c}!set\+\_\+del@{set\+\_\+del}}
+\index{set\+\_\+del@{set\+\_\+del}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+del}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} set\+\_\+del (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{set_8c_a766d123b18af5298d23b51bc1ed433e6}
+
+
+Funcion encargada de eliminar ids del conjunto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & conjunto del que se va a eliminar alguna id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha eliminado correctamente la id y E\+R\+R\+O\+R en caso de error 
+\end{DoxyReturn}
+\hypertarget{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}{\index{set.\+c@{set.\+c}!set\+\_\+destroy@{set\+\_\+destroy}}
+\index{set\+\_\+destroy@{set\+\_\+destroy}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} set\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set}
+\end{DoxyParamCaption}
+)}}\label{set_8c_a17fa263a49d6fe209c040e9ca5e0132a}
+
+
+Funcion encargada de liberar la memoria reservada para el conjunto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & conjunto que se va a liberar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha liberado la memoria correctamente y E\+R\+R\+O\+R en caso de error 
+\end{DoxyReturn}
+\hypertarget{set_8c_a9150dde4dfbdd1f0780caa45f40b6beb}{\index{set.\+c@{set.\+c}!set\+\_\+get\+\_\+\+Id@{set\+\_\+get\+\_\+\+Id}}
+\index{set\+\_\+get\+\_\+\+Id@{set\+\_\+get\+\_\+\+Id}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+get\+\_\+\+Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} set\+\_\+get\+\_\+\+Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{set_8c_a9150dde4dfbdd1f0780caa45f40b6beb}
+
+
+Funcion encargada de darnos el id que hay en una posicion del conjunto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & conjunto en el que buscamos \\
+\hline
+{\em i} & posicion de de la que queremos saber el id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id del elemento del conjunto 
+\end{DoxyReturn}
+\hypertarget{set_8c_ab947cfbbfb44a8ccc56bc356e74aa26f}{\index{set.\+c@{set.\+c}!set\+\_\+get\+\_\+n\+Id@{set\+\_\+get\+\_\+n\+Id}}
+\index{set\+\_\+get\+\_\+n\+Id@{set\+\_\+get\+\_\+n\+Id}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+get\+\_\+n\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int set\+\_\+get\+\_\+n\+Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set}
+\end{DoxyParamCaption}
+)}}\label{set_8c_ab947cfbbfb44a8ccc56bc356e74aa26f}
+
+
+Funcion encargada de darnos el numero de elementos del conjunto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & conjunto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+numero de elementos del conjunto 
+\end{DoxyReturn}
+\hypertarget{set_8c_a14115742a0e470616959ea6c72bb3f2c}{\index{set.\+c@{set.\+c}!set\+\_\+get\+\_\+size@{set\+\_\+get\+\_\+size}}
+\index{set\+\_\+get\+\_\+size@{set\+\_\+get\+\_\+size}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t set\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{set_8c_a14115742a0e470616959ea6c72bb3f2c}
+
+
+Funcion encargada devolver el tamaño del set en memoria. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño 
+\end{DoxyReturn}
+\hypertarget{set_8c_a8db105a25618f0ae56fe171acce1efec}{\index{set.\+c@{set.\+c}!set\+\_\+print@{set\+\_\+print}}
+\index{set\+\_\+print@{set\+\_\+print}!set.\+c@{set.\+c}}
+\subsubsection[{set\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} set\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf Set} $\ast$}]{set}
+\end{DoxyParamCaption}
+)}}\label{set_8c_a8db105a25618f0ae56fe171acce1efec}
+
+
+Funcion encargada de darnos toda la informacion de un conjunto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & set del que se quiere saber toda la informacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha impreso correctamente la informacion en el fichero, y E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}

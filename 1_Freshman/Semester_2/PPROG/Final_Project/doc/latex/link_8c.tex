@@ -1,0 +1,351 @@
+\hypertarget{link_8c}{\section{src/link.c File Reference}
+\label{link_8c}\index{src/link.\+c@{src/link.\+c}}
+}
+
+
+It implements the link.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$strings.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/link.\+h\char`\"{}}\\*
+Include dependency graph for link.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Link}{\+\_\+\+Link}
+\begin{DoxyCompactList}\small\item\em Estructura del link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{link_8c_ac99f378b6c3cd83f2192b68a044905ca}{\#define {\bfseries L\+I\+N\+K\+\_\+\+S\+P\+A\+C\+E\+S}~2}\label{link_8c_ac99f378b6c3cd83f2192b68a044905ca}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{link_8c_a8090d7f529cfd6a2fc5df3dd379fe514}{link\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion que inicializa el link Funcion encargada de reservar espacio para el link e inizializar sus parametros. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{link_8c_a85c4dd77887bf31f651ea1162144d712}{link\+\_\+destroy} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de liberar la memoria reservada para el link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{link_8c_a6c7a3bd7a856288c377edbcd045912e6}{link\+\_\+set\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar el nombre del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{link_8c_a052f6c7d44c2aca8cf0fb6522d3aa8f5}{link\+\_\+set\+\_\+link} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space1, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space2)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de conectar dos espacios con un link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{link_8c_a53fb7b3753a6d8318a97721e1009184a}{link\+\_\+set\+\_\+status} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a4eb959f56c9de4fb79f4891902033093}{D\+O\+O\+R} status)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar el estado de la puerta del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}{link\+\_\+get\+\_\+id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos el id del link. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{link_8c_a9747ee8201a323e112e67bdeacbc90d8}{link\+\_\+get\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Funcion que devuelve el nombre del link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a4eb959f56c9de4fb79f4891902033093}{D\+O\+O\+R} \hyperlink{link_8c_a62be17829072b49416e1b31a4165522a}{link\+\_\+get\+\_\+status} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Funcion encargada devolver el estado de la puerta. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} $\ast$ \hyperlink{link_8c_aa70e419787ae9cdc7e67fcb6a6594bdf}{link\+\_\+get\+\_\+link} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Funcion encargada devolver los ids de los espacios que forman el link. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{link_8c_a25ae7fce6d0a05cb6f34c414ce5f8879}{link\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion encargada devolver el tamaño del link en memoria. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_a4da473a85ef32634d63a56498f9a156f}{link\+\_\+space\+\_\+connected\+\_\+to} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\begin{DoxyCompactList}\small\item\em Funcion encargada devolver el espacio al que esta conectado otro espacio con ese link. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{link_8c_a95ea756dad592e65440a33dfbe47edcf}{link\+\_\+print} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de imprimir el link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/02-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{link_8c_a8090d7f529cfd6a2fc5df3dd379fe514}{\index{link.\+c@{link.\+c}!link\+\_\+create@{link\+\_\+create}}
+\index{link\+\_\+create@{link\+\_\+create}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ link\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a8090d7f529cfd6a2fc5df3dd379fe514}
+
+
+Funcion que inicializa el link Funcion encargada de reservar espacio para el link e inizializar sus parametros. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & se corresponde con el id del link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El link creado 
+\end{DoxyReturn}
+\hypertarget{link_8c_a85c4dd77887bf31f651ea1162144d712}{\index{link.\+c@{link.\+c}!link\+\_\+destroy@{link\+\_\+destroy}}
+\index{link\+\_\+destroy@{link\+\_\+destroy}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} link\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a85c4dd77887bf31f651ea1162144d712}
+
+
+Funcion encargada de liberar la memoria reservada para el link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link a destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}{\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}}
+\index{link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} link\+\_\+get\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}
+
+
+Funcion encargada de darnos el id del link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id del link 
+\end{DoxyReturn}
+\hypertarget{link_8c_aa70e419787ae9cdc7e67fcb6a6594bdf}{\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+link@{link\+\_\+get\+\_\+link}}
+\index{link\+\_\+get\+\_\+link@{link\+\_\+get\+\_\+link}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+get\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id}$\ast$ link\+\_\+get\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8c_aa70e419787ae9cdc7e67fcb6a6594bdf}
+
+
+Funcion encargada devolver los ids de los espacios que forman el link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array de 2 ids con los ids de los espacios del link 
+\end{DoxyReturn}
+\hypertarget{link_8c_a9747ee8201a323e112e67bdeacbc90d8}{\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}}
+\index{link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ link\+\_\+get\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a9747ee8201a323e112e67bdeacbc90d8}
+
+
+Funcion que devuelve el nombre del link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nombre del link 
+\end{DoxyReturn}
+\hypertarget{link_8c_a25ae7fce6d0a05cb6f34c414ce5f8879}{\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+size@{link\+\_\+get\+\_\+size}}
+\index{link\+\_\+get\+\_\+size@{link\+\_\+get\+\_\+size}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t link\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a25ae7fce6d0a05cb6f34c414ce5f8879}
+
+
+Funcion encargada devolver el tamaño del link en memoria. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño 
+\end{DoxyReturn}
+\hypertarget{link_8c_a62be17829072b49416e1b31a4165522a}{\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+status@{link\+\_\+get\+\_\+status}}
+\index{link\+\_\+get\+\_\+status@{link\+\_\+get\+\_\+status}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+get\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+O\+O\+R} link\+\_\+get\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a62be17829072b49416e1b31a4165522a}
+
+
+Funcion encargada devolver el estado de la puerta. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{link_8c_a95ea756dad592e65440a33dfbe47edcf}{\index{link.\+c@{link.\+c}!link\+\_\+print@{link\+\_\+print}}
+\index{link\+\_\+print@{link\+\_\+print}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} link\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a95ea756dad592e65440a33dfbe47edcf}
+
+
+Funcion encargada de imprimir el link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{link_8c_a052f6c7d44c2aca8cf0fb6522d3aa8f5}{\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+link@{link\+\_\+set\+\_\+link}}
+\index{link\+\_\+set\+\_\+link@{link\+\_\+set\+\_\+link}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+set\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} link\+\_\+set\+\_\+link (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{{\bf Id}}]{space1, }
+\item[{{\bf Id}}]{space2}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a052f6c7d44c2aca8cf0fb6522d3aa8f5}
+
+
+Funcion encargada de conectar dos espacios con un link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+{\em space1} & id del primer espacio \\
+\hline
+{\em space2} & id del segundo espacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{link_8c_a6c7a3bd7a856288c377edbcd045912e6}{\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}}
+\index{link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+set\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} link\+\_\+set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a6c7a3bd7a856288c377edbcd045912e6}
+
+
+Funcion encargada de cambiar el nombre del link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+{\em name} & nombre del link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{link_8c_a53fb7b3753a6d8318a97721e1009184a}{\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+status@{link\+\_\+set\+\_\+status}}
+\index{link\+\_\+set\+\_\+status@{link\+\_\+set\+\_\+status}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+set\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} link\+\_\+set\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{{\bf D\+O\+O\+R}}]{status}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a53fb7b3753a6d8318a97721e1009184a}
+
+
+Funcion encargada de cambiar el estado de la puerta del link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+{\em status} & estado de la puerta (abierto o cerrado) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{link_8c_a4da473a85ef32634d63a56498f9a156f}{\index{link.\+c@{link.\+c}!link\+\_\+space\+\_\+connected\+\_\+to@{link\+\_\+space\+\_\+connected\+\_\+to}}
+\index{link\+\_\+space\+\_\+connected\+\_\+to@{link\+\_\+space\+\_\+connected\+\_\+to}!link.\+c@{link.\+c}}
+\subsubsection[{link\+\_\+space\+\_\+connected\+\_\+to}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} link\+\_\+space\+\_\+connected\+\_\+to (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{link_8c_a4da473a85ef32634d63a56498f9a156f}
+
+
+Funcion encargada devolver el espacio al que esta conectado otro espacio con ese link. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & link \\
+\hline
+{\em space} & espacio del que queremos buscar a cual se conecta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id del espacio al que esta conectado space 
+\end{DoxyReturn}

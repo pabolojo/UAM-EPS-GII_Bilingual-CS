@@ -1,0 +1,40 @@
+lamb<-50
+x1<-20
+x2<-80
+
+x.norm <- seq(from = x1, to = x2, by = 1)
+y.norm <- dnorm(x = x.norm, mean = lamb, sd = lamb)
+
+
+x.pois<-seq(from = x1, to = x2, by = 1)
+y.pois<-dpois(x = x.pois, lambda = lamb)
+
+merge <- rbind(y.pois, y.norm)
+labels <- c("Poisson", "Normal")
+
+barplot(merge, names.arg = x.pois, main = "Comparison N(2, 2) and P(2)", col = c("blue","red"), legend = labels, beside = TRUE)
+
+
+
+
+lamb<-2
+x1<-0
+x2<-10
+
+x.pois<-seq(from = x1, to = x2, by = 1)
+y.pois<-dpois(x = x.pois, lambda = lamb)
+
+xnorm<-seq(from = x1, to = x2, length = 1000);
+
+plot(x.pois, y.pois, main = "Comparison N(2, 2) and P(2)", col = "red", type = "p", ylab = "y", xlab = "k")
+
+lines(xnorm, dnorm(xnorm, mean = lamb, sd = sqrt(lamb)), col = "blue", lty = 1)
+
+legend('topright', legend = c("Poisson", "Normal"), col = c("red", "blue"), lty = c(0, 1), pch = c("o", ""))
+
+
+k<-20:80
+lamb<-50
+plot(x = k, y = dpois(x = k, lambda = lamb), main = "Comparison N(50, 50) and P(50)", type = "s", col = "red", xlab = "k", ylab = "P(X = k)")
+curve(dnorm(x, mean = lamb, sd = sqrt(lamb)), from = k[1], to = k[length(k)], add = TRUE, col = "blue")
+legend('topright', legend = c("Poisson", "Normal"), col = c("red", "blue"), lty = c(1, 1))

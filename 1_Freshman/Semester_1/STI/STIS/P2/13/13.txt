@@ -1,0 +1,19 @@
+
+**Exercise 13**
+
+START
+DATA:
+   real vector[6];
+   integer i;
+ALGORITHM:
+FOR i=0 to i<6
+ WRITE("Number %d", i+1);
+ READ vector[-1*(i-5)];
+ENDFOR
+
+ WRITE("vector: %.2lf, %.2lf, %.2lf, %.2lf,
+ %.2lf, %.2lf\n",vector[0],vector[1],vector[2],
+vector[3],vector[4],vector[5]);
+
+
+ENDALGORITHM

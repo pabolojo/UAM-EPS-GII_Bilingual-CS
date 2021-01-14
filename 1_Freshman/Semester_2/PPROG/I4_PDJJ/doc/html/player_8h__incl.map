@@ -1,0 +1,5 @@
+<map id="player.h" name="player.h">
+<area shape="rect" id="node2" href="$types_8h.html" title="It defines common types. " alt="" coords="17,229,83,256"/>
+<area shape="rect" id="node3" href="$inventory_8h.html" title="It defines the header of inventory. " alt="" coords="37,80,124,107"/>
+<area shape="rect" id="node4" href="$set_8h.html" title="It defines the header of set. " alt="" coords="87,155,138,181"/>
+</map>

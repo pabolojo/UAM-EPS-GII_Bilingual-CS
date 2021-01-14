@@ -1,0 +1,11 @@
+<map id="_Game" name="_Game">
+<area shape="rect" id="node2" href="$struct__Link.html" title="Estructura del link. " alt="" coords="5,197,59,224"/>
+<area shape="rect" id="node3" href="$struct__Die.html" title="Estructura del die. " alt="" coords="83,197,132,224"/>
+<area shape="rect" id="node4" href="$struct__Command.html" title="Estructura del command. " alt="" coords="174,96,263,123"/>
+<area shape="rect" id="node5" href="$struct__Dialogue.html" title="Estructura del dialogue. " alt="" coords="263,197,341,224"/>
+<area shape="rect" id="node6" href="$struct__Space.html" title="Estructura del espacio. " alt="" coords="369,147,436,173"/>
+<area shape="rect" id="node7" href="$struct__Set.html" title="Estructura del set. " alt="" coords="418,5,467,32"/>
+<area shape="rect" id="node10" href="$struct__Inventory.html" title="Estructura del inventory. " alt="" coords="444,96,525,123"/>
+<area shape="rect" id="node8" href="$struct__Object.html" title="Estructura del objeto. " alt="" coords="552,197,619,224"/>
+<area shape="rect" id="node9" href="$struct__Player.html" title="Estructura del jugador. " alt="" coords="461,197,528,224"/>
+</map>

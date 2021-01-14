@@ -1,0 +1,276 @@
+\hypertarget{command_8h}{\section{include/command.h File Reference}
+\label{command_8h}\index{include/command.\+h@{include/command.\+h}}
+}
+
+
+It implements the command interpreter.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\\*
+Include dependency graph for command.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{command_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{command_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{typedef enum \hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50c}{enum\+\_\+\+Command} \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command}}\label{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}
+
+\begin{DoxyCompactList}\small\item\em Lista de posibles comandos. \end{DoxyCompactList}\item 
+\hypertarget{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{typedef struct \hyperlink{struct__Command}{\+\_\+\+Command} \hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command}}\label{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}
+
+\begin{DoxyCompactList}\small\item\em Estructura del comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{command_8h_ace19ba2296a74e4aef53304e0934c50c}{enum \hyperlink{command_8h_ace19ba2296a74e4aef53304e0934c50c}{enum\+\_\+\+Command} \{ \\*
+{\bfseries N\+O\+\_\+\+C\+M\+D} = -\/1, 
+{\bfseries U\+N\+K\+N\+O\+W\+N}, 
+{\bfseries E\+X\+I\+T}, 
+{\bfseries F\+O\+L\+L\+O\+W\+I\+N\+G}, 
+\\*
+{\bfseries P\+R\+E\+V\+I\+O\+U\+S}, 
+{\bfseries G\+R\+A\+S\+P}, 
+{\bfseries D\+R\+O\+P}, 
+{\bfseries L\+E\+F\+T}, 
+\\*
+{\bfseries R\+I\+G\+H\+T}, 
+{\bfseries D\+I\+E}, 
+{\bfseries C\+H\+E\+C\+K}, 
+{\bfseries M\+O\+V\+E}, 
+\\*
+{\bfseries T\+U\+R\+N\+O\+N}, 
+{\bfseries T\+U\+R\+N\+O\+F\+F}, 
+{\bfseries U\+P}, 
+{\bfseries D\+O\+W\+N}, 
+\\*
+{\bfseries O\+P\+E\+N}, 
+{\bfseries C\+O\+D\+E}, 
+{\bfseries A\+T\+A\+C\+K}, 
+{\bfseries E\+X\+A\+M\+I\+N\+E}, 
+\\*
+{\bfseries S\+A\+V\+E}, 
+{\bfseries L\+O\+A\+D}
+ \}}\label{command_8h_ace19ba2296a74e4aef53304e0934c50c}
+
+\begin{DoxyCompactList}\small\item\em Lista de posibles comandos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{command_8h_a3e1d59fed8f0eb039c403543477d2ce0}{command\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Funcion para reservar memoria e inicializar el comando. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{command_8h_a49a576ae3a09ad1eb7ce4d4cfb2a8dcd}{command\+\_\+destroy} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de liberar la memoria reservada para el comando. \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{command_8h_acec6ff385c317d181a695b9acb8a50bf}{command\+\_\+get\+\_\+user\+\_\+input} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$comando)
+\begin{DoxyCompactList}\small\item\em Funcion que lee el comando introducido por el usuario. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{command_8h_ab6f72b7de34e42d9c2249432f9a39bb0}{command\+\_\+set\+\_\+type\+\_\+command} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command, \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} type)
+\begin{DoxyCompactList}\small\item\em Funcion para fijar el tipo de comando Esta función se utiliza para facilitar el dialogue. \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} \hyperlink{command_8h_a944a55a38ef57eba8fa33711b06b963c}{command\+\_\+get\+\_\+type\+\_\+command} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em Funcion que devuelve el ultimo comando introducido. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{command_8h_a94aadd003b66c5a5ff7fc0448a6b3d85}{command\+\_\+get\+\_\+name\+\_\+command} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em Funcion que devuelve el ultimo nombre introducido. Puede ser para el objeto a coger, espacio a examinar o direccion en la que tiene que desplazarse con move. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{command_8h_a24e434241cd878cb8fc156e3eecc5249}{command\+\_\+get\+\_\+key\+\_\+command} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em Funcion que devuelve el ultimo objeto que quiere abrir una puerta. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{command_8h_ac15f0e683b5a53dd954cf269c6c68d5d}{command\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion que devuelve el tamaño del comando en memoria. \end{DoxyCompactList}\item 
+\hypertarget{command_8h_adf72810dee520376d958e507726256e9}{void {\bfseries command\+\_\+print} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$cmd)}\label{command_8h_adf72810dee520376d958e507726256e9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the command interpreter. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+08/03/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{command_8h_a3e1d59fed8f0eb039c403543477d2ce0}{\index{command.\+h@{command.\+h}!command\+\_\+create@{command\+\_\+create}}
+\index{command\+\_\+create@{command\+\_\+create}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command}$\ast$ command\+\_\+create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a3e1d59fed8f0eb039c403543477d2ce0}
+
+
+Funcion para reservar memoria e inicializar el comando. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+Comando creado 
+\end{DoxyReturn}
+\hypertarget{command_8h_a49a576ae3a09ad1eb7ce4d4cfb2a8dcd}{\index{command.\+h@{command.\+h}!command\+\_\+destroy@{command\+\_\+destroy}}
+\index{command\+\_\+destroy@{command\+\_\+destroy}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} command\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a49a576ae3a09ad1eb7ce4d4cfb2a8dcd}
+
+
+Funcion encargada de liberar la memoria reservada para el comando. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em command} & comando a destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{command_8h_a24e434241cd878cb8fc156e3eecc5249}{\index{command.\+h@{command.\+h}!command\+\_\+get\+\_\+key\+\_\+command@{command\+\_\+get\+\_\+key\+\_\+command}}
+\index{command\+\_\+get\+\_\+key\+\_\+command@{command\+\_\+get\+\_\+key\+\_\+command}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+get\+\_\+key\+\_\+command}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ command\+\_\+get\+\_\+key\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a24e434241cd878cb8fc156e3eecc5249}
+
+
+Funcion que devuelve el ultimo objeto que quiere abrir una puerta. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em command} & comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nombre del objeto 
+\end{DoxyReturn}
+\hypertarget{command_8h_a94aadd003b66c5a5ff7fc0448a6b3d85}{\index{command.\+h@{command.\+h}!command\+\_\+get\+\_\+name\+\_\+command@{command\+\_\+get\+\_\+name\+\_\+command}}
+\index{command\+\_\+get\+\_\+name\+\_\+command@{command\+\_\+get\+\_\+name\+\_\+command}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+get\+\_\+name\+\_\+command}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ command\+\_\+get\+\_\+name\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a94aadd003b66c5a5ff7fc0448a6b3d85}
+
+
+Funcion que devuelve el ultimo nombre introducido. Puede ser para el objeto a coger, espacio a examinar o direccion en la que tiene que desplazarse con move. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em command} & comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nombre 
+\end{DoxyReturn}
+\hypertarget{command_8h_ac15f0e683b5a53dd954cf269c6c68d5d}{\index{command.\+h@{command.\+h}!command\+\_\+get\+\_\+size@{command\+\_\+get\+\_\+size}}
+\index{command\+\_\+get\+\_\+size@{command\+\_\+get\+\_\+size}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t command\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{command_8h_ac15f0e683b5a53dd954cf269c6c68d5d}
+
+
+Funcion que devuelve el tamaño del comando en memoria. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño 
+\end{DoxyReturn}
+\hypertarget{command_8h_a944a55a38ef57eba8fa33711b06b963c}{\index{command.\+h@{command.\+h}!command\+\_\+get\+\_\+type\+\_\+command@{command\+\_\+get\+\_\+type\+\_\+command}}
+\index{command\+\_\+get\+\_\+type\+\_\+command@{command\+\_\+get\+\_\+type\+\_\+command}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+get\+\_\+type\+\_\+command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+\_\+\+Command} command\+\_\+get\+\_\+type\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}\label{command_8h_a944a55a38ef57eba8fa33711b06b963c}
+
+
+Funcion que devuelve el ultimo comando introducido. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em command} & comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+comando (enumerado) 
+\end{DoxyReturn}
+\hypertarget{command_8h_acec6ff385c317d181a695b9acb8a50bf}{\index{command.\+h@{command.\+h}!command\+\_\+get\+\_\+user\+\_\+input@{command\+\_\+get\+\_\+user\+\_\+input}}
+\index{command\+\_\+get\+\_\+user\+\_\+input@{command\+\_\+get\+\_\+user\+\_\+input}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+get\+\_\+user\+\_\+input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command}$\ast$ command\+\_\+get\+\_\+user\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{comando}
+\end{DoxyParamCaption}
+)}}\label{command_8h_acec6ff385c317d181a695b9acb8a50bf}
+
+
+Funcion que lee el comando introducido por el usuario. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em comando} & inicializado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+comando introducido 
+\end{DoxyReturn}
+\hypertarget{command_8h_ab6f72b7de34e42d9c2249432f9a39bb0}{\index{command.\+h@{command.\+h}!command\+\_\+set\+\_\+type\+\_\+command@{command\+\_\+set\+\_\+type\+\_\+command}}
+\index{command\+\_\+set\+\_\+type\+\_\+command@{command\+\_\+set\+\_\+type\+\_\+command}!command.\+h@{command.\+h}}
+\subsubsection[{command\+\_\+set\+\_\+type\+\_\+command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} command\+\_\+set\+\_\+type\+\_\+command (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command, }
+\item[{{\bf T\+\_\+\+Command}}]{type}
+\end{DoxyParamCaption}
+)}}\label{command_8h_ab6f72b7de34e42d9c2249432f9a39bb0}
+
+
+Funcion para fijar el tipo de comando Esta función se utiliza para facilitar el dialogue. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em command} & comando \\
+\hline
+{\em type} & tipo de comando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}

@@ -1,0 +1,10 @@
+set xlabel "Dictionary Size";
+set ylabel "Number of BO";
+set key right bottom;
+set title "Average Number of Basic Operations of Linear Search and Binary Search";
+f(x)= a*x+d;
+g(x)= b*(log(x)/log(2))+c;
+fit f(x) 'LinearSearch.log' using 1:3 via a,d;
+fit g(x) 'BinarySearch.log' using 1:3 via b,c;
+plot f(x) title "0.500x+0.500",'LinearSearch.log' using 1:3  title "Average Number of BO Linear Search", 'BinarySearch.log' using 1:3 title "Average Number of BO Binary Search", g(x) title "0.99log_2x-0.86";
+

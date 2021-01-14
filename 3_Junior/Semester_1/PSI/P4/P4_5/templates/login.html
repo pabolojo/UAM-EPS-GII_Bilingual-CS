@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %} Login {% endblock%} {% block body %} {% if user.is_authenticated %}
+<div><b>{{user.first_name}}</b> you are already logged in, logout if you want to login with another user</div>
+{% else %}
+<p>Insert your institutional NIA as username and your NIE as password to see your data and access the services of the page.</p>
+<form method="post" action="{% url 'core:login' %}">
+    {% csrf_token %}
+    <h2>Please login</h2>
+    <p><label for="id_username">Username:</label> <input type="text" name="username" autofocus="" required="" id="id_username"></p>
+    <p><label for="id_password">Password:</label> <input type="password" name="password" required="" id="id_password">
+    </p>
+    <input type="submit" class="btn btn-primary" value="LogIn">
+</form>
+
+{% if wrong_login %}
+<div>Username or password incorrect
+</div>
+{% endif %} {% endif %} {% endblock %}

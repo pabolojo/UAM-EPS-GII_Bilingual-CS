@@ -1,0 +1,12 @@
+<map id="game.h" name="game.h">
+<area shape="rect" id="node2" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="169,155,235,181"/>
+<area shape="rect" id="node3" href="$gamemanagement_8h.html" title="It defines the header of gamemanagement. " alt="" coords="36,80,176,107"/>
+<area shape="rect" id="node5" href="$game__rules_8h.html" title="Game Rules Header. " alt="" coords="252,80,352,107"/>
+<area shape="rect" id="node8" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="377,80,497,107"/>
+<area shape="rect" id="node10" href="$player_8c.html" title="It defines the header of the module player. " alt="" coords="521,80,589,107"/>
+<area shape="rect" id="node11" href="$set_8c.html" title="It defines the module SET. " alt="" coords="614,80,665,107"/>
+<area shape="rect" id="node4" href="$gamemanagement_8c.html" title="It defines the module of gamemanagement, contains different function of game, link,space. " alt="" coords="5,155,145,181"/>
+<area shape="rect" id="node6" href="$game__loop_8c.html" title="It defines the game loop, it contains the main function of the game. " alt="" coords="383,155,479,181"/>
+<area shape="rect" id="node7" href="$game__rules_8c.html" title="Game Rules Module. " alt="" coords="259,155,359,181"/>
+<area shape="rect" id="node9" href="$graphic__engine_8c.html" title="It defines the module of graphic_engine. " alt="" coords="503,155,623,181"/>
+</map>

@@ -1,0 +1,162 @@
+\hypertarget{gamereader_8c}{}\section{gamereader.\+c File Reference}
+\label{gamereader_8c}\index{gamereader.\+c@{gamereader.\+c}}
+
+
+It defines the module of gamereader, contains different function of game, link,space.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}gamereader.\+h\char`\"{}}\newline
+Include dependency graph for gamereader.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gamereader_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{gamereader_8c_ae5ad86de0a92d9eccb234948458da7f1}{game\+\_\+add\+\_\+space} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{gamereader_8c_a0d01072a28b01545d36240cb8bd9d4f8}{game\+\_\+load\+\_\+spaces} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em load spaces \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{gamereader_8c_a66279ceefe2efe0967be248e8d0e0565}{game\+\_\+load\+\_\+objects} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em it load the objects to the game to be able to play \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{gamereader_8c_a9597a8e456aa74db536e87d56f56c3b4}{game\+\_\+add\+\_\+object} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em add an object to the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{gamereader_8c_a4691bee17d5784ad6eb257dfbb252c27}{game\+\_\+add\+\_\+link} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em add links \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{gamereader_8c_aab4103cf97109ac921f358858ca2684d}{game\+\_\+load\+\_\+links} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em it load the links to the game to be able to play \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the module of gamereader, contains different function of game, link,space. 
+
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+21-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gamereader_8c_a4691bee17d5784ad6eb257dfbb252c27}\label{gamereader_8c_a4691bee17d5784ad6eb257dfbb252c27}} 
+\index{gamereader.\+c@{gamereader.\+c}!game\+\_\+add\+\_\+link@{game\+\_\+add\+\_\+link}}
+\index{game\+\_\+add\+\_\+link@{game\+\_\+add\+\_\+link}!gamereader.\+c@{gamereader.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+add\+\_\+link()}{game\_add\_link()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+add\+\_\+link (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+add links 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em link} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gamereader_8c_a9597a8e456aa74db536e87d56f56c3b4}\label{gamereader_8c_a9597a8e456aa74db536e87d56f56c3b4}} 
+\index{gamereader.\+c@{gamereader.\+c}!game\+\_\+add\+\_\+object@{game\+\_\+add\+\_\+object}}
+\index{game\+\_\+add\+\_\+object@{game\+\_\+add\+\_\+object}!gamereader.\+c@{gamereader.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+add\+\_\+object()}{game\_add\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+add\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+add an object to the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gamereader_8c_ae5ad86de0a92d9eccb234948458da7f1}\label{gamereader_8c_ae5ad86de0a92d9eccb234948458da7f1}} 
+\index{gamereader.\+c@{gamereader.\+c}!game\+\_\+add\+\_\+space@{game\+\_\+add\+\_\+space}}
+\index{game\+\_\+add\+\_\+space@{game\+\_\+add\+\_\+space}!gamereader.\+c@{gamereader.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+add\+\_\+space()}{game\_add\_space()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+add\+\_\+space (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+Private functions \mbox{\Hypertarget{gamereader_8c_aab4103cf97109ac921f358858ca2684d}\label{gamereader_8c_aab4103cf97109ac921f358858ca2684d}} 
+\index{gamereader.\+c@{gamereader.\+c}!game\+\_\+load\+\_\+links@{game\+\_\+load\+\_\+links}}
+\index{game\+\_\+load\+\_\+links@{game\+\_\+load\+\_\+links}!gamereader.\+c@{gamereader.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+load\+\_\+links()}{game\_load\_links()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+load\+\_\+links (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+it load the links to the game to be able to play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gamereader_8c_a66279ceefe2efe0967be248e8d0e0565}\label{gamereader_8c_a66279ceefe2efe0967be248e8d0e0565}} 
+\index{gamereader.\+c@{gamereader.\+c}!game\+\_\+load\+\_\+objects@{game\+\_\+load\+\_\+objects}}
+\index{game\+\_\+load\+\_\+objects@{game\+\_\+load\+\_\+objects}!gamereader.\+c@{gamereader.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+load\+\_\+objects()}{game\_load\_objects()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+load\+\_\+objects (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+it load the objects to the game to be able to play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gamereader_8c_a0d01072a28b01545d36240cb8bd9d4f8}\label{gamereader_8c_a0d01072a28b01545d36240cb8bd9d4f8}} 
+\index{gamereader.\+c@{gamereader.\+c}!game\+\_\+load\+\_\+spaces@{game\+\_\+load\+\_\+spaces}}
+\index{game\+\_\+load\+\_\+spaces@{game\+\_\+load\+\_\+spaces}!gamereader.\+c@{gamereader.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+load\+\_\+spaces()}{game\_load\_spaces()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+load\+\_\+spaces (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+load spaces 
+
+it load the spaces to the game to be able to play
+
+Private functions 
+\begin{DoxyParams}{Parameters}
+{\em game} & \\
+\hline
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR 
+\end{DoxyReturn}
+

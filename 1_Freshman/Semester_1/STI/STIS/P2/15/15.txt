@@ -1,0 +1,35 @@
+
+**Exercise 15**
+
+START
+DATA:
+   integer m,n,j,i;
+   integer matrix1[m][n],matrix2[m][n]; 
+
+ALGORITHM:
+ WRITE("Write the M order of matrices");
+ READ m;
+ WRITE("Write the N order of matrices");
+ READ n;
+
+FOR i=0 to i<m
+FOR j=0 to j<n
+ WRITE("Number %d,%d of matrix 2: ",i+1,j+1);
+ READ matrix1[i][j]
+ENDFOR
+ENDFOR
+FOR i=0 to i<m
+FOR j=0 to j<n
+matrix1[i][j]=matrix1[i][j]+matrix2[i][j];
+WRITE("The sum is")
+ENDFOR
+ENDFOR
+FOR i=0 to i<m      
+FORj=0 to j<n  
+ENDFOR
+ENDFOR        
+ WRITE("%d",matrix1[i][j]);
+
+ENDALGORITHM
+
+

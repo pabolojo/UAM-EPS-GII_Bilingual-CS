@@ -1,0 +1,608 @@
+\hypertarget{object_8h}{}\section{object.\+h File Reference}
+\label{object_8h}\index{object.\+h@{object.\+h}}
+
+
+It defines the module object.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for object.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{object_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{object_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}\label{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}} 
+typedef struct \hyperlink{struct__Object}{\+\_\+\+Object} \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}
+\begin{DoxyCompactList}\small\item\em defines the Object structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}{object\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em create the object in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a19d6d51fee809e3801893eefc789f4b4}{object\+\_\+destroy} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em destroy the object in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_ac15dc062c857503ec0ca66037caffd80}{object\+\_\+set\+\_\+name} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em set a name to the object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a89d6a495780c1a045defd1ec8e189102}{object\+\_\+set\+\_\+location} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set a location to the name of the object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_aac9668c6dc6b33c72dc787d373add0d5}{object\+\_\+set\+\_\+\+Init\+Location} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set a I\+N\+IT location to the name of the object \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{object_8h_a19320eebcbbd38533a18c741b804b584}{object\+\_\+get\+\_\+name} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the name of the object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{object_8h_ac5af152381a21853c6a28cc120e8e7fe}{object\+\_\+get\+\_\+id} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the id of the object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{object_8h_a45eda72d7edc16344f0812f76da165ec}{object\+\_\+get\+\_\+location} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the location of the object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{object_8h_a64961ebc5004e975a7b84caaec1fca13}{object\+\_\+get\+\_\+\+Init\+Location} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the init location of the object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}{object\+\_\+print} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em print the object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a726abb59ade147e1b0b6f8520976fff8}{object\+\_\+set\+\_\+description} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em set the descripcion of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a2697e228917ad9368d1eb5bcb1940d14}{object\+\_\+set\+\_\+altdescription} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$desc)
+\begin{DoxyCompactList}\small\item\em gives the descripcion of object \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{object_8h_a4b26ef1ec7057673899b58a5bf55f06a}{object\+\_\+get\+\_\+description} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the descripcion of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a7436fd50c2b738f8b43f8c80daf90f6c}{object\+\_\+set\+\_\+movable} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} b)
+\begin{DoxyCompactList}\small\item\em set the movable of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a7f287c00818d3700639c644fa3f86a98}{object\+\_\+set\+\_\+moved} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} b)
+\begin{DoxyCompactList}\small\item\em set the moved of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a4cd0ca0b94aa844953edb539e8caf942}{object\+\_\+set\+\_\+hidden} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} b)
+\begin{DoxyCompactList}\small\item\em set the hidden of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_aed0942c2dbcef7288bc5d63925d1c69a}{object\+\_\+set\+\_\+illuminate} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} b)
+\begin{DoxyCompactList}\small\item\em set the illuminate of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_a52813df54d3916cdcc019006775452ab}{object\+\_\+set\+\_\+turned\+On} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} b)
+\begin{DoxyCompactList}\small\item\em set the turned\+On of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{object_8h_ab62e9c302600d7c9a61392fff1b06534}{object\+\_\+set\+\_\+open} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em set the open of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{object_8h_a013409023095272ee75cf6f13b680cf4}{object\+\_\+get\+\_\+movable} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the movable of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{object_8h_ae37631a7815c57d1c862a9cb1809942c}{object\+\_\+get\+\_\+moved} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the moved of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{object_8h_a6171471129f33c873f5704e6309eee0d}{object\+\_\+get\+\_\+hidden} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the hidden of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{object_8h_a98241a6ff6c17286b614eb5757bd3752}{object\+\_\+get\+\_\+illuminate} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the illuminate of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{object_8h_a1636f96520ab968688edb92494deef4b}{object\+\_\+get\+\_\+turned\+On} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the turned\+On of object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{object_8h_ad44c2e34a5984f271b4d4c4be0eaf848}{object\+\_\+get\+\_\+open} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the open of object \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{object_8h_aa61752d5b48cdf5bac12c13021247792}{object\+\_\+get\+\_\+altdescription} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em get the altdescription of object \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the module object. 
+
+It defines the header of the module object.
+
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+7.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}\label{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}} 
+\index{object.\+h@{object.\+h}!object\+\_\+create@{object\+\_\+create}}
+\index{object\+\_\+create@{object\+\_\+create}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+create()}{object\_create()}}
+{\footnotesize\ttfamily \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}$\ast$ object\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+create the object in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a19d6d51fee809e3801893eefc789f4b4}\label{object_8h_a19d6d51fee809e3801893eefc789f4b4}} 
+\index{object.\+h@{object.\+h}!object\+\_\+destroy@{object\+\_\+destroy}}
+\index{object\+\_\+destroy@{object\+\_\+destroy}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+destroy()}{object\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+destroy the object in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_aa61752d5b48cdf5bac12c13021247792}\label{object_8h_aa61752d5b48cdf5bac12c13021247792}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+altdescription@{object\+\_\+get\+\_\+altdescription}}
+\index{object\+\_\+get\+\_\+altdescription@{object\+\_\+get\+\_\+altdescription}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+altdescription()}{object\_get\_altdescription()}}
+{\footnotesize\ttfamily const char$\ast$ object\+\_\+get\+\_\+altdescription (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the altdescription of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+altdescription or N\+U\+LL in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a4b26ef1ec7057673899b58a5bf55f06a}\label{object_8h_a4b26ef1ec7057673899b58a5bf55f06a}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+description@{object\+\_\+get\+\_\+description}}
+\index{object\+\_\+get\+\_\+description@{object\+\_\+get\+\_\+description}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+description()}{object\_get\_description()}}
+{\footnotesize\ttfamily const char$\ast$ object\+\_\+get\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the descripcion of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+object name or N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a6171471129f33c873f5704e6309eee0d}\label{object_8h_a6171471129f33c873f5704e6309eee0d}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+hidden@{object\+\_\+get\+\_\+hidden}}
+\index{object\+\_\+get\+\_\+hidden@{object\+\_\+get\+\_\+hidden}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+hidden()}{object\_get\_hidden()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} object\+\_\+get\+\_\+hidden (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the hidden of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_ac5af152381a21853c6a28cc120e8e7fe}\label{object_8h_ac5af152381a21853c6a28cc120e8e7fe}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+id@{object\+\_\+get\+\_\+id}}
+\index{object\+\_\+get\+\_\+id@{object\+\_\+get\+\_\+id}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+id()}{object\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the id of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a98241a6ff6c17286b614eb5757bd3752}\label{object_8h_a98241a6ff6c17286b614eb5757bd3752}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+illuminate@{object\+\_\+get\+\_\+illuminate}}
+\index{object\+\_\+get\+\_\+illuminate@{object\+\_\+get\+\_\+illuminate}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+illuminate()}{object\_get\_illuminate()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} object\+\_\+get\+\_\+illuminate (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the illuminate of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a64961ebc5004e975a7b84caaec1fca13}\label{object_8h_a64961ebc5004e975a7b84caaec1fca13}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+\+Init\+Location@{object\+\_\+get\+\_\+\+Init\+Location}}
+\index{object\+\_\+get\+\_\+\+Init\+Location@{object\+\_\+get\+\_\+\+Init\+Location}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+\+Init\+Location()}{object\_get\_InitLocation()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+get\+\_\+\+Init\+Location (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the init location of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a45eda72d7edc16344f0812f76da165ec}\label{object_8h_a45eda72d7edc16344f0812f76da165ec}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+location@{object\+\_\+get\+\_\+location}}
+\index{object\+\_\+get\+\_\+location@{object\+\_\+get\+\_\+location}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+location()}{object\_get\_location()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} object\+\_\+get\+\_\+location (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the location of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a013409023095272ee75cf6f13b680cf4}\label{object_8h_a013409023095272ee75cf6f13b680cf4}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+movable@{object\+\_\+get\+\_\+movable}}
+\index{object\+\_\+get\+\_\+movable@{object\+\_\+get\+\_\+movable}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+movable()}{object\_get\_movable()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} object\+\_\+get\+\_\+movable (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the movable of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_ae37631a7815c57d1c862a9cb1809942c}\label{object_8h_ae37631a7815c57d1c862a9cb1809942c}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+moved@{object\+\_\+get\+\_\+moved}}
+\index{object\+\_\+get\+\_\+moved@{object\+\_\+get\+\_\+moved}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+moved()}{object\_get\_moved()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} object\+\_\+get\+\_\+moved (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the moved of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a19320eebcbbd38533a18c741b804b584}\label{object_8h_a19320eebcbbd38533a18c741b804b584}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+name@{object\+\_\+get\+\_\+name}}
+\index{object\+\_\+get\+\_\+name@{object\+\_\+get\+\_\+name}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+name()}{object\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ object\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the name of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name of the object or in case of Error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_ad44c2e34a5984f271b4d4c4be0eaf848}\label{object_8h_ad44c2e34a5984f271b4d4c4be0eaf848}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+open@{object\+\_\+get\+\_\+open}}
+\index{object\+\_\+get\+\_\+open@{object\+\_\+get\+\_\+open}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+open()}{object\_get\_open()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} object\+\_\+get\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the open of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a1636f96520ab968688edb92494deef4b}\label{object_8h_a1636f96520ab968688edb92494deef4b}} 
+\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+turned\+On@{object\+\_\+get\+\_\+turned\+On}}
+\index{object\+\_\+get\+\_\+turned\+On@{object\+\_\+get\+\_\+turned\+On}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+get\+\_\+turned\+On()}{object\_get\_turnedOn()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} object\+\_\+get\+\_\+turned\+On (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+get the turned\+On of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}\label{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}} 
+\index{object.\+h@{object.\+h}!object\+\_\+print@{object\+\_\+print}}
+\index{object\+\_\+print@{object\+\_\+print}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+print()}{object\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+print the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a2697e228917ad9368d1eb5bcb1940d14}\label{object_8h_a2697e228917ad9368d1eb5bcb1940d14}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+altdescription@{object\+\_\+set\+\_\+altdescription}}
+\index{object\+\_\+set\+\_\+altdescription@{object\+\_\+set\+\_\+altdescription}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+altdescription()}{object\_set\_altdescription()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+altdescription (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{char $\ast$}]{desc }\end{DoxyParamCaption})}
+
+
+
+gives the descripcion of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em desc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name or N\+U\+LL in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a726abb59ade147e1b0b6f8520976fff8}\label{object_8h_a726abb59ade147e1b0b6f8520976fff8}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+description@{object\+\_\+set\+\_\+description}}
+\index{object\+\_\+set\+\_\+description@{object\+\_\+set\+\_\+description}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+description()}{object\_set\_description()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{char $\ast$}]{desc }\end{DoxyParamCaption})}
+
+
+
+set the descripcion of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em desc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a4cd0ca0b94aa844953edb539e8caf942}\label{object_8h_a4cd0ca0b94aa844953edb539e8caf942}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+hidden@{object\+\_\+set\+\_\+hidden}}
+\index{object\+\_\+set\+\_\+hidden@{object\+\_\+set\+\_\+hidden}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+hidden()}{object\_set\_hidden()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+hidden (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{b }\end{DoxyParamCaption})}
+
+
+
+set the hidden of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_aed0942c2dbcef7288bc5d63925d1c69a}\label{object_8h_aed0942c2dbcef7288bc5d63925d1c69a}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+illuminate@{object\+\_\+set\+\_\+illuminate}}
+\index{object\+\_\+set\+\_\+illuminate@{object\+\_\+set\+\_\+illuminate}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+illuminate()}{object\_set\_illuminate()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+illuminate (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{b }\end{DoxyParamCaption})}
+
+
+
+set the illuminate of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_aac9668c6dc6b33c72dc787d373add0d5}\label{object_8h_aac9668c6dc6b33c72dc787d373add0d5}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+\+Init\+Location@{object\+\_\+set\+\_\+\+Init\+Location}}
+\index{object\+\_\+set\+\_\+\+Init\+Location@{object\+\_\+set\+\_\+\+Init\+Location}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+\+Init\+Location()}{object\_set\_InitLocation()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+\+Init\+Location (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set a I\+N\+IT location to the name of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a89d6a495780c1a045defd1ec8e189102}\label{object_8h_a89d6a495780c1a045defd1ec8e189102}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+location@{object\+\_\+set\+\_\+location}}
+\index{object\+\_\+set\+\_\+location@{object\+\_\+set\+\_\+location}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+location()}{object\_set\_location()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+location (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set a location to the name of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a7436fd50c2b738f8b43f8c80daf90f6c}\label{object_8h_a7436fd50c2b738f8b43f8c80daf90f6c}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+movable@{object\+\_\+set\+\_\+movable}}
+\index{object\+\_\+set\+\_\+movable@{object\+\_\+set\+\_\+movable}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+movable()}{object\_set\_movable()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+movable (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{b }\end{DoxyParamCaption})}
+
+
+
+set the movable of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a7f287c00818d3700639c644fa3f86a98}\label{object_8h_a7f287c00818d3700639c644fa3f86a98}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+moved@{object\+\_\+set\+\_\+moved}}
+\index{object\+\_\+set\+\_\+moved@{object\+\_\+set\+\_\+moved}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+moved()}{object\_set\_moved()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+moved (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{b }\end{DoxyParamCaption})}
+
+
+
+set the moved of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_ac15dc062c857503ec0ca66037caffd80}\label{object_8h_ac15dc062c857503ec0ca66037caffd80}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+name@{object\+\_\+set\+\_\+name}}
+\index{object\+\_\+set\+\_\+name@{object\+\_\+set\+\_\+name}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+name()}{object\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+set a name to the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_ab62e9c302600d7c9a61392fff1b06534}\label{object_8h_ab62e9c302600d7c9a61392fff1b06534}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+open@{object\+\_\+set\+\_\+open}}
+\index{object\+\_\+set\+\_\+open@{object\+\_\+set\+\_\+open}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+open()}{object\_set\_open()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+set the open of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{object_8h_a52813df54d3916cdcc019006775452ab}\label{object_8h_a52813df54d3916cdcc019006775452ab}} 
+\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+turned\+On@{object\+\_\+set\+\_\+turned\+On}}
+\index{object\+\_\+set\+\_\+turned\+On@{object\+\_\+set\+\_\+turned\+On}!object.\+h@{object.\+h}}
+\subsubsection{\texorpdfstring{object\+\_\+set\+\_\+turned\+On()}{object\_set\_turnedOn()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} object\+\_\+set\+\_\+turned\+On (\begin{DoxyParamCaption}\item[{\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$}]{object,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{b }\end{DoxyParamCaption})}
+
+
+
+set the turned\+On of object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+

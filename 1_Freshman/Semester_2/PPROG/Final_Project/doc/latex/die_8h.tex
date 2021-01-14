@@ -1,0 +1,220 @@
+\hypertarget{die_8h}{\section{include/die.h File Reference}
+\label{die_8h}\index{include/die.\+h@{include/die.\+h}}
+}
+
+
+It implements the die interpreter.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\\*
+Include dependency graph for die.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{die_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{die_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{typedef struct \hyperlink{struct__Die}{\+\_\+\+Die} \hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}}\label{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}
+
+\begin{DoxyCompactList}\small\item\em Estructura del dado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$ \hyperlink{die_8h_a413bced882cd5cadbb1d8feaf367ed3f}{die\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de reservar memoria para el dado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{die_8h_a2115999335e58f733d846be485cfb783}{die\+\_\+destroy} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de liberar la memoria reservada para el dado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{die_8h_a57c9a2627bb3a1ca04fe55d72bd6a5ea}{die\+\_\+get\+\_\+id} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de obtener el id del dado. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{die_8h_a1f2178342235c18c32c54ccd849c3ffe}{die\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion encargada de devolver el tamaño en memoria del dado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{die_8h_a9a228775f79979e28bb3b4eea507f3d6}{die\+\_\+roll} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$dado, int sup, int inf)
+\begin{DoxyCompactList}\small\item\em Funcion para lanzar el dado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{die_8h_a6ab2e5a9dcbd7ba3bf9ac6ebb183ac97}{die\+\_\+print} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos toda la informacion de un dado. \end{DoxyCompactList}\item 
+int \hyperlink{die_8h_afef04ed0f9c6f21afcd1defa1e235b4e}{die\+\_\+get\+\_\+last\+Value} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos el ultimo valor del dado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the die interpreter. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/02/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{die_8h_a413bced882cd5cadbb1d8feaf367ed3f}{\index{die.\+h@{die.\+h}!die\+\_\+create@{die\+\_\+create}}
+\index{die\+\_\+create@{die\+\_\+create}!die.\+h@{die.\+h}}
+\subsubsection[{die\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Die}$\ast$ die\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{die_8h_a413bced882cd5cadbb1d8feaf367ed3f}
+
+
+Funcion encargada de reservar memoria para el dado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & id del dado que se va a crear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dado que se ha creado 
+\end{DoxyReturn}
+\hypertarget{die_8h_a2115999335e58f733d846be485cfb783}{\index{die.\+h@{die.\+h}!die\+\_\+destroy@{die\+\_\+destroy}}
+\index{die\+\_\+destroy@{die\+\_\+destroy}!die.\+h@{die.\+h}}
+\subsubsection[{die\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} die\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8h_a2115999335e58f733d846be485cfb783}
+
+
+Funcion encargada de liberar la memoria reservada para el dado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & dado que se quiere liberar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha liberado la memoria correctamente y E\+R\+R\+O\+R en caso de error 
+\end{DoxyReturn}
+\hypertarget{die_8h_a57c9a2627bb3a1ca04fe55d72bd6a5ea}{\index{die.\+h@{die.\+h}!die\+\_\+get\+\_\+id@{die\+\_\+get\+\_\+id}}
+\index{die\+\_\+get\+\_\+id@{die\+\_\+get\+\_\+id}!die.\+h@{die.\+h}}
+\subsubsection[{die\+\_\+get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} die\+\_\+get\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8h_a57c9a2627bb3a1ca04fe55d72bd6a5ea}
+
+
+Funcion encargada de obtener el id del dado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & dado del que se quiere saber el id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id del dado 
+\end{DoxyReturn}
+\hypertarget{die_8h_afef04ed0f9c6f21afcd1defa1e235b4e}{\index{die.\+h@{die.\+h}!die\+\_\+get\+\_\+last\+Value@{die\+\_\+get\+\_\+last\+Value}}
+\index{die\+\_\+get\+\_\+last\+Value@{die\+\_\+get\+\_\+last\+Value}!die.\+h@{die.\+h}}
+\subsubsection[{die\+\_\+get\+\_\+last\+Value}]{\setlength{\rightskip}{0pt plus 5cm}int die\+\_\+get\+\_\+last\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8h_afef04ed0f9c6f21afcd1defa1e235b4e}
+
+
+Funcion encargada de darnos el ultimo valor del dado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & dado del que se quiere saber \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int con el numero correspondiente 
+\end{DoxyReturn}
+\hypertarget{die_8h_a1f2178342235c18c32c54ccd849c3ffe}{\index{die.\+h@{die.\+h}!die\+\_\+get\+\_\+size@{die\+\_\+get\+\_\+size}}
+\index{die\+\_\+get\+\_\+size@{die\+\_\+get\+\_\+size}!die.\+h@{die.\+h}}
+\subsubsection[{die\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t die\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{die_8h_a1f2178342235c18c32c54ccd849c3ffe}
+
+
+Funcion encargada de devolver el tamaño en memoria del dado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño del dado 
+\end{DoxyReturn}
+\hypertarget{die_8h_a6ab2e5a9dcbd7ba3bf9ac6ebb183ac97}{\index{die.\+h@{die.\+h}!die\+\_\+print@{die\+\_\+print}}
+\index{die\+\_\+print@{die\+\_\+print}!die.\+h@{die.\+h}}
+\subsubsection[{die\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} die\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{die}
+\end{DoxyParamCaption}
+)}}\label{die_8h_a6ab2e5a9dcbd7ba3bf9ac6ebb183ac97}
+
+
+Funcion encargada de darnos toda la informacion de un dado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & dado del que se quiere saber toda la informacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha impreso correctamente la informacion en el fichero, y E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{die_8h_a9a228775f79979e28bb3b4eea507f3d6}{\index{die.\+h@{die.\+h}!die\+\_\+roll@{die\+\_\+roll}}
+\index{die\+\_\+roll@{die\+\_\+roll}!die.\+h@{die.\+h}}
+\subsubsection[{die\+\_\+roll}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} die\+\_\+roll (
+\begin{DoxyParamCaption}
+\item[{{\bf Die} $\ast$}]{dado, }
+\item[{int}]{sup, }
+\item[{int}]{inf}
+\end{DoxyParamCaption}
+)}}\label{die_8h_a9a228775f79979e28bb3b4eea507f3d6}
+
+
+Funcion para lanzar el dado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dado} & dado que queremos tirar \\
+\hline
+{\em sup} & numero máximo del dado \\
+\hline
+{\em inf} & numero mínimo del dado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si no ha habido problemas, E\+R\+R\+O\+R en caso de fallo 
+\end{DoxyReturn}

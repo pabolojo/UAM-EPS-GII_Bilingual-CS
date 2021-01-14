@@ -1,0 +1,82 @@
+move east
+move north
+move east
+move east
+examine
+grasp Antorcha
+move east
+move north
+grasp Llave1
+move south
+move west
+move west
+move west
+open Puerta1 with Llave1
+move west
+grasp Llave2
+move east
+move east
+move east
+move south
+open Puerta2 with Llave2
+move south
+grasp Llave3
+move north
+move north
+move west
+move west
+move north
+move up
+open Puerta3 with Llave3
+move south
+move west
+move north
+grasp Digito1
+grasp Espada
+move south
+move south
+grasp Digito5
+move north
+move east
+move east
+move north
+grasp Digito3
+move south
+move south
+grasp Digito4
+move north
+move east
+move east
+move north
+grasp Digito6
+move south
+move south
+grasp Digito2
+move north
+move west
+move west
+move west
+move north
+move down
+move south
+move east
+code
+open PuertaCodigo with Codigo
+move north
+move down
+move south
+turnon Antorcha
+move south
+atack (1-3)
+move west
+grasp Llave4
+move north
+move east
+move north
+move up
+move south
+move east
+move south
+move south
+open Puerta4 with Llave4
+move south

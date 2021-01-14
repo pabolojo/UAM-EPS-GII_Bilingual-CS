@@ -1,0 +1,34 @@
+
+- Normativa de entrega cumplida en su totalidad: Realizado: Hemos realizado varias lecturas del enunciado.
+
+- Recibir tramas Ethernet, realizar comprobaciones y llamar correctamente a la función de callback de nivel superior: Realizado: Hemos comprobado que la funcionalidad
+  requerida se cumplía, haciendo todos los checkeos de variables necesarios.
+
+- Enviar tramas Ethernet correctamente: Realizado: Hemos comprobado que los paquetes enviados son correctos y tienen una longitud correcta con Wireshark.
+
+- Enviar correctamente peticiones ARP: Realizado: Tras implementar la función como se nos indicaba en el enunciado, nuevamente, con Wireshark,
+  hemos podido comprobar que los paquetes ARP estaban bien formados y que sus direcciones eran correctas.
+
+- Procesar correctamente peticiones ARP recibidas: Realizado: Tras implementar la función como se nos indicaba en el enunciado,
+  hemos enviado paquetes ARP desde un terminal hasta el otro para comprobar que se recibían y procesaban correctamente.
+
+- Enviar correctamente respuestas ARP: Realizado: Ya habiendo implementado la funcionalidad como se nos indicaba, hemos comprobado que al recibir una petición ARP,
+  se generaba y enviaba una respuesta ARP, comprobando que era correcta con la ayuda de Wireshark, comprobando que los campos detectados por Wireshark eran los correctos
+  y contenían el valor enviado.
+
+- Procesar correctamente respuestas ARP: Realizado: Hemos comprobado que la IP destino era nuestra propia dirección. Hemos guardado en resolvedMAC la dirección MAC
+  a devolver, cambiado a false la variable awaitingResponse para que la función ARPResolution sepa que ya tiene disponible la dirección MAC y finalmente, hemos
+  guardado la MAC en la caché.
+
+- Manejo correcto de la caché ARP: Realizado: Cada vez que recibimos una petición ARP, en la función ARPResolution comprobamos si la MAC de la IP 
+  que se nos solicita se encuentra en la caché. Si es así, se devuelve sin llamar a createARPRequest, en caso contrario, se llama a esta última función,
+  donde en processARPReply se guardará en la caché la MAC asociada a la IP. Además esto lo hemos comprobado viendo que después de realizar una petición ARP,
+  la dirección MAC se guarda en la caché, y si volvemos a realizar la petición, el paquete de petición de ARP no se envía y se nos devuelve directamente la dirección MAC.
+
+- Uso correcto de Locks: Realizado: Hemos accedido a través de locks a todas las variables globales que pueden ser accedidas de forma concurrente, 
+  como puede ser en el caso de un thread. Como pueden ser resolvedMAC o awaitingResponse.
+
+- Realiza correctamente el ARP gratuito: Realizado: Hemos comprobado que teniendo los dos hosts, h1 y h2, si cambiamos la IP de h2 y le ponemos la de h1.
+  Ejecutamos primero el programa en h1 y luego en h2, en este último vemos que se nos informa de que el ARP no está inizializado. Esto se debe a que ha
+  detectado que su IP ya estaba asignada, por tanto, el ARP gratuito falla.
+

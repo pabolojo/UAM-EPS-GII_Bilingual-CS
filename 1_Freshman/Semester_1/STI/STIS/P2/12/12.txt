@@ -1,0 +1,17 @@
+
+START
+DATA:
+ real total;
+ real num;
+
+ALGORITHM
+
+FOR i=0 to i<10
+WRITE "Number: ", i+1;
+READ num;
+total=total+num;
+ENDFOR
+
+WRITE"Total: ", total
+ 
+ENDALGORITM 

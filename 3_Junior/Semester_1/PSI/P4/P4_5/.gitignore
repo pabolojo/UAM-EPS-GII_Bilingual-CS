@@ -1,0 +1,5 @@
+*.pyc
+Material\ and\ Report
+.vscode/
+config.sh
+.coverage

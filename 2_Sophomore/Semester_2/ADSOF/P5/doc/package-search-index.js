@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"exercise_5.graph"},{"l":"exercise_5.rules"},{"l":"exercise_5.rules.strategies"},{"l":"exercise_5.testersEnglish"},{"l":"exercises_1_to_4.graph"},{"l":"exercises_1_to_4.rules"},{"l":"exercises_1_to_4.rules.strategies"},{"l":"exercises_1_to_4.testersEnglish"}]

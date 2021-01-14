@@ -1,0 +1,13 @@
+move south
+move south
+move south
+move north
+move north
+move east
+move south
+move west
+take lantern
+move west
+drop lantern
+inspect lantern
+exit

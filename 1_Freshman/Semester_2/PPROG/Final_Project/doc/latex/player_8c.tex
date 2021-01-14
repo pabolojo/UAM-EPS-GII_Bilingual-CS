@@ -1,0 +1,417 @@
+\hypertarget{player_8c}{\section{src/player.c File Reference}
+\label{player_8c}\index{src/player.\+c@{src/player.\+c}}
+}
+
+
+It implements the player.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$strings.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/player.\+h\char`\"{}}\\*
+Include dependency graph for player.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Player}{\+\_\+\+Player}
+\begin{DoxyCompactList}\small\item\em Estructura del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8c_a97ea1d0deda3c51ef6ce63a13dab7a38}{player\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion para inicializar el jugador Funcion encargada de reservar espacio para el jugador e inizializar sus parametros. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}{player\+\_\+destroy} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de liberar la memoria reservada para el jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{player_8c_a6a30809f7775f5c2d3bef47d92769e59}{player\+\_\+set\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar el nombre del. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{player_8c_af92901f53a33ee9083a14fd947898e06}{player\+\_\+set\+\_\+space} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar el espacio en el que se encuentra. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{player_8c_af5eacaf6a51631f28500d8127e761c1b}{player\+\_\+set\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de añadir un objeto al jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{player_8c_a523d1c79f53c3ce0da06bd186520d35d}{player\+\_\+set\+\_\+inventory} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventorio)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de asignarle un inventorio al jugador Funcion usada para cargar los inventorios desde un archivo. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{player_8c_a6622c02be2fe230a5c0df66385a13ece}{player\+\_\+get\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de obtener el nombre del jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8c_af5a101ec91427951c5875569a8709956}{player\+\_\+get\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de obtener el id del jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8c_a4eabc7f4e8d852ef582ee331c104207c}{player\+\_\+get\+\_\+space} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de obtener el id del espacio donde se encuentra el jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{player_8c_a8deed220c7807d597a8765e3d131d1d9}{player\+\_\+get\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de ver si el jugador tiene un objeto. \end{DoxyCompactList}\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{player_8c_ac2abf0830926be3f9cfacd09cc8a4f39}{player\+\_\+get\+\_\+objects} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de devolver los ids de los objetos del jugador. \end{DoxyCompactList}\item 
+\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{player_8c_a270da6469a85e0c2b7f9f4088d290051}{player\+\_\+get\+\_\+inventory} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Funcion para obtener el inventorio del jugador Esta función se usa para guardar en el fichero los datos del juego actual. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{player_8c_a0db3f153d7d3635b0163400a48afa4c4}{player\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion encargada de devolver el tamaño del jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{player_8c_a0306b5f6a99481b01994c11500fe5901}{player\+\_\+del\+\_\+objects} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de borrar objetos del set del jugador. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{player_8c_aa0f2f8b4d1b63a60ef927d47aa45dbd1}{player\+\_\+print} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Funcion para imprimir los datos del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the player. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon y Miguel Rodriguez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/02-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{player_8c_a97ea1d0deda3c51ef6ce63a13dab7a38}{\index{player.\+c@{player.\+c}!player\+\_\+create@{player\+\_\+create}}
+\index{player\+\_\+create@{player\+\_\+create}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ player\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a97ea1d0deda3c51ef6ce63a13dab7a38}
+
+
+Funcion para inicializar el jugador Funcion encargada de reservar espacio para el jugador e inizializar sus parametros. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & se corresponde con el id del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El jugador creado 
+\end{DoxyReturn}
+\hypertarget{player_8c_a0306b5f6a99481b01994c11500fe5901}{\index{player.\+c@{player.\+c}!player\+\_\+del\+\_\+objects@{player\+\_\+del\+\_\+objects}}
+\index{player\+\_\+del\+\_\+objects@{player\+\_\+del\+\_\+objects}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+del\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+del\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a0306b5f6a99481b01994c11500fe5901}
+
+
+Funcion encargada de borrar objetos del set del jugador. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+{\em id} & id que quiero eliminar del set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K funcionamiento correcto, E\+R\+R\+O\+R caso contrario 
+\end{DoxyReturn}
+\hypertarget{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}{\index{player.\+c@{player.\+c}!player\+\_\+destroy@{player\+\_\+destroy}}
+\index{player\+\_\+destroy@{player\+\_\+destroy}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}
+
+
+Funcion encargada de liberar la memoria reservada para el jugador. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador a destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{player_8c_af5a101ec91427951c5875569a8709956}{\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}}
+\index{player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} player\+\_\+get\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8c_af5a101ec91427951c5875569a8709956}
+
+
+Funcion encargada de obtener el id del jugador. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nombre del jugador 
+\end{DoxyReturn}
+\hypertarget{player_8c_a270da6469a85e0c2b7f9f4088d290051}{\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}}
+\index{player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+inventory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ player\+\_\+get\+\_\+inventory (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a270da6469a85e0c2b7f9f4088d290051}
+
+
+Funcion para obtener el inventorio del jugador Esta función se usa para guardar en el fichero los datos del juego actual. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero si tiene objeto, falso caso contrario 
+\end{DoxyReturn}
+\hypertarget{player_8c_a6622c02be2fe230a5c0df66385a13ece}{\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}}
+\index{player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ player\+\_\+get\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a6622c02be2fe230a5c0df66385a13ece}
+
+
+Funcion encargada de obtener el nombre del jugador. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nombre del jugador 
+\end{DoxyReturn}
+\hypertarget{player_8c_a8deed220c7807d597a8765e3d131d1d9}{\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+object@{player\+\_\+get\+\_\+object}}
+\index{player\+\_\+get\+\_\+object@{player\+\_\+get\+\_\+object}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} player\+\_\+get\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a8deed220c7807d597a8765e3d131d1d9}
+
+
+Funcion encargada de ver si el jugador tiene un objeto. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero si tiene objeto, falso caso contrario 
+\end{DoxyReturn}
+\hypertarget{player_8c_ac2abf0830926be3f9cfacd09cc8a4f39}{\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+objects@{player\+\_\+get\+\_\+objects}}
+\index{player\+\_\+get\+\_\+objects@{player\+\_\+get\+\_\+objects}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ player\+\_\+get\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8c_ac2abf0830926be3f9cfacd09cc8a4f39}
+
+
+Funcion encargada de devolver los ids de los objetos del jugador. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+verdadero si tiene objeto, falso caso contrario 
+\end{DoxyReturn}
+\hypertarget{player_8c_a0db3f153d7d3635b0163400a48afa4c4}{\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+size@{player\+\_\+get\+\_\+size}}
+\index{player\+\_\+get\+\_\+size@{player\+\_\+get\+\_\+size}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t player\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a0db3f153d7d3635b0163400a48afa4c4}
+
+
+Funcion encargada de devolver el tamaño del jugador. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño 
+\end{DoxyReturn}
+\hypertarget{player_8c_a4eabc7f4e8d852ef582ee331c104207c}{\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+space@{player\+\_\+get\+\_\+space}}
+\index{player\+\_\+get\+\_\+space@{player\+\_\+get\+\_\+space}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+get\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} player\+\_\+get\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a4eabc7f4e8d852ef582ee331c104207c}
+
+
+Funcion encargada de obtener el id del espacio donde se encuentra el jugador. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id del espacio 
+\end{DoxyReturn}
+\hypertarget{player_8c_aa0f2f8b4d1b63a60ef927d47aa45dbd1}{\index{player.\+c@{player.\+c}!player\+\_\+print@{player\+\_\+print}}
+\index{player\+\_\+print@{player\+\_\+print}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{player_8c_aa0f2f8b4d1b63a60ef927d47aa45dbd1}
+
+
+Funcion para imprimir los datos del jugador. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{player_8c_a523d1c79f53c3ce0da06bd186520d35d}{\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+inventory@{player\+\_\+set\+\_\+inventory}}
+\index{player\+\_\+set\+\_\+inventory@{player\+\_\+set\+\_\+inventory}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+set\+\_\+inventory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+set\+\_\+inventory (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Inventory} $\ast$}]{inventorio}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a523d1c79f53c3ce0da06bd186520d35d}
+
+
+Funcion encargada de asignarle un inventorio al jugador Funcion usada para cargar los inventorios desde un archivo. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+{\em inventorio} & inventorio a añadir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{player_8c_a6a30809f7775f5c2d3bef47d92769e59}{\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}}
+\index{player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+set\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{player_8c_a6a30809f7775f5c2d3bef47d92769e59}
+
+
+Funcion encargada de cambiar el nombre del. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+{\em name} & nuevo nombre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{player_8c_af5eacaf6a51631f28500d8127e761c1b}{\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+object@{player\+\_\+set\+\_\+object}}
+\index{player\+\_\+set\+\_\+object@{player\+\_\+set\+\_\+object}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+set\+\_\+object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+set\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{player_8c_af5eacaf6a51631f28500d8127e761c1b}
+
+
+Funcion encargada de añadir un objeto al jugador. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+{\em value} & verdadero si tiene objeto, falso si no \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{player_8c_af92901f53a33ee9083a14fd947898e06}{\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+space@{player\+\_\+set\+\_\+space}}
+\index{player\+\_\+set\+\_\+space@{player\+\_\+set\+\_\+space}!player.\+c@{player.\+c}}
+\subsubsection[{player\+\_\+set\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} player\+\_\+set\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{player_8c_af92901f53a33ee9083a14fd947898e06}
+
+
+Funcion encargada de cambiar el espacio en el que se encuentra. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & jugador \\
+\hline
+{\em id} & id del nuevo espacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}

@@ -1,0 +1,147 @@
+\hypertarget{game__rules_8h}{\section{include/game\+\_\+rules.h File Reference}
+\label{game__rules_8h}\index{include/game\+\_\+rules.\+h@{include/game\+\_\+rules.\+h}}
+}
+
+
+It defines the game rules interface.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/game.\+h\char`\"{}}\\*
+Include dependency graph for game\+\_\+rules.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__rules_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{game__rules_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{game__rules_8h_a60dd8c87b598cf179dc700a896badc6c}{typedef enum \hyperlink{game__rules_8h_af65db71933f393ce1a8b0c0269987bd4}{enum\+\_\+\+Rules} \hyperlink{game__rules_8h_a60dd8c87b598cf179dc700a896badc6c}{T\+\_\+\+Rule}}\label{game__rules_8h_a60dd8c87b598cf179dc700a896badc6c}
+
+\begin{DoxyCompactList}\small\item\em Lista de posibles reglas. \end{DoxyCompactList}\item 
+\hypertarget{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{typedef struct \hyperlink{struct__GameRules}{\+\_\+\+Game\+Rules} \hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules}}\label{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}
+
+\begin{DoxyCompactList}\small\item\em Estructura del game\+Rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{game__rules_8h_af65db71933f393ce1a8b0c0269987bd4}{enum \hyperlink{game__rules_8h_af65db71933f393ce1a8b0c0269987bd4}{enum\+\_\+\+Rules} \{ \\*
+{\bfseries N\+O\+\_\+\+R\+U\+L\+E} = -\/1, 
+{\bfseries O\+C\+U\+L\+T}, 
+{\bfseries O\+F\+F}, 
+{\bfseries O\+N}, 
+\\*
+{\bfseries C\+L\+O\+S\+E}, 
+{\bfseries S\+H\+O\+W}, 
+{\bfseries C\+H\+A\+N\+G\+E}, 
+{\bfseries E\+L\+I\+M\+I\+N\+A\+T\+E}, 
+\\*
+{\bfseries R\+E\+G\+E\+N\+E\+R\+A\+T\+E}, 
+{\bfseries N\+E\+W\+E\+X\+I\+T}
+ \}}\label{game__rules_8h_af65db71933f393ce1a8b0c0269987bd4}
+
+\begin{DoxyCompactList}\small\item\em Lista de posibles reglas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$ \hyperlink{game__rules_8h_aefc0992f9d3b8228ea705408b535ca5c}{game\+\_\+rules\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Funcion para reservar memoria para el modulo de las reglas. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{game__rules_8h_aeae24b9ec0c75216361ba2363c19847b}{game\+\_\+rules\+\_\+destroy} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion que libera memoria. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{game__rules_8h_a84316ec7ab939c928c9a702ba571f90e}{game\+\_\+rules\+\_\+play} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} no\+\_\+rules)
+\begin{DoxyCompactList}\small\item\em Funcion para jugar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the game rules interface. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02/05/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{game__rules_8h_aefc0992f9d3b8228ea705408b535ca5c}{\index{game\+\_\+rules.\+h@{game\+\_\+rules.\+h}!game\+\_\+rules\+\_\+create@{game\+\_\+rules\+\_\+create}}
+\index{game\+\_\+rules\+\_\+create@{game\+\_\+rules\+\_\+create}!game\+\_\+rules.\+h@{game\+\_\+rules.\+h}}
+\subsubsection[{game\+\_\+rules\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Rules}$\ast$ game\+\_\+rules\+\_\+create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8h_aefc0992f9d3b8228ea705408b535ca5c}
+
+
+Funcion para reservar memoria para el modulo de las reglas. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+puntero al modulo 
+\end{DoxyReturn}
+\hypertarget{game__rules_8h_aeae24b9ec0c75216361ba2363c19847b}{\index{game\+\_\+rules.\+h@{game\+\_\+rules.\+h}!game\+\_\+rules\+\_\+destroy@{game\+\_\+rules\+\_\+destroy}}
+\index{game\+\_\+rules\+\_\+destroy@{game\+\_\+rules\+\_\+destroy}!game\+\_\+rules.\+h@{game\+\_\+rules.\+h}}
+\subsubsection[{game\+\_\+rules\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} game\+\_\+rules\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8h_aeae24b9ec0c75216361ba2363c19847b}
+
+
+Funcion que libera memoria. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & modulo a destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok O E\+R\+R\+O\+R si se libera bien o no 
+\end{DoxyReturn}
+\hypertarget{game__rules_8h_a84316ec7ab939c928c9a702ba571f90e}{\index{game\+\_\+rules.\+h@{game\+\_\+rules.\+h}!game\+\_\+rules\+\_\+play@{game\+\_\+rules\+\_\+play}}
+\index{game\+\_\+rules\+\_\+play@{game\+\_\+rules\+\_\+play}!game\+\_\+rules.\+h@{game\+\_\+rules.\+h}}
+\subsubsection[{game\+\_\+rules\+\_\+play}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} game\+\_\+rules\+\_\+play (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules, }
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{{\bf B\+O\+O\+L}}]{no\+\_\+rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8h_a84316ec7ab939c928c9a702ba571f90e}
+
+
+Funcion para jugar. 
+
+\begin{DoxyAuthor}{Author}
+Julia S\+Imon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & modulo de reglas \\
+\hline
+{\em game} & juego \\
+\hline
+{\em no\+\_\+rules} & para indicar que queremos jugar sin reglas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok O E\+R\+R\+O\+R si se libera bien o no 
+\end{DoxyReturn}

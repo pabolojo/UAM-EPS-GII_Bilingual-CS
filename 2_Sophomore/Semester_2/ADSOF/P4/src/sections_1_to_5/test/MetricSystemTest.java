@@ -1,0 +1,18 @@
+package sections_1_to_5.test;
+
+import sections_1_to_5.metricSystems.IMetricSystem;
+import sections_1_to_5.metricSystems.imperial.length.ImperialLengthMetricSystem;
+import sections_1_to_5.metricSystems.si.length.SiLengthMetricSystem;
+
+public class MetricSystemTest {
+
+	public static void main(String[] args) {
+		IMetricSystem ms = SiLengthMetricSystem.SYSTEM;
+		//new SiLengthMetricSystem();	// dar�a error de compilaci�n
+		System.out.println(ms.units());
+		System.out.println("Base = "+ms.base());
+		
+		System.out.println(SiLengthMetricSystem.METER.canTransformTo(ImperialLengthMetricSystem.FOOT));	// No: different metric systems
+	}
+
+}

@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block body %} {% if user.is_authenticated %} Summary page for <b>{{user.first_name}} {{user.last_name}}</b>. {% if user.theoryGroup != null %} (your theory group is {{user.theoryGroup}}) {%endif%}
+<br>
+<br>
+<h3>Convalidation</h3>
+{% if user.convalidationGranted %}
+<p>Your lab assignments have been convalidated.</p>
+{% else %}
+<p>Your lab assignments have NOT been convalidated.</p>
+<p>(If you wish to request a convalidation press the "convalidation" button.)</p>
+{% endif %}
+
+<p>
+    <h3>Pair Status</h3>
+    {% if pair is not None %} You are part of the following pair
+    <ul>
+        <li>{{pair.student1}}</li>
+        <li>{{pair.student2}}</li>
+    </ul>
+    {% if pair.validated %} The pair is active {% else %} The pair is NOT active {% endif %} {%else%} You are not part of any pair yet. {%endif%}
+</p>
+
+<h3>Selected Group</h3>
+{% if user.labGroup != null %} Your Lab Group is: {{user.labGroup}} {%else%} You are not part of a Lab Group yet.{%endif%}
+<hr>{% endif %}
+<h3>Help?</h3>
+<br> <b>This web site allows EDAT students to select which laboratory group they wish to enroll in. Please follow the steps below</b>
+<ol>
+    <li><a href="{% url 'core:login' %}">Login</a> with your institutional NIA as username, and your NIE as password</li>
+    {% if user.is_authenticated %}
+    <li>Check your <a href="{% url 'core:convalidation' %}">convalidation</a> state if needed</li>
+    <li><a href="{% url 'core:applypair' %}">Select a partner</a> to be with during the assignments</li>
+    <li>If you no longer want to be with that partner you can <a href="{% url 'core:breakpair' %}">break the pair<a></li>
+    <li> <a href="{% url 'core:applygroup' %}">Select a lab group<a> among the ones offered depending on your theory group</li>
+    {% endif %}
+</ol>
+
+{% endblock %}

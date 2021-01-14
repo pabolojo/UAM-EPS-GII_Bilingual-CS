@@ -1,0 +1,10 @@
+<map id="game.h" name="game.h">
+<area shape="rect" id="node2" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="5,155,71,181"/>
+<area shape="rect" id="node3" href="$gamereader_8h.html" title="It defines the header of game_reader. " alt="" coords="83,80,185,107"/>
+<area shape="rect" id="node5" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="209,80,329,107"/>
+<area shape="rect" id="node8" href="$player_8c.html" title="It defines the header of the module player. " alt="" coords="353,80,421,107"/>
+<area shape="rect" id="node9" href="$set_8c.html" title="It defines the module SET. " alt="" coords="446,80,497,107"/>
+<area shape="rect" id="node4" href="$gamereader_8c.html" title="It defines the module of gamereader, contains different function of game, link,space. " alt="" coords="95,155,197,181"/>
+<area shape="rect" id="node6" href="$game__loop_8c.html" title="It defines the game loop, it contains the main function of the game. " alt="" coords="221,155,317,181"/>
+<area shape="rect" id="node7" href="$graphic__engine_8c.html" title="It defines the module of graphic_engine. " alt="" coords="341,155,461,181"/>
+</map>

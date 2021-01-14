@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %} Convalidation {% endblock%} {% block body %}
+<p>Here you can check if you satisfy the requeriments needed to convalidate the EDAT assigments with the marks of the last year.</p>{% if conv is not None %} {% if conv is True %}
+<h3>Convalidation <b>CONFIRMED</b>, You satisfy the requirements</h3>
+{% else %}
+
+<h3>Convalidation <b>DENIED</b>, do not satisfy requirements</h3>
+{% endif %} {% elif pair > 0 %}
+<h3>You are a member of a pair, break it before applying for convalidation</h3>
+{% endif %} {% endblock %}

@@ -1,0 +1,385 @@
+######################################################################################
+#### TOPIC 5 #########################################################################
+######################################################################################
+
+### FIRST STEP ###
+
+# To change the working directory to make easy to: 
+# 1. Load and import datasets, source files, etc.
+# 2. To save the .Rdata when we exit R.
+
+# File -> Change dir -> (Select the correct folder:) -> OK
+
+
+
+
+##############################################################################
+### TEST OF HYPOTHESES FOR A SINGLE POPULATION
+##############################################################################
+
+### POPULATION MEAN ##########################################################
+
+## Example 5 (variance unknown):
+
+samp<-c(1.544,1.474,1.528,1.533,1.505,1.366,1.474,1.533,1.554,1.561,1.545,1.503,1.544,1.518,1.527,1.485,1.465,1.514,1.484,1.559)
+
+# Sample information
+xbar<-mean(samp)
+sx<-sd(samp)
+n<-length(samp)
+
+# Hypothesis test
+alpha<-0.05
+mu0<-1.5
+t<-abs((xbar-mu0)/(sx/sqrt(n)))
+p.value<-2*pt(t,df=n-1,lower.tail=FALSE)
+
+# To perform directly the hypothesis test
+t.test(x=samp, alternative = "two.sided", mu = mu0, paired = FALSE, conf.level = (1-alpha))
+
+##
+
+
+
+## Example 6:
+
+samp<-c(64.968,65.168,64.961,64.934,65.146,65.081,65.135,64.995,64.949,64.969,64.899,65.018,65.260,65.095,65.017,64.724,65.036,65.007,64.976,65.209)
+
+# Sample information
+varx<-var(samp)
+n<-length(samp)
+
+# Hypothesis test
+alpha<-0.05
+v0<-0.01
+xi<-(n-1)*varx/v0
+p.value<-pchisq(xi,df=n-1,lower.tail=FALSE)
+
+# To perform directly the hypothesis test
+#install.packages("EnvStats")
+library(EnvStats)
+varTest(x=samp, alternative = "greater", conf.level = 1-alpha, sigma.squared = v0)
+
+##
+
+
+
+## Example 7:
+
+# We import the dataset
+ex7<-read.table("Exercise7.csv",header=TRUE, sep=",", na.strings="NA", dec=".", strip.white=TRUE)
+
+# Sample information
+n<-length(ex7$samp)
+nsuc<-sum(ex7$samp)
+phat<-nsuc/n
+
+# Alternative to get the sample information
+nsuc<-sum(ex7$defective=="Yes")
+phat<-nsuc/n
+
+# Hypothesis test
+alpha<-0.05
+p0<-0.05
+z<-(phat-p0)/sqrt(p0*(1-p0)/n)
+p.value<-pnorm(z)
+
+# To perform directly the hypothesis test
+prop.test(x=nsuc, n=n,p = p0, alternative = "less", conf.level = 1-alpha, correct=FALSE)
+
+##
+
+
+
+
+## Example 8:
+
+# Sample information: datasets
+sampX<-c(108.04,93.66,89.17,60.11,112.33,95.04,79.90,101.96,78.57,101.05,101.62,75.15,98.67,95.75,84.12,101.37,104.38,83.82,70.04,99.65,79.21,96.47,78.75,86.30)
+sampY<-c(77.18,94.92,82.85,82.01,85.59,84.41,104.76,78.73,99.45,107.43,80.86,91.51,100.47,83.74,103.38,92.47,89.97,96.32,75.15,101.61,103.11,85.54,82.41,85.64)
+
+# Sample information: sample means and quasi-variances
+xbar<-mean(sampX); sx2<-var(sampX)
+ybar<-mean(sampY); sy2<-var(sampY)
+
+# Sample information: sample sizes
+m<-length(sampX); n<-length(sampY)
+
+# Sample information: pooled estimator of the population variance
+sp2<-((m-1)*sx2+(n-1)*sy2)/(n+m-2)
+
+# Data frame containing both datasets
+pyield<-c(sampX,sampY)
+catalyst<-c(rep("Catalyst 1",m),rep("Catalyst 2",n))
+dframe<-data.frame(pyield,catalyst)
+
+# To analyse the sample
+library(RcmdrMisc)
+par(mfrow=c(1,2)) 
+boxplot(sampX,sampY,names=c("Catalyst 1","Catalyst 2"))
+plotMeans(dframe$pyield, dframe$catalyst, error.bars="conf.int", level=0.95, connect=TRUE,ylab="Process Yield",xlab="Catalyst")
+layout(1)
+
+# Hypothesis test
+alpha<-0.05
+t<-abs(xbar-ybar)/sqrt(sp2*(1/m+1/n))
+p.value<-2*pt(t,df=(n+m-2),lower.tail=FALSE)
+
+# To perform directly the hypothesis test
+t.test(x=sampX, y=sampY, alternative = "two.sided", conf.level = 1-alpha, paired = FALSE, var.equal = TRUE)
+t.test(dframe$pyield~dframe$catalyst, alternative = "two.sided", conf.level = 1-alpha, paired = FALSE, var.equal = TRUE)
+
+##
+
+
+## Example 9:
+
+# Sample information: vectors with the datasets
+sampX<-c(3,7,25,10,15,6,12,25,15,7)
+sampY<-c(48,44,40,38,33,21,20,12,1,18)
+
+# Sample information: sample mean and quasi-variance
+xbar<-mean(sampX); qvarx<-var(sampX)
+ybar<-mean(sampY); qvary<-var(sampY)
+
+# Sample information: sample sizes
+m<-length(sampX); n<-length(sampY)
+
+# Degrees for freedom to compute the critical value
+nu<-round((qvarx/m+qvary/n)^2/((qvarx/m)^2/(m-1)+(qvary/n)^2/(n-1)))
+
+# Data frame containing both datasets
+concentration<-c(sampX,sampY)
+area<-c(rep("Metropolitan Phoenix",m),rep("Rural Arizona",n))
+dframe<-data.frame(concentration,area)
+
+# To analyse the sample
+library(RcmdrMisc)
+par(mfrow=c(1,2)) 
+boxplot(concentration~area,data=dframe)
+plotMeans(dframe$concentration, dframe$area, error.bars="conf.int", level=0.95, connect=TRUE,ylab="Arsenic concentration",xlab="Area")
+layout(1)
+
+# Hypothesis test
+alpha<-0.05
+t<-abs(xbar-ybar)/sqrt(qvarx/m+qvary/n)
+p.value<-2*pt(t,df=nu,lower.tail=FALSE)
+
+# To perform directly the hypothesis test
+t.test(x=sampX, y=sampY, alternative = "two.sided", conf.level = 1-alpha, paired = FALSE, var.equal = FALSE)
+t.test(dframe$concentration~dframe$area, alternative = "two.sided", conf.level = 1-alpha, paired = FALSE, var.equal = FALSE)
+
+##
+
+
+
+## Example 10 
+
+# Sample information: vectors with the datasets
+sampX<-c(37.0,25.8,16.2,24.2,22.0,33.4,23.8,58.2,33.6,24.4,23.4,21.2,36.2,29.8)
+sampY<-c(17.8,20.2,16.8,41.4,21.4,38.4,16.8,32.2,27.8,23.2,29.6,20.6,32.2,53.8)
+
+# Sample information: dataset corresponding to the sample of D
+sampD<-sampX-sampY
+
+# Sample information: sample mean, quasi-variance and size of the sample of D
+dbar<-mean(sampD)
+qvard<-var(sampD)
+n<-length(sampD)
+
+# To analyse the sample
+par(mfrow=c(1,3)) 
+boxplot(sampX,sampY,names=c("Car 1","Car 2"))
+hist(sampX,main="Parking time with car 1",xlab="Parking time")
+hist(sampY,main="Parking time with car 2",xlab="Parking time")
+layout(1)
+
+# Hypothesis test
+alpha<-0.05
+t<-abs(dbar)/sqrt(qvard/n)
+p.value<-2*pt(t,df=n-1,lower.tail=FALSE)
+
+# To perform directly the hypothesis test
+t.test(x=sampX, y=sampY, alternative = "two.sided", conf.level = 1-alpha, paired = TRUE)
+
+##
+
+
+## Example 11:
+
+# Sample informations: vectors with the datasets
+sampX<-c(109.32,111.67,109.53,113.18,109.49,112.12,109.54,111.07,106.99,110.97,110.24,107.60,110.00,110.34,106.24,107.27)
+sampY<-c(108.63,114.15,109.84,111.72,110.04,109.53,110.03,104.33,109.72,104.07,109.19,110.19,112.15,110.40,108.03,108.68,108.96,110.55)
+
+# Sample information: sample quasi-variances
+qvarx<-var(sampX)
+qvary<-var(sampY)
+
+# Sample information: sample sizes
+m<-length(sampX)
+n<-length(sampY)
+
+# Data-frame containing both datasets
+thickness<-c(sampX,sampY)
+gas<-c(rep("Mixture 1",m),rep("Mixture 2",n))
+dframe<-data.frame(thickness,gas)
+
+# To analyse the sample
+library(RcmdrMisc)
+par(mfrow=c(1,2)) 
+boxplot(thickness~gas,data=dframe)
+plotMeans(dframe$thickness, dframe$gas, error.bars="se", level=0.95, connect=TRUE,ylab="Thickness",xlab="Gas")
+layout(1)
+
+# Hypothesis test
+alpha<-0.05
+f<-qvarx/qvary
+p.value<-2*pf(f,df1=m-1,df2=n-1) #Or 2*pf(f,df1=m-1,df2=n-1,lower.tail=FALSE)
+
+# To perform directly the hypothesis test
+var.test(x=sampX, y=sampY, ratio = 1, alternative = "two.sided", conf.level = 1-alpha)
+##
+
+
+## Example 12:
+
+# Sample information: number of successes
+nsucX<-10
+nsucY<-8
+nsuc<-c(nsucX,nsucY)
+
+# Sample information: sample sizes
+m<-85
+n<-85
+ssize<-c(m,n)
+
+# Sample information: sample proportions
+phatX<-nsucX/m
+phatY<-nsucY/n
+
+# Data-frame containing both datasets
+sampX<-c(rep("Yes",nsucX),rep("No",m-nsucX))
+sampY<-c(rep("Yes",nsucY),rep("No",n-nsucY))
+rougher<-c(sampX,sampY)
+process<-c(rep("Process 1",m),rep("Process 2",n))
+dframe<-data.frame(rougher,process)
+
+# To analyse the sample
+library(RcmdrMisc)
+Barplot(dframe$process, by=dframe$rougher, style="divided", legend.pos="above", xlab="process", ylab="Frequency") # It is usually easier to interpret than the following one
+Barplot(dframe$process, by=dframe$rougher, style="parallel", legend.pos="above", xlab="process", ylab="Frequency")
+
+# Hypothesis test
+alpha<-0.05
+phat<-(m*phatX+n*phatY)/(m+n)
+qhat<-1-phat
+z<-abs(phatX-phatY)/sqrt(phat*qhat*(1/m+1/n))
+p.value<-2*pnorm(z,lower.tail=FALSE)
+
+# To perform directly the hypothesis test
+prop.test(nsuc, ssize, alternative="two.sided", conf.level = 1-alpha, correct = FALSE)
+##
+
+
+
+## Example 13:
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(78,90,94,89,110,84,44)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=c("Mo","Tu","We","Th","Fr","Sa","Su"))
+
+# Expected frequencies
+expfreq<-rep(n/7,7)
+
+# Experimental value
+chisq<-sum((obsfreq-expfreq)^2/expfreq)
+
+# To perform directly the hypothesis test
+chisq.test(obsfreq, p = expfreq/n)
+
+##
+
+
+
+## Example 14:
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(32,15,9,4)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=(0:3))
+
+# MLE of lambda
+la<-sum((0:3)*obsfreq)/n
+
+# Number of parameters we estimate
+r<-1
+
+# Estimate of the expected frequencies
+estim.prob<-c(dpois(0:2,lambda=la),ppois(2,lambda=la,lower.tail=FALSE))
+expfreq<-n*estim.prob
+
+# We need to combine the last two classes
+obsfreq.n<-c(32,15,9+4)
+estim.prob.n<-c(dpois(0:1,lambda=la),ppois(1,lambda=la,lower.tail=FALSE))
+expfreq.n<-n*estim.prob.n
+
+# Experimental value
+chisq<-sum((obsfreq.n-expfreq.n)^2/expfreq.n)
+
+# P-value
+p.value<-pchisq(chisq,df=length(obsfreq.n)-1-r,lower.tail=FALSE)
+
+##
+
+
+## Example 15:
+
+# We import the dataset
+ex15<-read.table("Exercise15.csv",header=TRUE, sep=",", na.strings="NA", dec=".", strip.white=TRUE)
+
+# Two-way contingency table (observed frequencies)
+table(ex15$job,ex15$plan)
+
+# To perform directly the hypothesis test
+res<-chisq.test(x=ex15$job,y=ex15$plan)
+
+# Table of expected frequencies
+res$expected
+
+# Table of the residuals (square root of the terms of the chi-square statistic)
+res$residuals # (O_{ij}-E_{ij})/sqrt(E_{ij})
+
+##
+
+
+
+## Example 16:
+
+# We import the dataset
+ex15<-read.table("Exercise15.csv",header=TRUE, sep=",", na.strings="NA", dec=".", strip.white=TRUE)
+
+# Two-way contingency table (observed frequencies)
+table(ex15$job,ex15$plan)
+
+# To perform directly the hypothesis test
+res<-chisq.test(x=ex15$job,y=ex15$plan)
+
+# Table of expected frequencies
+res$expected
+
+# Table of the residuals (square root of the terms of the chi-square statistic)
+res$residuals # (O_{ij}-E_{ij})/sqrt(E_{ij})
+
+# To analyse the relationship 
+library(RcmdrMisc)
+Barplot(ex15$plan, by=ex15$job, style="divided", legend.pos="above", xlab="Plan", ylab="Frequency") # It is usually easier to interpret than the following one
+Barplot(ex15$plan, by=ex15$job, style="parallel", legend.pos="above", xlab="Plan", ylab="Frequency")
+
+##
+
+

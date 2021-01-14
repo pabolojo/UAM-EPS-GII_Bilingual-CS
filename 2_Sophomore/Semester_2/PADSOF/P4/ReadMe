@@ -1,0 +1,44 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!! Open from P4 not from src to avoid file path errors !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+This is the CHVOTE App, when you first execute it please signIn as the Administrator, with credentials "admin", "admin" for user and password respectivelly and click "SignIn".
+Once you have signedIn as admin, please set the threashold for the application projects.
+
+Now you are in the Admin page, that is divided in three main pages:
+
+Settings:
+	Where you can change the threshold for projects, see the current Threshold and change the date of the app and signOut.
+
+Projects:
+	In this page new user projects will be shown when users creates them, you, as an admin have to approve or reject them giving a reason why.
+	You can also see more info about those projects clicking "More Info".
+
+Users:
+	Here you have two sub panels, the "Accept Users" one, where you can accept or reject new users for your application. And the "Ban/Unban Users" sub panel, where you can see in red the banned users and in green the rest, you can Ban/Unban clicking the button.
+
+
+
+You can register new users clicking signUp on the first screen. Then you would have to wait until the Admin accepts them.
+
+
+
+When you sgnIn whit a regular user you would land on the Registered page, that is divided in three main pages, as the Admin one:
+
+Settings:
+	Where you can change yout password and signOut.
+
+Projects:
+	Here you have three sub panels, the "Projects" one, where you can see all the projects of the application or search by words among them, first the infrastructure projects are shown in orange, and the social ones after in purple. From this panel you can either see more information about a project, vote it (individual or in name of a group) and create a new project (filling the form, then you will need to wait until accepted or rejected by the Admin).
+
+	The "My Projects" sub panel hold all the projects that you have created, in orange the ones receiving votes and in green the ones that are ready to be sent to the Councill Hall, you can send them by clicking the "Send to CouncilHall" button. From this view you can also ask for popularity reports clicking the "Popularity Report" button or see more info about the selected project clicking the "More Info" button.
+
+	Finally, on the "My Supported Projects" sub panel you can see the project that you have voted, in red the ones that you have suscribed to, in green the ones that have been approved by the Council Hall and in white the rest. You can ask for popularity reports, suscribe or see more info of any project you select from the list.
+
+Groups:
+	Here you have two sub panels, the "Groups" one, where you can see, in a tree way, all the groups of the application or search by words among them. You can also create or join groups clicking its corresponding buttons.
+
+	In the "My Groups" sub panel you can see all the groups that you belong to or you have created. You can ask for affinity reports of two of them or leave any group.
+
+
+
+
+When you open the Application, it is restored from the "savefile" if any, and when you close the app it is automatically saved on the file "savefile", an auxiliary savefile ("auxsavefile") is attached to the assignment, you would have to change its name to "savefile" in order to load the information from it to the Application.

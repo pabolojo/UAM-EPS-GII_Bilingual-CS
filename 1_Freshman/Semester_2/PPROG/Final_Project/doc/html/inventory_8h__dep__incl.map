@@ -1,0 +1,13 @@
+<map id="include/inventory.h" name="include/inventory.h">
+<area shape="rect" id="node2" href="$player_8h.html" title="It defines a player. " alt="" coords="285,80,397,107"/>
+<area shape="rect" id="node12" href="$inventory_8c.html" title="It implements the inventory. " alt="" coords="422,80,529,107"/>
+<area shape="rect" id="node3" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="223,155,333,181"/>
+<area shape="rect" id="node11" href="$player_8c.html" title="It implements the player. " alt="" coords="359,155,449,181"/>
+<area shape="rect" id="node4" href="$game_8c.html" title="It implements the game interface and all the associated callbacks for each command. " alt="" coords="5,229,91,256"/>
+<area shape="rect" id="node5" href="$game__management_8h.html" title="It defines the game management interface. " alt="" coords="116,229,308,256"/>
+<area shape="rect" id="node8" href="$game__management_8c.html" title="It implements the game_reader interface. " alt="" coords="254,304,423,331"/>
+<area shape="rect" id="node9" href="$game__rules_8h.html" title="It defines the game rules interface. " alt="" coords="389,229,533,256"/>
+<area shape="rect" id="node6" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="64,304,228,331"/>
+<area shape="rect" id="node7" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="245,379,363,405"/>
+<area shape="rect" id="node10" href="$game__rules_8c.html" title="It implements the game_rules module. " alt="" coords="499,304,621,331"/>
+</map>

@@ -1,0 +1,52 @@
+#s:1|Casilla   1|-1|-1|1|-1|-1|-1| /\ * )    |(  ) __    |(  )/\ \   |You have reached the city... |It doesnt look good|1|
+#s:2|Casilla   2|1|-1|2|-1|-1|-1|^ ^  )  ^ ^|  ^ ) \   ^| ^ \()/ ^  |...streets are full of chaos.|Fire and destruction|1|
+#s:3|Casilla   3|2|-1|3|-1|-1|-1|   ___^_   |  ( o o )  |   ( - )   |You feel something behind you.|Be careful!|1|
+#s:4|Casilla   4|3|-1|4|-1|-1|-1|   \\o//   |  /// \\\  |  / \_/ \  |A giant spider! Go hide!|Think fast|1|
+#s:5|Casilla   5|4|-1|5|-1|-1|-1|)   ()   ( |) o () o ( |)   ()   ( |The door is locked|Look back!|1|
+#s:6|Casilla   6|5|-1|6|-1|-1|-1|   _____   |  ( o o )  |   ( - )   |It looks like its gone|Phew!|1|
+#s:7|Casilla   7|6|-1|7|-1|-1|-1|  _/-\_    |  (^o^)    |  -( )-    |You find an adventurer|He looks kind|1|
+#s:8|Casilla   8|7|-1|8|-1|-1|-1|  _____    | (look!)   |      \    |...he can show you something|You feel curiosity|1|
+#s:9|Casilla   9|8|-1|9|11|-1|-1|    _____  |   //:.//  |  //.://   |A secret tunnel? Go east!|Follow me!|1|
+#s:10|Casilla 10|-1|12|-1|-1|-1|-1|  _____    | (wow !)   |      \    |A hidden room!|I smell treasure|1|
+#s:11|Casilla 11|-1|9|11|-1|-1|-1| <><>><<<> | <>><>><>> | <<>>><>>> |Its dark inside, find a torch|Complete darkness|1|
+#s:12|Casilla 12|11|14|12|10|-1|-1|<---       |   CHOOSE  |       --->|The tunnel divides!|East or West?|1|
+#s:13|Casilla 13|12|-1|-1|-1|-1|-1|  _______  | /__/__/_  | _/__/__/  |Damm! A dead end|Try another way|1|
+#s:14|Casilla 14|-1|-1|14|12|-1|-1|   _____   |  ( o o )  |   ( - )   |That was tricky...|Better be careful...|1|
+#s:15|Casilla 15|14|-1|15|-1|-1|-1|  ..  / )  | //\\//    | `  ``     |A monster worm! Use something|"open worm with <object>"|1|
+#s:16|Casilla 16|15|-1|16|-1|-1|-1|   /-\__   |  (^-^)    |  -( )->   |Mechant: A coin for a letter|"open merchant with coin"|1|
+#s:17|Casilla 17|16|-1|17|-1|-1|-1|  /\   /\  | (  )_(  ) | (  ) (  ) |You arrive to the palace|...|1|
+#s:18|Casilla 18|17|-1|18|-1|-1|-1|)   ()   ( |) o () o ( |)   ()   ( |Guard: You need a signed letter|"open palace with letter"|1|
+#s:19|Casilla 19|18|-1|19|-1|-1|-1|   /   \   |   /___\   |  ()___()  |You reached the iron throne|Hurray!!|1|
+#s:20|Casilla 20|-1|-1|-1|-1|-1|-1|    ---    |    END    |    ---    |THE END|Have a nice day!|1|
+
+#l:1|Link_1|1|2|1|NULL|
+#l:2|Link_2|2|3|1|NULL|
+#l:3|Link_3|3|4|1|NULL|
+#l:4|Link_4|4|5|1|NULL|
+#l:5|door|5|6|0|key|
+#l:6|Link_6|6|7|1|NULL|
+#l:7|Link_7|7|8|1|NULL|
+#l:8|Link_8|8|9|1|NULL|
+#l:9|Link_9|9|10|0|NULL|
+#l:10|Link_10|10|11|1|NULL|
+#l:11|Link_11|11|12|1|NULL|
+#l:12|Link_12|12|13|1|NULL|
+#l:13|Link 13|13|14|1|NULL|
+#l:14|Link 14|14|15|1|NULL|
+#l:15|worm|15|16|0|venom|
+#l:16|merchant|16|17|0|coin|
+#l:17|Link 17|17|18|1|NULL|
+#l:18|palace|18|19|0|letter|
+#l:19|Link 19|19|20|1|NULL|
+#l:20|Link 20|20|21|1|NULL|
+
+#o:1|letter|17| signed letter|
+#o:2|coin|10|A gold coin|
+#o:3|key|3|A rusty key|
+#o:4|torch|9|A lit torch|
+#o:5|venom|5|A venom flask|
+#o:6|star|19|Level star|
+#o:7|sword|7|Warrior sword|
+#o:8|bow|8|Battle bow|
+#o:9|arrow|11|Long arrow|
+#o:10|bomb|13|Unstable bomb|

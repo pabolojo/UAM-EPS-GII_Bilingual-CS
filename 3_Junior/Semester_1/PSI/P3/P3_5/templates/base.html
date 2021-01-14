@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    <script src="{% static 'js/main.js' %}"></script>
+    <link rel="icon" href="{% static 'img/icon.png' %}">
+    <title>
+        EDAT - {% block title %}{% endblock %}
+    </title>
+</head>
+
+
+<body>
+    <header>
+        <a href="{% url 'core:home' %}"><button class="tablink">Home</button></a>
+        <a href="{% url 'core:login' %}"><button class="tablink">LogIn</button></a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'core:logout' %}"><button class="tablink">LogOut</button></a>
+        <a href="{% url 'core:convalidation' %}"><button class="tablink">Convalidation</button></a>
+        <a href="{% url 'core:applypair' %}"><button class="tablink">Apply Pair</button></a>
+        <a href="{% url 'core:applygroup' %}"><button class="tablink">Apply Group</button></a>
+        {% endif %}
+    </header>
+    <div>
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

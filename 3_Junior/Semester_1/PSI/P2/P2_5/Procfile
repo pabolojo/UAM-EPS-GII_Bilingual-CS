@@ -1,0 +1,1 @@
+web: gunicorn P2_5.wsgi --log-file -

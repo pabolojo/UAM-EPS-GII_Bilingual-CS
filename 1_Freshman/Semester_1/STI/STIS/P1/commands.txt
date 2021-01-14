@@ -1,0 +1,32 @@
+EXERCISE 1
+
+mkdir All
+mv all.frn.tar.gz ~/Descargas/All/
+cd All/
+tar -xzvf all.frn.tar.gz
+
+EXERCISE 2
+
+ls -S p*/*8.frn >naPnu8
+
+EXERCISE 3
+
+mkdir Na
+cp pandoravirus_dulcis_uid213019/NC_021858.frn Na/
+cat NC_021858.frn | grep ACG
+cat NC_021858.frn | grep ACG -c
+
+EXERCISE 4
+
+sed -i 's/ACG/Thr/g' NC_021858.frn
+sed -i 's/ACA/Thr/g' NC_021858.frn
+sed -i 's/ACC/Thr/g' NC_021858.frn
+sed -i 's/ACT/Thr/g' NC_021858.frn
+sed -i 's/CCT/Pro/g' NC_021858.frn
+sed -i 's/CCC/Pro/g' NC_021858.frn
+sed -i 's/CCA/Pro/g' NC_021858.frn
+sed -i 's/CCG/Pro/g' NC_021858.frn
+
+EXERCISE 5
+
+mkdir All; mv all.frn.tar.gz ~/Descargas/All/; cd All/; tar -xzvf all.frn.tar.gz; ls -S p*/*8.frn >naPnu8; mkdir Na; cp pandoravirus_dulcis_uid213019/NC_021858.frn Na/; cd Na/; cat NC_021858.frn | grep ACG; cat NC_021858.frn | grep ACG -c; sed -i 's/ACG/Thr/g' NC_021858.frn; sed -i 's/ACA/Thr/g' NC_021858.frn; sed -i 's/ACC/Thr/g' NC_021858.frn; sed -i 's/ACT/Thr/g' NC_021858.frn; sed -i 's/CCT/Pro/g' NC_021858.frn; sed -i 's/CCC/Pro/g' NC_021858.frn; sed -i 's/CCA/Pro/g' NC_021858.frn; sed -i 's/CCG/Pro/g' NC_021858.frn

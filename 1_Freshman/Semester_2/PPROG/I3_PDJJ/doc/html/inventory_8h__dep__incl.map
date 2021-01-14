@@ -1,0 +1,4 @@
+<map id="inventory.h" name="inventory.h">
+<area shape="rect" id="node2" href="$inventory_8c.html" title="It implements the inventory module,it keeps the drop objects. " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$player_8c.html" title="It defines the header of the module player. " alt="" coords="116,80,184,107"/>
+</map>

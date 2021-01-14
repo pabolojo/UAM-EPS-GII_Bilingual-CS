@@ -1,0 +1,6 @@
+set xlabel "Dictionary Size";
+set ylabel "Average Time (s)";
+set key left top;
+set title "Comparison of the Average Time between Linear Auto Search and Binary Search for different n\_times";
+plot 'LinearAutoSearch1.log' using 1:2  title "Average Time Linear Auto Search n_times=1", 'BinarySearch1.log' using 1:2 title "Average Time Binary Search n_times=1", 'LinearAutoSearch2.log' using 1:2  title "Average Time Linear Auto Search n_times=100", 'BinarySearch2.log' using 1:2 title "Average Time Binary Search n_times=100", 'LinearAutoSearch3.log' using 1:2  title "Average Time Linear Auto Search n_times=10000", 'BinarySearch3.log' using 1:2 title "Average Time Binary Search n_times=10000";
+

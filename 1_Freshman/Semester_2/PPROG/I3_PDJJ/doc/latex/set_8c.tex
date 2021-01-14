@@ -1,0 +1,238 @@
+\hypertarget{set_8c}{}\section{set.\+c File Reference}
+\label{set_8c}\index{set.\+c@{set.\+c}}
+
+
+It defines the module S\+ET.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}space.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for set.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{set_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Set}{\+\_\+\+Set}
+\begin{DoxyCompactList}\small\item\em defines the structure of set \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}{set\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em create the set in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a1f3a3f5d74c6dd9e9be0ec515fae282a}{set\+\_\+destroy} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$aux)
+\begin{DoxyCompactList}\small\item\em destroy the set in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{set_8c_a6426d210af9f56c938fba5f221ec6a80}{set\+\_\+id\+\_\+in} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$aux, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} var)
+\begin{DoxyCompactList}\small\item\em set the id in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_ab43446d7f625f4b646da3810609ef92d}{set\+\_\+id\+\_\+add} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$aux, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} new)
+\begin{DoxyCompactList}\small\item\em set the id add in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a7c68c583fc56840769f93dd8a0e24d8a}{set\+\_\+remov\+\_\+id} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$aux, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} rmv)
+\begin{DoxyCompactList}\small\item\em remove the id add in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{set_8c_a68b44d04ca0d7ba5b3e949f04dd2f8ff}{set\+\_\+get\+\_\+id} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$aux, int pos)
+\begin{DoxyCompactList}\small\item\em set the id add in the game \end{DoxyCompactList}\item 
+int \hyperlink{set_8c_a69784555363e44d97c4f6c0119bc52d8}{set\+\_\+get\+Num} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em set get number in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_afb5717fc0d782e62066cfe40960d5362}{set\+\_\+set\+\_\+id} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$aux, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id, int pos)
+\begin{DoxyCompactList}\small\item\em set the id in the game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a38ab539c50ee57aae502ee63657bcf22}{set\+\_\+print} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$aux)
+\begin{DoxyCompactList}\small\item\em prints the set \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the module S\+ET. 
+
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+21-\/02-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}\label{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}} 
+\index{set.\+c@{set.\+c}!set\+\_\+create@{set\+\_\+create}}
+\index{set\+\_\+create@{set\+\_\+create}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+create()}{set\_create()}}
+{\footnotesize\ttfamily \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}$\ast$ set\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create the set in the game 
+
+\begin{DoxyReturn}{Returns}
+set or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a1f3a3f5d74c6dd9e9be0ec515fae282a}\label{set_8c_a1f3a3f5d74c6dd9e9be0ec515fae282a}} 
+\index{set.\+c@{set.\+c}!set\+\_\+destroy@{set\+\_\+destroy}}
+\index{set\+\_\+destroy@{set\+\_\+destroy}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+destroy()}{set\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+destroy the set in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a68b44d04ca0d7ba5b3e949f04dd2f8ff}\label{set_8c_a68b44d04ca0d7ba5b3e949f04dd2f8ff}} 
+\index{set.\+c@{set.\+c}!set\+\_\+get\+\_\+id@{set\+\_\+get\+\_\+id}}
+\index{set\+\_\+get\+\_\+id@{set\+\_\+get\+\_\+id}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+get\+\_\+id()}{set\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} set\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{aux,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+set the id add in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & \\
+\hline
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a69784555363e44d97c4f6c0119bc52d8}\label{set_8c_a69784555363e44d97c4f6c0119bc52d8}} 
+\index{set.\+c@{set.\+c}!set\+\_\+get\+Num@{set\+\_\+get\+Num}}
+\index{set\+\_\+get\+Num@{set\+\_\+get\+Num}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+get\+Num()}{set\_getNum()}}
+{\footnotesize\ttfamily int set\+\_\+get\+Num (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+set get number in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of sets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_ab43446d7f625f4b646da3810609ef92d}\label{set_8c_ab43446d7f625f4b646da3810609ef92d}} 
+\index{set.\+c@{set.\+c}!set\+\_\+id\+\_\+add@{set\+\_\+id\+\_\+add}}
+\index{set\+\_\+id\+\_\+add@{set\+\_\+id\+\_\+add}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+id\+\_\+add()}{set\_id\_add()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+id\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{aux,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{new }\end{DoxyParamCaption})}
+
+
+
+set the id add in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & \\
+\hline
+{\em new} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a6426d210af9f56c938fba5f221ec6a80}\label{set_8c_a6426d210af9f56c938fba5f221ec6a80}} 
+\index{set.\+c@{set.\+c}!set\+\_\+id\+\_\+in@{set\+\_\+id\+\_\+in}}
+\index{set\+\_\+id\+\_\+in@{set\+\_\+id\+\_\+in}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+id\+\_\+in()}{set\_id\_in()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} set\+\_\+id\+\_\+in (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{aux,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{var }\end{DoxyParamCaption})}
+
+
+
+set the id in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & \\
+\hline
+{\em var} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a38ab539c50ee57aae502ee63657bcf22}\label{set_8c_a38ab539c50ee57aae502ee63657bcf22}} 
+\index{set.\+c@{set.\+c}!set\+\_\+print@{set\+\_\+print}}
+\index{set\+\_\+print@{set\+\_\+print}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+print()}{set\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+prints the set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a7c68c583fc56840769f93dd8a0e24d8a}\label{set_8c_a7c68c583fc56840769f93dd8a0e24d8a}} 
+\index{set.\+c@{set.\+c}!set\+\_\+remov\+\_\+id@{set\+\_\+remov\+\_\+id}}
+\index{set\+\_\+remov\+\_\+id@{set\+\_\+remov\+\_\+id}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+remov\+\_\+id()}{set\_remov\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+remov\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{aux,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{rmv }\end{DoxyParamCaption})}
+
+
+
+remove the id add in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & \\
+\hline
+{\em rmv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_afb5717fc0d782e62066cfe40960d5362}\label{set_8c_afb5717fc0d782e62066cfe40960d5362}} 
+\index{set.\+c@{set.\+c}!set\+\_\+set\+\_\+id@{set\+\_\+set\+\_\+id}}
+\index{set\+\_\+set\+\_\+id@{set\+\_\+set\+\_\+id}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+set\+\_\+id()}{set\_set\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+set\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{aux,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+set the id in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aux} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+

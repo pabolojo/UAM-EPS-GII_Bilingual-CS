@@ -1,0 +1,142 @@
+-- 5.2.1.1
+
+select customer.customer_id,  customer.first_name, customer.last_name, customer.create_date, address.address, city.city, address.postal_code
+from customer
+INNER JOIN address ON customer.address_id=address.address_id
+INNER JOIN city ON address.city_id=city.city_id
+where customer.first_name='Mary' or customer.last_name='Brown'
+
+
+
+-- 5.2.1.2
+
+SELECT film.film_id,
+       film.title,
+       film.release_year,
+       film.length,
+       film.description,
+       LANGUAGE.name
+FROM   film,
+       LANGUAGE
+WHERE  film.title LIKE '%%%s%%'
+       AND film.language_id = LANGUAGE.language_id;
+
+SELECT actor.first_name,
+       actor.last_name
+FROM   actor,
+       film_actor,
+       film
+WHERE  film.film_id = film_actor.film_id
+       AND film_actor.actor_id = actor.actor_id
+       AND film.film_id = %inputvalue;
+
+
+
+-- 5.2.1.3
+
+select rental.rental_id, rental.rental_date, inventory.film_id, film.title, rental.staff_id, staff.first_name, staff.store_id, payment.amount
+from rental
+inner join inventory on inventory.inventory_id=rental.inventory_id
+inner join film on film.film_id=inventory.film_id
+inner join staff on staff.staff_id=rental.staff_id
+inner join payment on payment.rental_id=rental.rental_id
+where rental.rental_date>'InputDate' and rental.rental_date<'InputDate' and payment.customer_id=InputCustomerId
+order by rental.rental_date
+
+
+
+-- 5.2.1.4
+SELECT category.category_id from customer,rental, inventory,film,film_category, category
+	where customer.customer_id= "InputId"
+	and rental.customer_id=customer.customer_id
+	AND rental.inventory_id = inventory.inventory_id
+	AND inventory.film_id = film.film_id
+	AND film.film_id = film_category.film_id
+	AND film_category.category_id = category.category_id
+	group by category.category_id,category.name
+	having count(*) in  -- take the most rented category by a user
+		(select count(*) from customer,rental, inventory,film,film_category, category
+		where customer.customer_id= "InputId"
+		and rental.customer_id=customer.customer_id
+		AND rental.inventory_id = inventory.inventory_id
+    	AND inventory.film_id = film.film_id
+    	AND film.film_id = film_category.film_id
+    	AND film_category.category_id = category.category_id
+		group by category.category_id,category.name
+		order by count(*) desc limit 1)
+
+
+
+SELECT film.film_id,film.title,category.name from customer,rental, inventory,film,film_category, category
+where rental.customer_id=customer.customer_id
+AND rental.inventory_id = inventory.inventory_id
+AND inventory.film_id = film.film_id
+AND film.film_id = film_category.film_id
+AND film_category.category_id = category.category_id
+AND category.category_id="%s"
+and film.film_id not in (select film.film_id from customer,rental,film, inventory --select films that the user hasn't watched
+						where customer.customer_id= "InputId"
+						and rental.customer_id=customer.customer_id
+						AND rental.inventory_id = inventory.inventory_id
+    					AND inventory.film_id = film.film_id )
+group by category.category_id,film.film_id, film.title
+order by count(*) desc limit 3
+
+-- 5.2.2.1
+
+select customer_id
+from customer
+where customer_id=InputCustomer_id
+
+select staff_id
+from staff
+where staff_id=InputStaffID and store_id=InputStoreId
+
+select inventory_id
+from inventory
+where film_id=1  and store_id=1 and inventory_id not in(
+select rental.inventory_id
+from rental
+inner join inventory on rental.inventory_id=inventory.inventory_id
+where film_id=1 and rental.return_date is NULL
+)
+
+INSERT INTO rental VALUES ((SELECT MAX(rental_id)+1 FROM rental), now(), %d, %ld, NULL, %ld, now())
+
+INSERT INTO payment VALUES ((SELECT MAX(payment_id)+1 FROM payment), %ld, %ld, (SELECT MAX(rental_id) FROM rental), %ld, now())
+
+-- 5.2.2.2
+
+delete from payment where rental_id=%ld
+
+delete from rental where rental_id=%ld
+
+-- 5.2.3.1
+
+SELECT film_id
+FROM   film
+WHERE  film_id = %ld
+
+DELETE FROM payment
+USING  inventory,
+       rental
+WHERE  inventory.film_id =%ld
+       AND rental.inventory_id = inventory.inventory_id
+       AND rental.rental_id = payment.rental_id
+
+DELETE FROM rental
+USING  inventory
+WHERE  inventory.film_id = %ld
+       AND rental.inventory_id = inventory.inventory_id
+
+DELETE FROM film_actor
+WHERE  film_id = %ld
+
+DELETE FROM film_category
+WHERE  film_id = %ld
+
+DELETE FROM inventory
+WHERE  film_id = %ld
+
+DELETE FROM film
+WHERE  film_id = %ld

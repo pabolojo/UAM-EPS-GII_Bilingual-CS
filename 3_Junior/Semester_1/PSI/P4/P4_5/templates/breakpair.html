@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block title %} Break Pair {% endblock%} {% block body %}
+<p>Here you can check the pairs you are part of. You can request to break this pairs, if the pair is validated you will send a request to break it, if both members of the pair request the break it will be broken. If the pair is not validated it will be broken
+    directly with your request.</p>
+
+{% if bad_data is True %}
+<p>
+    <h3><b>The data you send is incorrect, please send the correct data</b></h3>
+</p>
+{% endif %} {% if pair_delete is True %}
+<p>
+    <h3><b>Pair broken successfully</b></h3>
+</p>
+{% endif %} {% if pair_request is True %}
+<p>
+    <h3><b>Your request to delete the pair has been submitted successfully</b></h3>
+</p>
+{% endif %}
+
+<h3>Select the pair to be broken</h3>
+<form id="breakpair_form" method="post" action="{% url 'core:breakpair' %}" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <!-- Display each form -->
+    {{ breakpair_form.as_p }}
+
+    <!-- Provide a button to click to submit the form. -->
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
+{% endblock %}

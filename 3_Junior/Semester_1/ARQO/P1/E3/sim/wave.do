@@ -1,0 +1,30 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /processor_tb/i_processor/Clk
+add wave -noupdate /processor_tb/i_processor/Reset
+add wave -noupdate /processor_tb/i_processor/PC_reg
+add wave -noupdate -expand /processor_tb/i_processor/RegsMIPS/regs
+add wave -noupdate /processor_tb/i_processor/UnidadControl/RegWrite
+add wave -noupdate /processor_tb/i_processor/RegWrite_IDEX
+add wave -noupdate /processor_tb/i_processor/RegWrite_EXMEM
+add wave -noupdate /processor_tb/i_processor/RegWrite_MEMWB
+add wave -noupdate /processor_tb/i_processor/RegsMIPS/We3
+add wave -noupdate /processor_tb/i_processor/reg_RD_data
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {72 ns} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 312
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {0 ns} {280 ns}

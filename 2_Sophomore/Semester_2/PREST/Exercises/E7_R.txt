@@ -1,0 +1,353 @@
+#######################################################################
+#### SOLUTIONS EXERCISE SHEET 7 #######################################
+#######################################################################
+
+
+######### EXERCISE 1 ##################################################
+
+# Sample information
+samp<-c(168,180,170,175,171,173,169,184,176)
+xbar<-mean(samp)
+sx<-sd(samp)
+n<-length(samp)
+
+# Data for the hypothesis test
+alpha<-0.05
+mu0<-180
+sigma<-6
+
+# Hypothesis test: sigma known
+z<-(xbar-mu0)/(sigma/sqrt(n))
+p.value<-2*pnorm(abs(z),lower.tail=FALSE)
+
+# Hypothesis test: sigma unknown
+t<-(xbar-mu0)/(sx/sqrt(n))
+p.value<-2*pt(abs(t),df=n-1,lower.tail=FALSE)
+
+#######################################################################
+
+
+
+######### EXERCISE 2 ##################################################
+
+# Sample information
+samp<-c(10.1,12.5,12.2,10.2,12.8,12.1,11.2,11.4,10.7,14.9,13.9,13.3)
+xbar<-mean(samp)
+sx<-sd(samp)
+n<-length(samp)
+
+# Data for the hypothesis test
+alpha<-0.025
+mu0<-13
+
+# To perform directly the hypothesis test on the mean
+t.test(x=samp, alternative = "less", mu = mu0, paired = FALSE, conf.level = (1-alpha))
+
+v0<-1.5
+xi<-(n-1)*sx^2/v0^2
+p.value<-pchisq(xi,df=n-1)
+
+# To perform directly the hypothesis test
+#install.packages("EnvStats")
+library(EnvStats)
+varTest(x=samp, alternative = "less", conf.level = 1-alpha, sigma.squared = v0^2)
+
+#######################################################################
+
+
+
+######### EXERCISE 3 ##################################################
+
+# (a)
+
+p0<-1/2
+alpha<-0.05
+n<-200
+z<-qnorm(alpha/2,lower.tail=FALSE)
+
+p0-z*sqrt(p0*(1-p0)/n)
+p0+z*sqrt(p0*(1-p0)/n)
+
+(p0-z*sqrt(p0*(1-p0)/n))*200
+(p0+z*sqrt(p0*(1-p0)/n))*200
+
+#######################################################################
+
+
+
+######### EXERCISE 4 ##################################################
+
+sampX<-c(120,312,243,161,314,234,143,287,423,155)
+sampY<-c(130,306,255,168,310,250,158,290,440,140)
+sampD<-sampX-sampY
+
+dbar<-mean(sampD)
+qvard<-var(sampD)
+n<-length(sampD)
+
+alpha<-0.05
+t<-dbar/sqrt(qvard/n)
+
+# To perform directly the hypothesis test
+t.test(x=sampX, y=sampY, alternative = "two.sided", conf.level = 1-alpha, paired = TRUE)
+
+#######################################################################
+
+
+
+######### EXERCISE 5 ##################################################
+
+sampX<-c(84.63,84.38,84.08,84.41,83.82,83.55,83.92,83.69,84.06,84.03)
+sampY<-c(83.15,83.72,83.84,84.20,83.92,84.16,84.02,83.60,84.13,84.24)
+sampD<-sampX-sampY
+
+dbar<-mean(sampD)
+qvard<-var(sampD)
+n<-length(sampD)
+
+alpha<-0.05
+t<-dbar/sqrt(qvard/n)
+
+# To perform directly the hypothesis test
+t.test(x=sampX, y=sampY, alternative = "two.sided", conf.level = 1-alpha, paired = TRUE)
+
+#######################################################################
+
+######### EXERCISE 6 ##################################################
+
+nsucX<-60
+nsucY<-175
+nsuc<-c(nsucX,nsucY)
+
+m<-100
+n<-250
+ssize<-c(m,n)
+
+phatX<-nsucX/m
+phatY<-nsucY/n
+
+alpha<-0.05
+phat<-(m*phatX+n*phatY)/(m+n)
+qhat<-1-phat
+z<-(phatX-phatY)/sqrt(phat*qhat*(1/m+1/n))
+
+# (a)
+p.value<-2*pnorm(abs(z),lower.tail=FALSE)
+prop.test(nsuc, ssize, alternative="two.sided", conf.level = 1-alpha, correct = FALSE)
+
+# (b)
+p.value<-pnorm(z)
+prop.test(nsuc, ssize, alternative="less", conf.level = 1-alpha, correct = FALSE)
+
+#######################################################################
+
+######### EXERCISE 7 ##################################################
+
+sampX<-c(1.84,1.92,1.94,1.92,1.85,1.91,2.07)
+sampY<-c(2.81,4.06,3.62,3.27,3.27,3.76)
+
+xbar<-mean(sampX); qvarx<-var(sampX)
+ybar<-mean(sampY); qvary<-var(sampY)
+
+m<-length(sampX); n<-length(sampY)
+
+nu<-round((qvarx/m+qvary/n)^2/((qvarx/m)^2/(m-1)+(qvary/n)^2/(n-1)))
+
+t<-(xbar-ybar)/sqrt(qvarx/m+qvary/n)
+p.value<-2*pt(abs(t),df=nu,lower.tail=FALSE)
+
+t.test(x=sampX, y=sampY, alternative = "two.sided", conf.level = 1-alpha, paired = FALSE, var.equal = FALSE)
+
+#######################################################################
+
+######### EXERCISE 8 ##################################################
+
+xbar<-3.5
+qvarx<-0.5^2
+ybar<-3.2
+qvary<-1^2
+
+m<-140
+n<-100
+
+# (a) Difference on the means
+
+nu<-round((qvarx/m+qvary/n)^2/((qvarx/m)^2/(m-1)+(qvary/n)^2/(n-1)))
+t<-(xbar-ybar)/sqrt(qvarx/m+qvary/n)
+p.value<-2*pt(abs(t),df=nu,lower.tail=FALSE)
+
+# (b) Ratio of two variances
+
+alpha<-0.05
+f<-qvarx/qvary
+p.value<-pf(f,df1=m-1,df2=n-1) 
+
+#######################################################################
+
+
+######### EXERCISE 9 ##################################################
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(43,49,56,45,66,41)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=(1:6))
+
+# Expected frequencies
+expfreq<-rep(n/6,6)
+
+# Experimental value
+chisq<-sum((obsfreq-expfreq)^2/expfreq)
+
+# To perform directly the hypothesis test
+chisq.test(obsfreq, p = expfreq/n)
+
+#######################################################################
+
+
+######### EXERCISE 10 #################################################
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(30,80,140,110,60,30)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=c("A1","A2","A3","A4","A5","A6"))
+
+# Expected frequencies
+p1<-pnorm(-2)
+p2<-pnorm(-1)-pnorm(-2)
+p3<-pnorm(0)-pnorm(-1)
+p4<-pnorm(1)-pnorm(0)
+p5<-pnorm(2)-pnorm(1)
+p6<-pnorm(2,lower.tail=FALSE)
+expfreq<-round(c(p1,p2,p3,p4,p5,p6),5)*n
+
+# Experimental value
+chisq<-sum((obsfreq-expfreq)^2/expfreq)
+
+# To perform directly the hypothesis test
+chisq.test(obsfreq, p = expfreq/n)
+
+#######################################################################
+
+
+
+######### EXERCISE 11 #################################################
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(8,7,3,5,9,11,6,4,7)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=c("A1","A2","A3","A4","A5","A6","A7","A8","A9"))
+
+# Expected frequencies
+expfreq<-rep(1/9,9)*n
+
+# Experimental value
+chisq<-sum((obsfreq-expfreq)^2/expfreq)
+
+# To perform directly the hypothesis test
+chisq.test(obsfreq, p = expfreq/n)
+
+
+#######################################################################
+
+
+######### EXERCISE 12 #################################################
+
+## Part (a)
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(58,75,44,18,5)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=c("A1","A2","A3","A4","A5"))
+
+# Estimate of the Poisson parameter
+la<-sum(c(58,75,44,18,3,1,1)*(0:6))/n
+
+# Expected frequencies
+expfreq<-c(dpois(0:3,lambda=la),ppois(3,lambda=la,lower.tail=FALSE))*n
+
+# Experimental value
+chisq<-sum((obsfreq-expfreq)^2/expfreq)
+
+# P-value
+pchisq(chisq,df=3,lower.tail=FALSE)
+
+
+## Part (b)
+
+vexp<-(1.2-1.35)/sqrt(1.35/200)
+alpha<-0.05
+-qnorm(0.05,lower.tail=FALSE)
+p.value<-pnorm(vexp)
+
+#######################################################################
+
+
+######### EXERCISE 13 #################################################
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(442,514,38,6)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=c("A1","A2","A3","A4"))
+
+# Estimate of the parameter p
+q<-0.087
+p<-1-q
+
+# Expected frequencies
+expfreq<-c(p/2,p^2/2+p*q,q/2,q^2/2)*n
+
+# Experimental value
+chisq<-sum((obsfreq-expfreq)^2/expfreq)
+
+# P-value
+pchisq(chisq,df=2,lower.tail=FALSE)
+
+#######################################################################
+
+
+######### EXERCISE 14 #################################################
+
+# Sample information: observed frequencies and sample size
+obsfreq<-c(10,50,40)
+n<-sum(obsfreq)
+
+# Sample information: representation
+barplot(obsfreq, names.arg=c("L","M","N"))
+
+# Estimate of the parameter p
+p<-3/10
+
+# Expected frequencies
+expfreq<-c(p^2,(1-p)^2,2*p*(1-p))*n
+
+# Experimental value
+chisq<-sum((obsfreq-expfreq)^2/expfreq)
+
+# P-value
+pchisq(chisq,df=1,lower.tail=FALSE)
+
+#######################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+

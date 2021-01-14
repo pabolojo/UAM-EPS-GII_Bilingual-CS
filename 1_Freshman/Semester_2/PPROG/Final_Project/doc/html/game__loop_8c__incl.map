@@ -1,0 +1,16 @@
+<map id="src/game_loop.c" name="src/game_loop.c">
+<area shape="rect" id="node7" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="707,81,828,122"/>
+<area shape="rect" id="node20" href="$game__rules_8h.html" title="It defines the game rules interface. " alt="" coords="924,171,1081,197"/>
+<area shape="rect" id="node8" href="$game__management_8h.html" title="It defines the game management interface. " alt="" coords="541,171,744,197"/>
+<area shape="rect" id="node9" href="$game_8h.html" title="It defines the game interface for each command. " alt="" coords="433,245,556,272"/>
+<area shape="rect" id="node10" href="$command_8h.html" title="It implements the command interpreter. " alt="" coords="205,395,352,421"/>
+<area shape="rect" id="node12" href="$space_8h.html" title="It defines a space. " alt="" coords="429,395,555,421"/>
+<area shape="rect" id="node15" href="$player_8h.html" title="It defines a player. " alt="" coords="557,320,683,347"/>
+<area shape="rect" id="node17" href="$object_8h.html" title="It defines a object. " alt="" coords="5,395,131,421"/>
+<area shape="rect" id="node18" href="$die_8h.html" title="It implements the die interpreter. " alt="" coords="129,320,236,347"/>
+<area shape="rect" id="node19" href="$dialogue_8h.html" title="It implements the dialogue interpreter Finalidad: A) Para comando ejecutado por el usuario se acabe m..." alt="" coords="319,320,457,347"/>
+<area shape="rect" id="node11" href="$types_8h.html" title="It defines common types. " alt="" coords="396,544,519,571"/>
+<area shape="rect" id="node13" href="$set_8h.html" title="It defines a set. " alt="" coords="542,469,649,496"/>
+<area shape="rect" id="node14" href="$link_8h.html" title="It implements the link interpreter. " alt="" coords="355,469,465,496"/>
+<area shape="rect" id="node16" href="$inventory_8h.html" title="It implements the inventory interpreter. " alt="" coords="681,395,823,421"/>
+</map>

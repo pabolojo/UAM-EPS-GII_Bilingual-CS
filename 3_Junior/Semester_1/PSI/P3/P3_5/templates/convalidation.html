@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Convalidation
+{% endblock%}
+
+{% block body %}
+
+{% if conv is not None %}
+{% if conv is True %}
+<h1>Convalidation CONFIRMED, You satisfy them.</h1>
+{% else %}
+<h1>Convalidation DENIED, do not satify requirements</h1>
+{% endif %}
+{% elif pair > 0 %}
+<div>
+    <h1>Convalidation Request Page</h1>
+    You are a member of a pair, break it before applying for convalidation
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,392 @@
+\hypertarget{dialogue_8h}{\section{include/dialogue.h File Reference}
+\label{dialogue_8h}\index{include/dialogue.\+h@{include/dialogue.\+h}}
+}
+
+
+It implements the dialogue interpreter Finalidad\+: A) Para comando ejecutado por el usuario se acabe mostrando una frase indicativa de qué acción ha realizado y si esta se ha llevado a cabo con exito o no B) Tiene que identificarse si el usuario ha ejecutado de forma consecutiva un mismo comando sin exito o si ha intentado ejecutar un comando que no existe.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/command.\+h\char`\"{}}\\*
+Include dependency graph for dialogue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{dialogue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dialogue_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}{typedef struct \hyperlink{struct__Dialogue}{\+\_\+\+Dialogue} {\bfseries Dialogue}}\label{dialogue_8h_ad25e8d75177dc0ecfaaf97610765d318}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct__Dialogue}{Dialogue} $\ast$ \hyperlink{dialogue_8h_acb150833c6f301d0311c2af653a56464}{dialogue\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Funcion que crea dialogo. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_a1eff6cd1b20ce1694e41790ceb46c75d}{dialogue\+\_\+destroy} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Funcion que libera memoria. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_a8203250d2fc10ec25b44f429389a295a}{dialogue\+\_\+set\+\_\+comando} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, \hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$comando)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda la informacion del comando ejecutado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_ac1bf0055431877ddb7ce4f4c0fe86f3a}{dialogue\+\_\+set\+\_\+status} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} status\+\_\+cmd)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda el estado del comando ejecutaod. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_a953e9af508614a0a2c50d4416dab7bb0}{dialogue\+\_\+set\+\_\+object\+\_\+nomovible} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} object)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda si el objeto se puede mover o no Necesaria para el comando grasp. En el resto de casos no se usa. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_ab3cd3cf3db8e37fc1fb583958739ab77}{dialogue\+\_\+set\+\_\+check\+\_\+space} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} space)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda si se examina un espacio Necesaria para el comando check. En el resto de casos no se usa. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_ab74f0d479bdd4bbdb593406429b2914c}{dialogue\+\_\+set\+\_\+link\+\_\+cerrado} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} link)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda si el link esta cerrado Necesaria para los comandos de movimiento. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_a8126ffb359647fe3cd290c506337a567}{dialogue\+\_\+set\+\_\+link\+\_\+open} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} link)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda si el link esta abierto Necesaria para el comando open. En el resto de casos no se usa. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_abcf48fc390f92d587f0752164c64dfba}{dialogue\+\_\+set\+\_\+no\+\_\+monster} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} monster)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda si hay monstruo Necesaria para el comando atack. En el resto de casos no se usa. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_a4b51155f8dbe3bf2e72d0cb3b927df33}{dialogue\+\_\+set\+\_\+space} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, char $\ast$space)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda el nombre del espacio. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_a5c0ffccd5a9b4c2c99f245c1bde78240}{dialogue\+\_\+set\+\_\+object} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, char $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda el nombre del objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{dialogue_8h_ab8cf66f924b4a44edc24edf69806d35d}{dialogue\+\_\+set\+\_\+link\+\_\+name} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue, char $\ast$link)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda el nombre del link. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{dialogue_8h_a7f19526cd107cdb2456b770742c42c96}{dialogue\+\_\+get\+\_\+data} (\hyperlink{struct__Dialogue}{Dialogue} $\ast$dialogue)
+\begin{DoxyCompactList}\small\item\em Funcion que saca los datos del dialogo. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{dialogue_8h_ae6f2f829785871df914dae6f08f6d2f0}{dialogue\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion encargada de devolver el tamaño en memoria del dialogue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the dialogue interpreter Finalidad\+: A) Para comando ejecutado por el usuario se acabe mostrando una frase indicativa de qué acción ha realizado y si esta se ha llevado a cabo con exito o no B) Tiene que identificarse si el usuario ha ejecutado de forma consecutiva un mismo comando sin exito o si ha intentado ejecutar un comando que no existe. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+23/04/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{dialogue_8h_acb150833c6f301d0311c2af653a56464}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+create@{dialogue\+\_\+create}}
+\index{dialogue\+\_\+create@{dialogue\+\_\+create}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dialogue}$\ast$ dialogue\+\_\+create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_acb150833c6f301d0311c2af653a56464}
+
+
+Funcion que crea dialogo. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+dialogo creado 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_a1eff6cd1b20ce1694e41790ceb46c75d}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+destroy@{dialogue\+\_\+destroy}}
+\index{dialogue\+\_\+destroy@{dialogue\+\_\+destroy}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_a1eff6cd1b20ce1694e41790ceb46c75d}
+
+
+Funcion que libera memoria. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Datos} & a liberar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K O E\+R\+R\+O\+R si se libera bien o no 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_a7f19526cd107cdb2456b770742c42c96}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+get\+\_\+data@{dialogue\+\_\+get\+\_\+data}}
+\index{dialogue\+\_\+get\+\_\+data@{dialogue\+\_\+get\+\_\+data}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+get\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ dialogue\+\_\+get\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_a7f19526cd107cdb2456b770742c42c96}
+
+
+Funcion que saca los datos del dialogo. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & estructura \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cadena con la frase a mostrar por pantalla 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_ae6f2f829785871df914dae6f08f6d2f0}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+get\+\_\+size@{dialogue\+\_\+get\+\_\+size}}
+\index{dialogue\+\_\+get\+\_\+size@{dialogue\+\_\+get\+\_\+size}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t dialogue\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_ae6f2f829785871df914dae6f08f6d2f0}
+
+
+Funcion encargada de devolver el tamaño en memoria del dialogue. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño del dialogue 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_ab3cd3cf3db8e37fc1fb583958739ab77}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+check\+\_\+space@{dialogue\+\_\+set\+\_\+check\+\_\+space}}
+\index{dialogue\+\_\+set\+\_\+check\+\_\+space@{dialogue\+\_\+set\+\_\+check\+\_\+space}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+check\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+check\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{{\bf B\+O\+O\+L}}]{space}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_ab3cd3cf3db8e37fc1fb583958739ab77}
+
+
+Funcion que guarda si se examina un espacio Necesaria para el comando check. En el resto de casos no se usa. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_a8203250d2fc10ec25b44f429389a295a}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+comando@{dialogue\+\_\+set\+\_\+comando}}
+\index{dialogue\+\_\+set\+\_\+comando@{dialogue\+\_\+set\+\_\+comando}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+comando}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+comando (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{{\bf Command} $\ast$}]{comando}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_a8203250d2fc10ec25b44f429389a295a}
+
+
+Funcion que guarda la informacion del comando ejecutado. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+{\em comando} & ejecutado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_ab74f0d479bdd4bbdb593406429b2914c}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+link\+\_\+cerrado@{dialogue\+\_\+set\+\_\+link\+\_\+cerrado}}
+\index{dialogue\+\_\+set\+\_\+link\+\_\+cerrado@{dialogue\+\_\+set\+\_\+link\+\_\+cerrado}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+link\+\_\+cerrado}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+link\+\_\+cerrado (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{{\bf B\+O\+O\+L}}]{link}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_ab74f0d479bdd4bbdb593406429b2914c}
+
+
+Funcion que guarda si el link esta cerrado Necesaria para los comandos de movimiento. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_ab8cf66f924b4a44edc24edf69806d35d}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+link\+\_\+name@{dialogue\+\_\+set\+\_\+link\+\_\+name}}
+\index{dialogue\+\_\+set\+\_\+link\+\_\+name@{dialogue\+\_\+set\+\_\+link\+\_\+name}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+link\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+link\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{char $\ast$}]{link}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_ab8cf66f924b4a44edc24edf69806d35d}
+
+
+Funcion que guarda el nombre del link. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_a8126ffb359647fe3cd290c506337a567}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+link\+\_\+open@{dialogue\+\_\+set\+\_\+link\+\_\+open}}
+\index{dialogue\+\_\+set\+\_\+link\+\_\+open@{dialogue\+\_\+set\+\_\+link\+\_\+open}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+link\+\_\+open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+link\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{{\bf B\+O\+O\+L}}]{link}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_a8126ffb359647fe3cd290c506337a567}
+
+
+Funcion que guarda si el link esta abierto Necesaria para el comando open. En el resto de casos no se usa. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_abcf48fc390f92d587f0752164c64dfba}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+no\+\_\+monster@{dialogue\+\_\+set\+\_\+no\+\_\+monster}}
+\index{dialogue\+\_\+set\+\_\+no\+\_\+monster@{dialogue\+\_\+set\+\_\+no\+\_\+monster}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+no\+\_\+monster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+no\+\_\+monster (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{{\bf B\+O\+O\+L}}]{monster}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_abcf48fc390f92d587f0752164c64dfba}
+
+
+Funcion que guarda si hay monstruo Necesaria para el comando atack. En el resto de casos no se usa. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_a5c0ffccd5a9b4c2c99f245c1bde78240}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+object@{dialogue\+\_\+set\+\_\+object}}
+\index{dialogue\+\_\+set\+\_\+object@{dialogue\+\_\+set\+\_\+object}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{char $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_a5c0ffccd5a9b4c2c99f245c1bde78240}
+
+
+Funcion que guarda el nombre del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_a953e9af508614a0a2c50d4416dab7bb0}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+object\+\_\+nomovible@{dialogue\+\_\+set\+\_\+object\+\_\+nomovible}}
+\index{dialogue\+\_\+set\+\_\+object\+\_\+nomovible@{dialogue\+\_\+set\+\_\+object\+\_\+nomovible}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+object\+\_\+nomovible}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+object\+\_\+nomovible (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{{\bf B\+O\+O\+L}}]{object}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_a953e9af508614a0a2c50d4416dab7bb0}
+
+
+Funcion que guarda si el objeto se puede mover o no Necesaria para el comando grasp. En el resto de casos no se usa. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_a4b51155f8dbe3bf2e72d0cb3b927df33}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+space@{dialogue\+\_\+set\+\_\+space}}
+\index{dialogue\+\_\+set\+\_\+space@{dialogue\+\_\+set\+\_\+space}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+space (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{char $\ast$}]{space}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_a4b51155f8dbe3bf2e72d0cb3b927df33}
+
+
+Funcion que guarda el nombre del espacio. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{dialogue_8h_ac1bf0055431877ddb7ce4f4c0fe86f3a}{\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+set\+\_\+status@{dialogue\+\_\+set\+\_\+status}}
+\index{dialogue\+\_\+set\+\_\+status@{dialogue\+\_\+set\+\_\+status}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection[{dialogue\+\_\+set\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} dialogue\+\_\+set\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{{\bf Dialogue} $\ast$}]{dialogue, }
+\item[{{\bf S\+T\+A\+T\+U\+S}}]{status\+\_\+cmd}
+\end{DoxyParamCaption}
+)}}\label{dialogue_8h_ac1bf0055431877ddb7ce4f4c0fe86f3a}
+
+
+Funcion que guarda el estado del comando ejecutaod. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em dialogue} & dialogo \\
+\hline
+{\em status\+\_\+cmd} & indica si el comando se ha realizado correctamente o no \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}

@@ -1,0 +1,13 @@
+- Normativa de entrega cumplida en su totalidad: Realizado: Hemos realizado varias lecturas del enunciado.
+- Contar paquetes de una traza: Realizado: Hemos comprobado que el número de paquetes que muestra nuestro programa coincide con el número de paquetes que muestra Wireshark.
+  Para ello hemos ejecutado nuestro programa para que nos guardase la traza y esta misma la hemos abierto con Wireshark para comprobarlo.
+- Contar paquetes de la interfaz de red: Realizado: Ya que el programa tiene un único flujo independientemente de por donde lleguen los paquetes al cumplirse el de la traza, 
+  se cumple el de la interfaz.
+- Almacenar en una traza el tráfico capturado en vivo: Realizado: Hemos comprobado que todos los bytes de la traza capturada coincide con lo que indica Wireshark en un conjunto
+  diverso de paquetes. Esto se puede comprobar con la captura "practica1captura.png" que entregamos.
+- Modificar fecha correctamente: Realizado: En la función auxiliar "procesa_paquete" modificamos los datos de "ts.tv_sec" del "header" y le sumamos la macro "TIME_OFFSET" correspondiente a
+  30 minutos. También se comprueba que esto se realice siempre que el paquete provenga de una interfaz.
+- Imprimir los N primeros bytes de un paquete y validarlo con Wireshark (captura depantalla): Realizado: Hemos comprobado que se imprimen correctamente los bytes, probando con diferentes
+  longitudes y esto se puede comprobar en la captura adjunta "practica1captura.png".
+- Cuestionario "Ejercicios de captura de tráfico": Realizado: Hemos realizado los cinco ejercicios tras haber leído el tutorial, y adjuntamos el archivo "practica1.pcap" correspondiente
+  al primer ejercicio, ya que el resto son modificaciones de los filtros de captura.

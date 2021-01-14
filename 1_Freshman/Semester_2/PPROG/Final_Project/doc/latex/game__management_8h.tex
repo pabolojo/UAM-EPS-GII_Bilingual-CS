@@ -1,0 +1,137 @@
+\hypertarget{game__management_8h}{\section{include/game\+\_\+management.h File Reference}
+\label{game__management_8h}\index{include/game\+\_\+management.\+h@{include/game\+\_\+management.\+h}}
+}
+
+
+It defines the game management interface.  
+
+
+{\ttfamily \#include \char`\"{}../include/game.\+h\char`\"{}}\\*
+Include dependency graph for game\+\_\+management.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__management_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{game__management_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$ \hyperlink{game__management_8h_aa8743dec35f2ea99a09caf2f3ba6e171}{game\+\_\+management\+\_\+game\+\_\+create\+\_\+from\+\_\+file} (char $\ast$filename)
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{game__management_8h_a286668ae828305f082569c1cd2cbbbb2}{game\+\_\+management\+\_\+game\+\_\+load} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{game__management_8h_aa8c1688b52d1433de45138a9e44856fb}{game\+\_\+management\+\_\+save} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\item 
+\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$ \hyperlink{game__management_8h_a5ac20ddebbd7a1aefdb55ec44a0c938e}{game\+\_\+management\+\_\+load} (char $\ast$filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines the game management interface. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02/05/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{game__management_8h_aa8743dec35f2ea99a09caf2f3ba6e171}{\index{game\+\_\+management.\+h@{game\+\_\+management.\+h}!game\+\_\+management\+\_\+game\+\_\+create\+\_\+from\+\_\+file@{game\+\_\+management\+\_\+game\+\_\+create\+\_\+from\+\_\+file}}
+\index{game\+\_\+management\+\_\+game\+\_\+create\+\_\+from\+\_\+file@{game\+\_\+management\+\_\+game\+\_\+create\+\_\+from\+\_\+file}!game\+\_\+management.\+h@{game\+\_\+management.\+h}}
+\subsubsection[{game\+\_\+management\+\_\+game\+\_\+create\+\_\+from\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ game\+\_\+management\+\_\+game\+\_\+create\+\_\+from\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8h_aa8743dec35f2ea99a09caf2f3ba6e171}
+Funcion que crea el juego, cargando la informacion necesaria desde un archivo
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & nombre del fichero a leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+juego creado 
+\end{DoxyReturn}
+\hypertarget{game__management_8h_a286668ae828305f082569c1cd2cbbbb2}{\index{game\+\_\+management.\+h@{game\+\_\+management.\+h}!game\+\_\+management\+\_\+game\+\_\+load@{game\+\_\+management\+\_\+game\+\_\+load}}
+\index{game\+\_\+management\+\_\+game\+\_\+load@{game\+\_\+management\+\_\+game\+\_\+load}!game\+\_\+management.\+h@{game\+\_\+management.\+h}}
+\subsubsection[{game\+\_\+management\+\_\+game\+\_\+load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} game\+\_\+management\+\_\+game\+\_\+load (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8h_a286668ae828305f082569c1cd2cbbbb2}
+Funcion que carga los espacios y objetos segun el fichero
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & juego \\
+\hline
+{\em filename} & nombre del fichero a leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{game__management_8h_a5ac20ddebbd7a1aefdb55ec44a0c938e}{\index{game\+\_\+management.\+h@{game\+\_\+management.\+h}!game\+\_\+management\+\_\+load@{game\+\_\+management\+\_\+load}}
+\index{game\+\_\+management\+\_\+load@{game\+\_\+management\+\_\+load}!game\+\_\+management.\+h@{game\+\_\+management.\+h}}
+\subsubsection[{game\+\_\+management\+\_\+load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game}$\ast$ game\+\_\+management\+\_\+load (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8h_a5ac20ddebbd7a1aefdb55ec44a0c938e}
+Funcion que carga el game Esta funcion carga el estado actual del juego desde un fichero de datos
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{game__management_8h_aa8c1688b52d1433de45138a9e44856fb}{\index{game\+\_\+management.\+h@{game\+\_\+management.\+h}!game\+\_\+management\+\_\+save@{game\+\_\+management\+\_\+save}}
+\index{game\+\_\+management\+\_\+save@{game\+\_\+management\+\_\+save}!game\+\_\+management.\+h@{game\+\_\+management.\+h}}
+\subsubsection[{game\+\_\+management\+\_\+save}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} game\+\_\+management\+\_\+save (
+\begin{DoxyParamCaption}
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{game__management_8h_aa8c1688b52d1433de45138a9e44856fb}
+Funcion que guarda el game Esta funcion guarda el estado actual del juego en un fichero de datos para despues poder cargarlo
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & juego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}

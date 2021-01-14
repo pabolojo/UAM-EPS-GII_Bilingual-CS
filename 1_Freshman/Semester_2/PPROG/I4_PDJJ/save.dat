@@ -1,0 +1,62 @@
+#s:1|Casilla 1|-1|-1|1|-1|-1|-1|- - - - - -|   START   |- - - - - -|START|Long description here 1|1|
+#s:2|Casilla 2|1|-1|2|-1|-1|-1|           |           |           |Space 2|Long description here 2|1|
+#s:3|Casilla 3|2|-1|3|-1|-1|-1|           |           |           |Space 3|Long description here 3|1|
+#s:4|Casilla 4|3|-1|4|-1|-1|-1|           |           |           |Space 4|Long description here 4|1|
+#s:5|Casilla 5 (Goose)|4|-1|5|25|-1|-1|           | <O)__/    |  \_-/     |Open Link_5 with +|Long description here 5|1|
+#s:6|Casilla 6|5|-1|6|-1|-1|-1|           |           |           |Space 6|Long description here 6|1|
+#s:7|Casilla 7|6|-1|7|-1|-1|-1|           |           |           |Space 7|Long description here 7|1|
+#s:8|Casilla 8 (Bridge)|7|-1|8|30|-1|-1|   ___     |  / _ \    | / / \ \   |Bridge|Long description here 8|1|
+#s:9|Casilla 9 (Goose)|8|-1|9|26|-1|-1|           | <-)__/    |  \_-/     |Goose|Long description here 9|1|
+#s:10|Casilla 10|9|-1|10|-1|-1|-1|           |           |           |Space 10|Long description here 10|1|
+#s:11|Casilla 11|10|-1|11|-1|-1|-1|           |           |           |Space 11|Long description here 11|1|
+#s:12|Casilla 12|11|-1|12|-1|-1|-1|           |           |           |Space 12|Long description here 12|1|
+#s:13|Casilla 13 (Goose)|12|-1|13|27|-1|-1|           | <+)__/    |  \_-/     |Goose|Long description here 13|1|
+#s:14|Casilla 14|13|-1|14|-1|-1|-1|           |           |           |Space 14|Long description here 14|1|
+#s:15|Casilla 15|14|-1|15|-1|-1|-1|           |           |           |Space 15|Long description here 15|1|
+#s:16|Casilla 16 (Bridge)|15|30|16|-1|-1|-1|   ___     |  / _ \    | / / \ \   |Bridge|Long description here 16|1|
+#s:17|Casilla 17 (Goose)|16|-1|17|28|-1|-1|           | <O)__/    |  \_-/     |Goose|Long description here 17|1|
+#s:18|Casilla 18|17|-1|18|-1|-1|-1|           |           |           |Space 18|Long description here 18|1|
+#s:19|Casilla 19|18|-1|19|-1|-1|-1|           |           |           |Space 19|Long description here 19|1|
+#s:20|Casilla 20|19|-1|20|-1|-1|-1|           |           |           |Space 20|Long description here 20|1|
+#s:21|Casilla 21 (Goose)|20|-1|21|29|-1|-1|           | <O)__/    |  \_-/     |Goose|Long description here 21|1|
+#s:22|Casilla 22|21|31|22|31|-1|-1|    ___    |   (O O)   |    \m/    |DEAD|Long description here 22|1|
+#s:23|Casilla 23|22|-1|23|-1|-1|-1|           |           |           |Space 23|Long description here 23|1|
+#s:24|Casilla 24|23|-1|24|-1|-1|-1|           |           |           |Space 24|Long description here 24|1|
+#s:25|Casilla 25|24|-1|-1|-1|-1|-1|- - - - - -|  FINISH!  |- - - - - -|END|Long description here 25|1|
+
+#l:1|Link_1|1|2|1|NULL|
+#l:2|Link_2|2|3|1|NULL|
+#l:3|Link_3|3|4|1|NULL|
+#l:4|Link_4|4|5|1|NULL|
+#l:5|Link_5|5|6|1|+|
+#l:6|Link_6|6|7|1|NULL|
+#l:7|Link_7|7|8|1|NULL|
+#l:8|Link_8|8|9|1|NULL|
+#l:9|Link_9|9|10|1|NULL|
+#l:10|Link_10|10|11|1|NULL|
+#l:11|Link_11|11|12|1|NULL|
+#l:12|Link_12|12|13|1|NULL|
+#l:13|Link 13|13|14|1|NULL|
+#l:14|Link 14|14|15|1|NULL|
+#l:15|Link 15|15|16|1|NULL|
+#l:16|Link 16|16|17|1|NULL|
+#l:17|Link 17|17|18|1|NULL|
+#l:18|Link 18|18|19|1|NULL|
+#l:19|Link 19|19|20|1|NULL|
+#l:20|Link 20|20|21|1|NULL|
+#l:21|Link 21|21|22|1|NULL|
+#l:22|Link 22|22|23|1|NULL|
+#l:23|Link 23|23|24|1|NULL|
+#l:24|Link 24|24|25|1|NULL|
+#l:25|Link 25|5|9|1|NULL|
+#l:26|Link 26|9|13|1|NULL|
+#l:27|Link 27|13|17|1|NULL|
+#l:28|Link 28|17|21|1|NULL|
+#l:29|Link 29|21|25|1|NULL|
+#l:30|Link 30|8|16|1|NULL|
+#l:31|link 31|22|1|1|NULL|
+
+#o:1|o|2|The orb of darkness|
+#o:2|*|1|A sharp shuriken|
+#o:3|x|4|The treasure x|
+#o:4|+|6|A rusty compass|

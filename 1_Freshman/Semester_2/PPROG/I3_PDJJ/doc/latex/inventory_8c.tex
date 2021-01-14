@@ -1,0 +1,277 @@
+\hypertarget{inventory_8c}{}\section{inventory.\+c File Reference}
+\label{inventory_8c}\index{inventory.\+c@{inventory.\+c}}
+
+
+It implements the inventory module,it keeps the drop objects.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inventory.\+h\char`\"{}}\newline
+Include dependency graph for inventory.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inventory_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Bag}{\+\_\+\+Bag}
+\begin{DoxyCompactList}\small\item\em defines structure of bag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$ \hyperlink{inventory_8c_a7a7a920b704bd2432f665ac0268be447}{bag\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em create a bag \end{DoxyCompactList}\item 
+void \hyperlink{inventory_8c_aada9a87f8de0d01f6b896dcc2e2bac43}{bag\+\_\+destroy} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em destroy bag \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8c_adb716c6c8c93013fee634bad8ad8837f}{bag\+\_\+add\+Obj} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} obj)
+\begin{DoxyCompactList}\small\item\em add an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8c_aaa55527dd33257b50abe049ca1c4cab7}{bag\+\_\+remove\+Obj} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em remove an object \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{inventory_8c_a025c9a4d21c3e5ad3d1beb3ffcb0c61a}{bag\+\_\+check\+Obj} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag, int pos)
+\begin{DoxyCompactList}\small\item\em checks objects \end{DoxyCompactList}\item 
+int \hyperlink{inventory_8c_aa9cd4c1707e337436c5c47de3243f4bd}{bag\+\_\+num\+Obj} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em G\+ET T\+HE N\+U\+M\+B\+ER OF A\+L\+L\+O\+C\+A\+T\+ED O\+B\+J\+E\+CT. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8c_a0bdd587bf81c5aaabbd1b2e474f078fb}{bag\+\_\+set\+Max\+Obj} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag, int max\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em set max objects in game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{inventory_8c_a7c53a93839697e3f40a5e5105b195bf2}{bag\+\_\+get\+Object} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag, int position)
+\begin{DoxyCompactList}\small\item\em get objcet bag in game \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8c_a996300fd5ac9e16d1f72cf7c6895fa2b}{bag\+\_\+set\+Object} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id, int position)
+\begin{DoxyCompactList}\small\item\em set id psoition of bag in game \end{DoxyCompactList}\item 
+int \hyperlink{inventory_8c_a776ffdc273b024c5d02355d4ee1d13e3}{bag\+\_\+get\+Max\+Obj} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em G\+ET M\+AX O\+B\+J\+E\+CT. \end{DoxyCompactList}\item 
+void \hyperlink{inventory_8c_a640f8257f45259075f0fe5fbdfca2dd6}{bag\+\_\+print} (\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em prints the bag in the game \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the inventory module,it keeps the drop objects. 
+
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28-\/03-\/2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+G\+NU Public License 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{inventory_8c_adb716c6c8c93013fee634bad8ad8837f}\label{inventory_8c_adb716c6c8c93013fee634bad8ad8837f}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+add\+Obj@{bag\+\_\+add\+Obj}}
+\index{bag\+\_\+add\+Obj@{bag\+\_\+add\+Obj}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+add\+Obj()}{bag\_addObj()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} bag\+\_\+add\+Obj (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{obj }\end{DoxyParamCaption})}
+
+
+
+add an object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_a025c9a4d21c3e5ad3d1beb3ffcb0c61a}\label{inventory_8c_a025c9a4d21c3e5ad3d1beb3ffcb0c61a}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+check\+Obj@{bag\+\_\+check\+Obj}}
+\index{bag\+\_\+check\+Obj@{bag\+\_\+check\+Obj}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+check\+Obj()}{bag\_checkObj()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} bag\+\_\+check\+Obj (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+checks objects 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE or F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_a7a7a920b704bd2432f665ac0268be447}\label{inventory_8c_a7a7a920b704bd2432f665ac0268be447}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+create@{bag\+\_\+create}}
+\index{bag\+\_\+create@{bag\+\_\+create}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+create()}{bag\_create()}}
+{\footnotesize\ttfamily \hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag}$\ast$ bag\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create a bag 
+
+\begin{DoxyReturn}{Returns}
+bag, in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_aada9a87f8de0d01f6b896dcc2e2bac43}\label{inventory_8c_aada9a87f8de0d01f6b896dcc2e2bac43}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+destroy@{bag\+\_\+destroy}}
+\index{bag\+\_\+destroy@{bag\+\_\+destroy}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+destroy()}{bag\_destroy()}}
+{\footnotesize\ttfamily void bag\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+destroy bag 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bag, in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_a776ffdc273b024c5d02355d4ee1d13e3}\label{inventory_8c_a776ffdc273b024c5d02355d4ee1d13e3}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+get\+Max\+Obj@{bag\+\_\+get\+Max\+Obj}}
+\index{bag\+\_\+get\+Max\+Obj@{bag\+\_\+get\+Max\+Obj}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+get\+Max\+Obj()}{bag\_getMaxObj()}}
+{\footnotesize\ttfamily int bag\+\_\+get\+Max\+Obj (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+G\+ET M\+AX O\+B\+J\+E\+CT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+M\+B\+ER OF M\+AX O\+B\+J\+E\+CT or -\/1 in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_a7c53a93839697e3f40a5e5105b195bf2}\label{inventory_8c_a7c53a93839697e3f40a5e5105b195bf2}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+get\+Object@{bag\+\_\+get\+Object}}
+\index{bag\+\_\+get\+Object@{bag\+\_\+get\+Object}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+get\+Object()}{bag\_getObject()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} bag\+\_\+get\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+get objcet bag in game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bah or in case of error N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_aa9cd4c1707e337436c5c47de3243f4bd}\label{inventory_8c_aa9cd4c1707e337436c5c47de3243f4bd}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+num\+Obj@{bag\+\_\+num\+Obj}}
+\index{bag\+\_\+num\+Obj@{bag\+\_\+num\+Obj}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+num\+Obj()}{bag\_numObj()}}
+{\footnotesize\ttfamily int bag\+\_\+num\+Obj (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+G\+ET T\+HE N\+U\+M\+B\+ER OF A\+L\+L\+O\+C\+A\+T\+ED O\+B\+J\+E\+CT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+M\+B\+ER OF A\+L\+L\+O\+C\+A\+T\+ED O\+B\+J\+E\+CT or -\/1 in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_a640f8257f45259075f0fe5fbdfca2dd6}\label{inventory_8c_a640f8257f45259075f0fe5fbdfca2dd6}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+print@{bag\+\_\+print}}
+\index{bag\+\_\+print@{bag\+\_\+print}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+print()}{bag\_print()}}
+{\footnotesize\ttfamily void bag\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+prints the bag in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_aaa55527dd33257b50abe049ca1c4cab7}\label{inventory_8c_aaa55527dd33257b50abe049ca1c4cab7}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+remove\+Obj@{bag\+\_\+remove\+Obj}}
+\index{bag\+\_\+remove\+Obj@{bag\+\_\+remove\+Obj}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+remove\+Obj()}{bag\_removeObj()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} bag\+\_\+remove\+Obj (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+remove an object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_a0bdd587bf81c5aaabbd1b2e474f078fb}\label{inventory_8c_a0bdd587bf81c5aaabbd1b2e474f078fb}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+set\+Max\+Obj@{bag\+\_\+set\+Max\+Obj}}
+\index{bag\+\_\+set\+Max\+Obj@{bag\+\_\+set\+Max\+Obj}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+set\+Max\+Obj()}{bag\_setMaxObj()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} bag\+\_\+set\+Max\+Obj (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag,  }\item[{int}]{max\+\_\+obj }\end{DoxyParamCaption})}
+
+
+
+set max objects in game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+{\em max\+\_\+obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8c_a996300fd5ac9e16d1f72cf7c6895fa2b}\label{inventory_8c_a996300fd5ac9e16d1f72cf7c6895fa2b}} 
+\index{inventory.\+c@{inventory.\+c}!bag\+\_\+set\+Object@{bag\+\_\+set\+Object}}
+\index{bag\+\_\+set\+Object@{bag\+\_\+set\+Object}!inventory.\+c@{inventory.\+c}}
+\subsubsection{\texorpdfstring{bag\+\_\+set\+Object()}{bag\_setObject()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} bag\+\_\+set\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a96eaad8b37d9b6e19ddc373ec38c751e}{Bag} $\ast$}]{bag,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id,  }\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+set id psoition of bag in game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & \\
+\hline
+{\em id} & \\
+\hline
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+

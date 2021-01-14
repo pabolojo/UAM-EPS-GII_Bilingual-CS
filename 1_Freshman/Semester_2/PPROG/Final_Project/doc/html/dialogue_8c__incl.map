@@ -1,0 +1,5 @@
+<map id="src/dialogue.c" name="src/dialogue.c">
+<area shape="rect" id="node7" href="$dialogue_8h.html" title="It implements the dialogue interpreter Finalidad: A) Para comando ejecutado por el usuario se acabe m..." alt="" coords="448,80,587,107"/>
+<area shape="rect" id="node8" href="$types_8h.html" title="It defines common types. " alt="" coords="455,229,577,256"/>
+<area shape="rect" id="node9" href="$command_8h.html" title="It implements the command interpreter. " alt="" coords="499,155,645,181"/>
+</map>

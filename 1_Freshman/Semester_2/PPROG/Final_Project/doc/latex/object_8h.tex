@@ -1,0 +1,660 @@
+\hypertarget{object_8h}{\section{include/object.h File Reference}
+\label{object_8h}\index{include/object.\+h@{include/object.\+h}}
+}
+
+
+It defines a object.  
+
+
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\\*
+Include dependency graph for object.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{object_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{object_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{object_8h_acdc7844fbd4d45737d4aa56834d37829}{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+S}~100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{typedef struct \hyperlink{struct__Object}{\+\_\+\+Object} \hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object}}\label{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}
+
+\begin{DoxyCompactList}\small\item\em Estructura del objeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$ \hyperlink{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}{object\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de reservar memoria para un objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_a19d6d51fee809e3801893eefc789f4b4}{object\+\_\+destroy} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de liberar la memoria reservada para el objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_ac15dc062c857503ec0ca66037caffd80}{object\+\_\+set\+\_\+name} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar el nombre de un objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_a352bd939c515fd5e3baee189ddaa606a}{object\+\_\+set\+\_\+description} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar la descripción del objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_a279df1e8d8473c787bfce7072a6a6f2a}{object\+\_\+set\+\_\+des\+\_\+movido} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar la descripción del objeto cuando ha sido movido. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_ae95a1ce5479928e05d85f6b5fa2871c0}{object\+\_\+set\+\_\+pos\+\_\+inicial} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space)
+\begin{DoxyCompactList}\small\item\em Funcion que guarda la posicion inicial del objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{object_8h_ac5af152381a21853c6a28cc120e8e7fe}{object\+\_\+get\+\_\+id} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de decirnos el id del objeto. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{object_8h_a7954dbdd53d8b5dc259993f04bba28f8}{object\+\_\+get\+\_\+name} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de decirnos el nombre del objeto. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{object_8h_ab92f583fcb6e3000ebe48cc04c5853cd}{object\+\_\+get\+\_\+description} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de decirnos la descripción del objeto Nos devuelve una descripcion u otra en función de si ha sido o no movido respecto de su posicion original. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{object_8h_abe1f4e65fe87ea1e4c3bf4637e8273f0}{object\+\_\+get\+\_\+pos\+\_\+inicial} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion que devuelve la posicion inicial del objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}{object\+\_\+print} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos toda la informacion de un objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{object_8h_aa16dfdded78cfb67cf4b9bcd425f199a}{object\+\_\+get\+\_\+movible} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Devuelve la movilidad del objeto Es decir, indica si el objeto se va a poder mover o no de su posicion inicial. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_ab67660a09c514d65452fb4a4fa7ec493}{object\+\_\+set\+\_\+movible} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} movible)
+\begin{DoxyCompactList}\small\item\em Establece la movilidad del objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{object_8h_adf2cba90c6b63690720a094cfe8fbf19}{object\+\_\+get\+\_\+movido} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Devuelve si el objeto se ha movido. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_a577d445a84a1f60cc7c756a3e9a00e74}{object\+\_\+set\+\_\+movido} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} movido)
+\begin{DoxyCompactList}\small\item\em Establece si el objeto se ha movido. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{object_8h_a9e49f66ecc1c29e5eb83c5915814e2b4}{object\+\_\+get\+\_\+oculto} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Devuelve si el objeto esta oculto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_aa370f8431dc57329b1c561a033e198bd}{object\+\_\+set\+\_\+oculto} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} oculto)
+\begin{DoxyCompactList}\small\item\em Establece la visibilidad del objetp. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{object_8h_a49dbce205db36230c53fb0ccf0a73174}{object\+\_\+get\+\_\+open} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Devuelve el id del link que abre. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_a3afab23d0ed66591693f1ecd8a85e0df}{object\+\_\+set\+\_\+open} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} open)
+\begin{DoxyCompactList}\small\item\em Establece que abre el objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{object_8h_aba5a8583a56db5cc0f861d6e8c48c1a7}{object\+\_\+get\+\_\+iluminado} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Devuelve si el objeto esta ilumonado. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_a61d2b95e4ee9a120ebdb049a0479d8f7}{object\+\_\+set\+\_\+iluminado} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} iluminado)
+\begin{DoxyCompactList}\small\item\em Establece la iluminacion del objeto. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{object_8h_a7aa4240bb16a17e130623f6ba88e57fd}{object\+\_\+get\+\_\+encendido} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Devuelve si el objeto esta encendido. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{object_8h_a19ebfcfebe1618fbe000d5768f759557}{object\+\_\+set\+\_\+encendido} (\hyperlink{object_8h_a7f8bbcda919b65ce67f92fba08e0212f}{Object} $\ast$object, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} encendido)
+\begin{DoxyCompactList}\small\item\em Establece si el objeto esta encendido. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{object_8h_a7ee5148e5bbfa4fc0f81d94b4fea7c33}{object\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion encargada de darnos el tamaño del objeto en memoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It defines a object. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon y Miguel Rodriguez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/02-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{object_8h_acdc7844fbd4d45737d4aa56834d37829}{\index{object.\+h@{object.\+h}!M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+S@{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+S}}
+\index{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+S@{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+S}!object.\+h@{object.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+S~100}}\label{object_8h_acdc7844fbd4d45737d4aa56834d37829}
+numero maximo de objetos 
+
+\subsection{Function Documentation}
+\hypertarget{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}{\index{object.\+h@{object.\+h}!object\+\_\+create@{object\+\_\+create}}
+\index{object\+\_\+create@{object\+\_\+create}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ object\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{object_8h_abb0cd30fca5fbddf137c6c04df66bbc7}
+
+
+Funcion encargada de reservar memoria para un objeto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & id del objeto que se va a crear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+objeto que se ha creado 
+\end{DoxyReturn}
+\hypertarget{object_8h_a19d6d51fee809e3801893eefc789f4b4}{\index{object.\+h@{object.\+h}!object\+\_\+destroy@{object\+\_\+destroy}}
+\index{object\+\_\+destroy@{object\+\_\+destroy}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a19d6d51fee809e3801893eefc789f4b4}
+
+
+Funcion encargada de liberar la memoria reservada para el objeto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objecto que se va a liberar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha liberado la memoria correctamente y E\+R\+R\+O\+R en caso de error 
+\end{DoxyReturn}
+\hypertarget{object_8h_ab92f583fcb6e3000ebe48cc04c5853cd}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+description@{object\+\_\+get\+\_\+description}}
+\index{object\+\_\+get\+\_\+description@{object\+\_\+get\+\_\+description}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ object\+\_\+get\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_ab92f583fcb6e3000ebe48cc04c5853cd}
+
+
+Funcion encargada de decirnos la descripción del objeto Nos devuelve una descripcion u otra en función de si ha sido o no movido respecto de su posicion original. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto del que se quiere saber la descripción \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+descripcion del objeto 
+\end{DoxyReturn}
+\hypertarget{object_8h_a7aa4240bb16a17e130623f6ba88e57fd}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+encendido@{object\+\_\+get\+\_\+encendido}}
+\index{object\+\_\+get\+\_\+encendido@{object\+\_\+get\+\_\+encendido}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+encendido}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} object\+\_\+get\+\_\+encendido (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a7aa4240bb16a17e130623f6ba88e57fd}
+
+
+Devuelve si el objeto esta encendido. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un booleano (B\+O\+O\+L)\+: si esta encendido 
+\end{DoxyReturn}
+\hypertarget{object_8h_ac5af152381a21853c6a28cc120e8e7fe}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+id@{object\+\_\+get\+\_\+id}}
+\index{object\+\_\+get\+\_\+id@{object\+\_\+get\+\_\+id}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} object\+\_\+get\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_ac5af152381a21853c6a28cc120e8e7fe}
+
+
+Funcion encargada de decirnos el id del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto del que se quiere saber el id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id del objeto 
+\end{DoxyReturn}
+\hypertarget{object_8h_aba5a8583a56db5cc0f861d6e8c48c1a7}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+iluminado@{object\+\_\+get\+\_\+iluminado}}
+\index{object\+\_\+get\+\_\+iluminado@{object\+\_\+get\+\_\+iluminado}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+iluminado}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} object\+\_\+get\+\_\+iluminado (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_aba5a8583a56db5cc0f861d6e8c48c1a7}
+
+
+Devuelve si el objeto esta ilumonado. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un booleano (B\+O\+O\+L)\+: si esta iluminado 
+\end{DoxyReturn}
+\hypertarget{object_8h_aa16dfdded78cfb67cf4b9bcd425f199a}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+movible@{object\+\_\+get\+\_\+movible}}
+\index{object\+\_\+get\+\_\+movible@{object\+\_\+get\+\_\+movible}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+movible}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} object\+\_\+get\+\_\+movible (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_aa16dfdded78cfb67cf4b9bcd425f199a}
+
+
+Devuelve la movilidad del objeto Es decir, indica si el objeto se va a poder mover o no de su posicion inicial. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un booleano (B\+O\+O\+L)\+: la movilidad 
+\end{DoxyReturn}
+\hypertarget{object_8h_adf2cba90c6b63690720a094cfe8fbf19}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+movido@{object\+\_\+get\+\_\+movido}}
+\index{object\+\_\+get\+\_\+movido@{object\+\_\+get\+\_\+movido}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+movido}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} object\+\_\+get\+\_\+movido (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_adf2cba90c6b63690720a094cfe8fbf19}
+
+
+Devuelve si el objeto se ha movido. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un booleano (B\+O\+O\+L)\+: si se ha movido 
+\end{DoxyReturn}
+\hypertarget{object_8h_a7954dbdd53d8b5dc259993f04bba28f8}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+name@{object\+\_\+get\+\_\+name}}
+\index{object\+\_\+get\+\_\+name@{object\+\_\+get\+\_\+name}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ object\+\_\+get\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a7954dbdd53d8b5dc259993f04bba28f8}
+
+
+Funcion encargada de decirnos el nombre del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto del que se quiere saber el nombre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nombre del objeto 
+\end{DoxyReturn}
+\hypertarget{object_8h_a9e49f66ecc1c29e5eb83c5915814e2b4}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+oculto@{object\+\_\+get\+\_\+oculto}}
+\index{object\+\_\+get\+\_\+oculto@{object\+\_\+get\+\_\+oculto}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+oculto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} object\+\_\+get\+\_\+oculto (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a9e49f66ecc1c29e5eb83c5915814e2b4}
+
+
+Devuelve si el objeto esta oculto. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un booleano (B\+O\+O\+L)\+: si esta oculto 
+\end{DoxyReturn}
+\hypertarget{object_8h_a49dbce205db36230c53fb0ccf0a73174}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+open@{object\+\_\+get\+\_\+open}}
+\index{object\+\_\+get\+\_\+open@{object\+\_\+get\+\_\+open}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} object\+\_\+get\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a49dbce205db36230c53fb0ccf0a73174}
+
+
+Devuelve el id del link que abre. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Reyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un int(id)\+: id 
+\end{DoxyReturn}
+\hypertarget{object_8h_abe1f4e65fe87ea1e4c3bf4637e8273f0}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+pos\+\_\+inicial@{object\+\_\+get\+\_\+pos\+\_\+inicial}}
+\index{object\+\_\+get\+\_\+pos\+\_\+inicial@{object\+\_\+get\+\_\+pos\+\_\+inicial}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+pos\+\_\+inicial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} object\+\_\+get\+\_\+pos\+\_\+inicial (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_abe1f4e65fe87ea1e4c3bf4637e8273f0}
+
+
+Funcion que devuelve la posicion inicial del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id del espacio inicial 
+\end{DoxyReturn}
+\hypertarget{object_8h_a7ee5148e5bbfa4fc0f81d94b4fea7c33}{\index{object.\+h@{object.\+h}!object\+\_\+get\+\_\+size@{object\+\_\+get\+\_\+size}}
+\index{object\+\_\+get\+\_\+size@{object\+\_\+get\+\_\+size}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t object\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a7ee5148e5bbfa4fc0f81d94b4fea7c33}
+
+
+Funcion encargada de darnos el tamaño del objeto en memoria. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño 
+\end{DoxyReturn}
+\hypertarget{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}{\index{object.\+h@{object.\+h}!object\+\_\+print@{object\+\_\+print}}
+\index{object\+\_\+print@{object\+\_\+print}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_adebb77fb5d33fc70616ab3b2b64c27ce}
+
+
+Funcion encargada de darnos toda la informacion de un objeto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto del que se quiere saber toda la informacion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha impreso correctamente la informacion en el fichero, y E\+R\+R\+O\+R en caso contrario 
+\end{DoxyReturn}
+\hypertarget{object_8h_a279df1e8d8473c787bfce7072a6a6f2a}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+des\+\_\+movido@{object\+\_\+set\+\_\+des\+\_\+movido}}
+\index{object\+\_\+set\+\_\+des\+\_\+movido@{object\+\_\+set\+\_\+des\+\_\+movido}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+des\+\_\+movido}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+des\+\_\+movido (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a279df1e8d8473c787bfce7072a6a6f2a}
+
+
+Funcion encargada de cambiar la descripción del objeto cuando ha sido movido. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto al que se quiere cambiar la descripción \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho correctamente o no 
+\end{DoxyReturn}
+\hypertarget{object_8h_a352bd939c515fd5e3baee189ddaa606a}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+description@{object\+\_\+set\+\_\+description}}
+\index{object\+\_\+set\+\_\+description@{object\+\_\+set\+\_\+description}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+description (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a352bd939c515fd5e3baee189ddaa606a}
+
+
+Funcion encargada de cambiar la descripción del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto al que se quiere cambiar la descripción \\
+\hline
+{\em string} & descripcion del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho correctamente o no 
+\end{DoxyReturn}
+\hypertarget{object_8h_a19ebfcfebe1618fbe000d5768f759557}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+encendido@{object\+\_\+set\+\_\+encendido}}
+\index{object\+\_\+set\+\_\+encendido@{object\+\_\+set\+\_\+encendido}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+encendido}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+encendido (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf B\+O\+O\+L}}]{encendido}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a19ebfcfebe1618fbe000d5768f759557}
+
+
+Establece si el objeto esta encendido. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Resyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+{\em encendido} & si el objeto esta encendido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+U\+S\+: O\+K o E\+R\+R\+O\+R 
+\end{DoxyReturn}
+\hypertarget{object_8h_a61d2b95e4ee9a120ebdb049a0479d8f7}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+iluminado@{object\+\_\+set\+\_\+iluminado}}
+\index{object\+\_\+set\+\_\+iluminado@{object\+\_\+set\+\_\+iluminado}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+iluminado}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+iluminado (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf B\+O\+O\+L}}]{iluminado}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a61d2b95e4ee9a120ebdb049a0479d8f7}
+
+
+Establece la iluminacion del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Resyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+{\em iluminado} & si el objeto ilumina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+U\+S\+: O\+K o E\+R\+R\+O\+R 
+\end{DoxyReturn}
+\hypertarget{object_8h_ab67660a09c514d65452fb4a4fa7ec493}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+movible@{object\+\_\+set\+\_\+movible}}
+\index{object\+\_\+set\+\_\+movible@{object\+\_\+set\+\_\+movible}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+movible}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+movible (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf B\+O\+O\+L}}]{movible}
+\end{DoxyParamCaption}
+)}}\label{object_8h_ab67660a09c514d65452fb4a4fa7ec493}
+
+
+Establece la movilidad del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Resyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+{\em movible} & si el objeto es movible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+U\+S\+: O\+K o E\+R\+R\+O\+R 
+\end{DoxyReturn}
+\hypertarget{object_8h_a577d445a84a1f60cc7c756a3e9a00e74}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+movido@{object\+\_\+set\+\_\+movido}}
+\index{object\+\_\+set\+\_\+movido@{object\+\_\+set\+\_\+movido}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+movido}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+movido (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf B\+O\+O\+L}}]{movido}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a577d445a84a1f60cc7c756a3e9a00e74}
+
+
+Establece si el objeto se ha movido. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Resyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+{\em movido} & si el objeto se ha movido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+U\+S\+: O\+K o E\+R\+R\+O\+R 
+\end{DoxyReturn}
+\hypertarget{object_8h_ac15dc062c857503ec0ca66037caffd80}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+name@{object\+\_\+set\+\_\+name}}
+\index{object\+\_\+set\+\_\+name@{object\+\_\+set\+\_\+name}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{object_8h_ac15dc062c857503ec0ca66037caffd80}
+
+
+Funcion encargada de cambiar el nombre de un objeto. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Rodriguez 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & objeto al que se le va a cambiar el nombre \\
+\hline
+{\em name} & nuevo nombre que se le va a asignar al objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K si se ha cambiado el nombre correctamente y E\+R\+R\+O\+R en caso de error 
+\end{DoxyReturn}
+\hypertarget{object_8h_aa370f8431dc57329b1c561a033e198bd}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+oculto@{object\+\_\+set\+\_\+oculto}}
+\index{object\+\_\+set\+\_\+oculto@{object\+\_\+set\+\_\+oculto}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+oculto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+oculto (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf B\+O\+O\+L}}]{oculto}
+\end{DoxyParamCaption}
+)}}\label{object_8h_aa370f8431dc57329b1c561a033e198bd}
+
+
+Establece la visibilidad del objetp. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Resyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+{\em oculto} & si el objeto esta oculto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+U\+S\+: O\+K o E\+R\+R\+O\+R 
+\end{DoxyReturn}
+\hypertarget{object_8h_a3afab23d0ed66591693f1ecd8a85e0df}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+open@{object\+\_\+set\+\_\+open}}
+\index{object\+\_\+set\+\_\+open@{object\+\_\+set\+\_\+open}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+open (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{open}
+\end{DoxyParamCaption}
+)}}\label{object_8h_a3afab23d0ed66591693f1ecd8a85e0df}
+
+
+Establece que abre el objeto. 
+
+\begin{DoxyAuthor}{Author}
+Sergio de los Resyes 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+{\em open} & el link que abre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+U\+S\+: O\+K o E\+R\+R\+O\+R 
+\end{DoxyReturn}
+\hypertarget{object_8h_ae95a1ce5479928e05d85f6b5fa2871c0}{\index{object.\+h@{object.\+h}!object\+\_\+set\+\_\+pos\+\_\+inicial@{object\+\_\+set\+\_\+pos\+\_\+inicial}}
+\index{object\+\_\+set\+\_\+pos\+\_\+inicial@{object\+\_\+set\+\_\+pos\+\_\+inicial}!object.\+h@{object.\+h}}
+\subsubsection[{object\+\_\+set\+\_\+pos\+\_\+inicial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} object\+\_\+set\+\_\+pos\+\_\+inicial (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{{\bf Id}}]{space}
+\end{DoxyParamCaption}
+)}}\label{object_8h_ae95a1ce5479928e05d85f6b5fa2871c0}
+
+
+Funcion que guarda la posicion inicial del objeto. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & el objeto \\
+\hline
+{\em Id} & id del espacio inicial \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}

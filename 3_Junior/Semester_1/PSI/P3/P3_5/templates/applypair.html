@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+Apply Pair
+{% endblock%}
+
+{% block body %}
+
+{% if pair_user is None %}
+<p>
+    The pair creation process requires the active
+    participation of both members of the pair.
+    Let us image that María and Pedro want to work together.
+    First Maria needs to log into the system and apply
+    for a pair selecting Pedro as partner. After that
+    Pedro needs to log into the system and apply for a
+    pair selecting María as partner. At this point the pair
+    is validated and will be taken into account in the
+    group select process.
+</p>
+
+Select the second member of your pair
+<form id="pair_form" method="post" action="{% url 'core:applypair' %}" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <!-- Display each form -->
+    {{ pair_form.as_p }}
+
+    <!-- Provide a button to click to submit the form. -->
+    <input type="submit" value="submit" />
+</form>
+{% elif pair_user.validated is True %}
+<h1>You already belong to pair {{pair_user.student1}}, {{pair_user.student2}}</h1>
+{% else %}
+<h1>You have requested to be apired with {{pair_user.student2}}</h1>
+{% endif %}
+{% endblock %}

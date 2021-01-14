@@ -1,0 +1,5 @@
+<map id="include/game_management.h" name="include/game_management.h">
+<area shape="rect" id="node2" href="$graphic__engine_8h.html" title="It defines a textual graphic engine. " alt="" coords="4,80,168,107"/>
+<area shape="rect" id="node4" href="$game__management_8c.html" title="It implements the game_reader interface. " alt="" coords="194,80,363,107"/>
+<area shape="rect" id="node3" href="$game__loop_8c.html" title="It defines the game loop. " alt="" coords="27,155,145,181"/>
+</map>

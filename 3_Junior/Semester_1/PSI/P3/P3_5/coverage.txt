@@ -1,0 +1,52 @@
+---------------------------COVERAGE ANTIGUO-------------------------------------
+(venv_psi) [labassign]$ coverage report -m -iName                                         Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------------
+core/__init__.py                                 0      0   100%
+core/admin.py                                    9      0   100%
+core/apps.py                                     3      3     0%   1-5
+core/forms.py                                   35      1    97%   83
+core/management/commands/populate.py           157      4    97%   135, 157-173
+core/migrations/0001_initial.py                  8      0   100%
+core/migrations/0002_auto_20201102_1621.py       5      0   100%
+core/migrations/0003_auto_20201102_1634.py       5      0   100%
+core/migrations/0004_auto_20201102_1658.py       4      0   100%
+core/migrations/0005_auto_20201102_1716.py       4      0   100%
+core/migrations/0006_auto_20201108_1123.py       4      0   100%
+core/migrations/0007_auto_20201108_1124.py       4      0   100%
+core/migrations/0008_auto_20201108_1145.py       4      0   100%
+core/migrations/0009_auto_20201108_1241.py       4      0   100%
+core/migrations/0010_auto_20201116_1643.py       5      0   100%
+core/migrations/0011_auto_20201116_1657.py       5      0   100%
+core/migrations/__init__.py                      0      0   100%
+core/models.py                                  62      0   100%
+core/urls.py                                     4      0   100%
+core/views.py                                  100      3    97%   40, 75-76
+--------------------------------------------------------------------------
+TOTAL                                          422     11    97%
+
+
+----------------------------COVERAGE NUEVO--------------------------------------
+(venv_psi) [labassign]$ coverage report -m -iName                                         Stmts   Miss  Cover   Missing
+--------------------------------------------------------------------------
+core/__init__.py                                 0      0   100%
+core/admin.py                                    9      0   100%
+core/apps.py                                     3      3     0%   1-5
+core/forms.py                                   35      0   100%
+core/management/commands/populate.py           157      4    97%   135, 157-173
+core/migrations/0001_initial.py                  8      0   100%
+core/migrations/0002_auto_20201102_1621.py       5      0   100%
+core/migrations/0003_auto_20201102_1634.py       5      0   100%
+core/migrations/0004_auto_20201102_1658.py       4      0   100%
+core/migrations/0005_auto_20201102_1716.py       4      0   100%
+core/migrations/0006_auto_20201108_1123.py       4      0   100%
+core/migrations/0007_auto_20201108_1124.py       4      0   100%
+core/migrations/0008_auto_20201108_1145.py       4      0   100%
+core/migrations/0009_auto_20201108_1241.py       4      0   100%
+core/migrations/0010_auto_20201116_1643.py       5      0   100%
+core/migrations/0011_auto_20201116_1657.py       5      0   100%
+core/migrations/__init__.py                      0      0   100%
+core/models.py                                  62      0   100%
+core/urls.py                                     4      0   100%
+core/views.py                                  100      0   100%
+--------------------------------------------------------------------------
+TOTAL                                          422      7    98%

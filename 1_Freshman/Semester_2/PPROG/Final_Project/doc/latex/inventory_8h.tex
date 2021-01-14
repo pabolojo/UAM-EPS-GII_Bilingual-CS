@@ -1,0 +1,353 @@
+\hypertarget{inventory_8h}{\section{include/inventory.h File Reference}
+\label{inventory_8h}\index{include/inventory.\+h@{include/inventory.\+h}}
+}
+
+
+It implements the inventory interpreter.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/set.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/types.\+h\char`\"{}}\\*
+Include dependency graph for inventory.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{inventory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inventory_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{typedef struct \hyperlink{struct__Inventory}{\+\_\+\+Inventory} \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}}\label{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}
+
+\begin{DoxyCompactList}\small\item\em Estructura del inventorio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{inventory_8h_a5d6b47f7a727932c56d66a65fb540910}{inventory\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Inicializar el inventory Funcion encargada de reservar espacio para el inventory e inizializar sus parametros. De momento todos los inventory tienen un máximo de 5 objetos. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}{inventory\+\_\+destroy} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de liberar la memoria reservada para el inventorio. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{inventory_8h_a13ac434eec9b6f1eecdbb8c219c15d0c}{inventory\+\_\+set\+\_\+dimension} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, int i)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de cambiar la dimension del inventory. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{inventory_8h_a551c769a166a1d88bad1d42c22e6193a}{inventory\+\_\+set\+\_\+objects} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$objects)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de asignar un set con objetos a un inventorio Esta funcion se usa para cuando cargamos del fichero binario de datos. \end{DoxyCompactList}\item 
+int \hyperlink{inventory_8h_ae728dae459d6f9a5d43570ba93a14615}{inventory\+\_\+get\+\_\+number\+\_\+objects} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Funcion que te dice el numero de objetos que hay en un inventorio. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{inventory_8h_a50102eddbb12644bd25a85fe8585a546}{inventory\+\_\+get\+\_\+id} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, int pos\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Funcion que te dice el id del objeto que hay en una posicion. \end{DoxyCompactList}\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{inventory_8h_ae544f0902a2cbbc1e1b26a3d12dee790}{inventory\+\_\+get\+\_\+objects} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Funcion que te devuelve el set de los objetos del inventorio. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{inventory_8h_a6079fbb8afa520897f8ec978d47adf30}{inventory\+\_\+get\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Funcion que te devuelve el tamaño en memoria del inventory. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{inventory_8h_adb64993bbb4b8c2e0c84f438073760c5}{inventory\+\_\+add\+\_\+object} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de añadir objetos al set. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{inventory_8h_a17e818c6024ffdab4dba6eb814675f81}{inventory\+\_\+remove\+\_\+object} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion encargada de borrar objetos del set del inventorio. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} \hyperlink{inventory_8h_a75d442213e5c8721f091a04539d6b566}{inventory\+\_\+object\+\_\+exist} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Funcion que te dice si un objeto esta o no en un inventorio. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{inventory_8h_a066bd3b6e77e3d026112997ed93a7421}{inventory\+\_\+print} (F\+I\+L\+E $\ast$pf, \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Funcion para imprimir el inventorio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the inventory interpreter. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+08/03/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{inventory_8h_adb64993bbb4b8c2e0c84f438073760c5}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+add\+\_\+object@{inventory\+\_\+add\+\_\+object}}
+\index{inventory\+\_\+add\+\_\+object@{inventory\+\_\+add\+\_\+object}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+add\+\_\+object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+add\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_adb64993bbb4b8c2e0c84f438073760c5}
+
+
+Funcion encargada de añadir objetos al set. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+{\em id} & id que quiero añadir al set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a5d6b47f7a727932c56d66a65fb540910}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+create@{inventory\+\_\+create}}
+\index{inventory\+\_\+create@{inventory\+\_\+create}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventory}$\ast$ inventory\+\_\+create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a5d6b47f7a727932c56d66a65fb540910}
+
+
+Inicializar el inventory Funcion encargada de reservar espacio para el inventory e inizializar sus parametros. De momento todos los inventory tienen un máximo de 5 objetos. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+El inventory creado 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+destroy@{inventory\+\_\+destroy}}
+\index{inventory\+\_\+destroy@{inventory\+\_\+destroy}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a690c5b171251c27a628f0ecaaaf6b9ce}
+
+
+Funcion encargada de liberar la memoria reservada para el inventorio. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio a destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a50102eddbb12644bd25a85fe8585a546}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+id@{inventory\+\_\+get\+\_\+id}}
+\index{inventory\+\_\+get\+\_\+id@{inventory\+\_\+get\+\_\+id}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+get\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id} inventory\+\_\+get\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{int}]{pos\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a50102eddbb12644bd25a85fe8585a546}
+
+
+Funcion que te dice el id del objeto que hay en una posicion. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+{\em pos\+\_\+id} & posicion del objeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id del objeto en esa posicion 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_ae728dae459d6f9a5d43570ba93a14615}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+number\+\_\+objects@{inventory\+\_\+get\+\_\+number\+\_\+objects}}
+\index{inventory\+\_\+get\+\_\+number\+\_\+objects@{inventory\+\_\+get\+\_\+number\+\_\+objects}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+get\+\_\+number\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}int inventory\+\_\+get\+\_\+number\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_ae728dae459d6f9a5d43570ba93a14615}
+
+
+Funcion que te dice el numero de objetos que hay en un inventorio. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+numero de objetos o -\/1 en caso de error 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_ae544f0902a2cbbc1e1b26a3d12dee790}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+objects@{inventory\+\_\+get\+\_\+objects}}
+\index{inventory\+\_\+get\+\_\+objects@{inventory\+\_\+get\+\_\+objects}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+get\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ inventory\+\_\+get\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_ae544f0902a2cbbc1e1b26a3d12dee790}
+
+
+Funcion que te devuelve el set de los objetos del inventorio. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set de objetos 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a6079fbb8afa520897f8ec978d47adf30}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+size@{inventory\+\_\+get\+\_\+size}}
+\index{inventory\+\_\+get\+\_\+size@{inventory\+\_\+get\+\_\+size}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t inventory\+\_\+get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a6079fbb8afa520897f8ec978d47adf30}
+
+
+Funcion que te devuelve el tamaño en memoria del inventory. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+tamaño inventory 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a75d442213e5c8721f091a04539d6b566}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+object\+\_\+exist@{inventory\+\_\+object\+\_\+exist}}
+\index{inventory\+\_\+object\+\_\+exist@{inventory\+\_\+object\+\_\+exist}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+object\+\_\+exist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} inventory\+\_\+object\+\_\+exist (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a75d442213e5c8721f091a04539d6b566}
+
+
+Funcion que te dice si un objeto esta o no en un inventorio. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+{\em id} & id del objeto que queremos saber si esta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true en caso de que si, false caso contrario 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a066bd3b6e77e3d026112997ed93a7421}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+print@{inventory\+\_\+print}}
+\index{inventory\+\_\+print@{inventory\+\_\+print}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+print}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{pf, }
+\item[{{\bf Inventory} $\ast$}]{inventory}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a066bd3b6e77e3d026112997ed93a7421}
+
+
+Funcion para imprimir el inventorio. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em pf} & file donde se va a escribir (por defecto stdout) \\
+\hline
+{\em inventory} & inventorio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si se ha hecho o no correctamente 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a17e818c6024ffdab4dba6eb814675f81}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+remove\+\_\+object@{inventory\+\_\+remove\+\_\+object}}
+\index{inventory\+\_\+remove\+\_\+object@{inventory\+\_\+remove\+\_\+object}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+remove\+\_\+object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+remove\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{{\bf Id}}]{id}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a17e818c6024ffdab4dba6eb814675f81}
+
+
+Funcion encargada de borrar objetos del set del inventorio. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+{\em id} & id que quiero eliminar del set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K funcionamiento correcto, E\+R\+R\+O\+R caso contrario 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a13ac434eec9b6f1eecdbb8c219c15d0c}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+set\+\_\+dimension@{inventory\+\_\+set\+\_\+dimension}}
+\index{inventory\+\_\+set\+\_\+dimension@{inventory\+\_\+set\+\_\+dimension}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+set\+\_\+dimension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+set\+\_\+dimension (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a13ac434eec9b6f1eecdbb8c219c15d0c}
+
+
+Funcion encargada de cambiar la dimension del inventory. 
+
+\begin{DoxyAuthor}{Author}
+Cristina Soria 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+{\em i} & nuevo tamaño \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K funcionamiento correcto, E\+R\+R\+O\+R caso contrario 
+\end{DoxyReturn}
+\hypertarget{inventory_8h_a551c769a166a1d88bad1d42c22e6193a}{\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+set\+\_\+objects@{inventory\+\_\+set\+\_\+objects}}
+\index{inventory\+\_\+set\+\_\+objects@{inventory\+\_\+set\+\_\+objects}!inventory.\+h@{inventory.\+h}}
+\subsubsection[{inventory\+\_\+set\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} inventory\+\_\+set\+\_\+objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Inventory} $\ast$}]{inventory, }
+\item[{{\bf Set} $\ast$}]{objects}
+\end{DoxyParamCaption}
+)}}\label{inventory_8h_a551c769a166a1d88bad1d42c22e6193a}
+
+
+Funcion encargada de asignar un set con objetos a un inventorio Esta funcion se usa para cuando cargamos del fichero binario de datos. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & inventorio \\
+\hline
+{\em objects} & set de objetos a asociar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K funcionamiento correcto, E\+R\+R\+O\+R caso contrario 
+\end{DoxyReturn}

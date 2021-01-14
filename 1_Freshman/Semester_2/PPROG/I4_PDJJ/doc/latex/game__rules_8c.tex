@@ -1,0 +1,260 @@
+\hypertarget{game__rules_8c}{}\section{game\+\_\+rules.\+c File Reference}
+\label{game__rules_8c}\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+
+
+Game Rules Module.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+rules.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+rules.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__rules_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Rules}{\+\_\+\+Rules}
+\begin{DoxyCompactList}\small\item\em defines the rules structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game__rules_8c_a4ffabc057b1fee7abd6a3555b03320dd}\label{game__rules_8c_a4ffabc057b1fee7abd6a3555b03320dd}} 
+\#define \hyperlink{game__rules_8c_a4ffabc057b1fee7abd6a3555b03320dd}{N\+\_\+\+R\+U\+L\+ES}~6
+\begin{DoxyCompactList}\small\item\em defines the macro for the number of rules \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game__rules_8c_a128a0e8baeaa0cf0f82b55544f40f494}\label{game__rules_8c_a128a0e8baeaa0cf0f82b55544f40f494}} 
+\#define \hyperlink{game__rules_8c_a128a0e8baeaa0cf0f82b55544f40f494}{N\+\_\+\+S\+P\+A\+C\+ES}~20
+\begin{DoxyCompactList}\small\item\em defines the macro for the number of spaces \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game__rules_8c_a7c23e7b371062725f3d823c54d975eae}\label{game__rules_8c_a7c23e7b371062725f3d823c54d975eae}} 
+typedef void($\ast$ \hyperlink{game__rules_8c_a7c23e7b371062725f3d823c54d975eae}{callback\+\_\+fn}) (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em defines callbacks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{game__rules_8c_a0775ffa7b0e38f0d48349413a1dcb9e9}{rules\+\_\+callback\+\_\+\+R0} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em callback for R0 \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a9f639fea17a6adcd59c71715c9271e37}{rules\+\_\+callback\+\_\+\+R1} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em callback for R1 \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a4444290fa5f5e159cfe2848a0713beff}{rules\+\_\+callback\+\_\+\+R2} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em callback for R2 \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a93b10462610835ed3cbb7519fb1a795c}{rules\+\_\+callback\+\_\+\+R3} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em callback for R3 \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a3dd9a1f29dedcb320ff6b47f510d402c}{rules\+\_\+callback\+\_\+\+R4} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em callback for R4 \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a165bb3ce07391907a6e5ecd835e19305}{rules\+\_\+callback\+\_\+\+R5} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em callback for R5 \end{DoxyCompactList}\item 
+\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$ \hyperlink{game__rules_8c_aad961700eb0f609e599d442498b318c5}{Rules\+Create} ()
+\begin{DoxyCompactList}\small\item\em create a game rule \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game__rules_8c_acbd71f0908b3eb7e5ed5958d51b13cab}{Rules\+Destroy} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em destroy rule \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game__rules_8c_aba5baaead34b2b6ac9c8bf5949c0c11c}{Rules\+Start} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} disable, int rule)
+\begin{DoxyCompactList}\small\item\em set rules start \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_ac657c59bd9d82e017213323a8dd4ed7c}{Random\+Rule} (\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$rules)
+\begin{DoxyCompactList}\small\item\em set randum rules \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Game Rules Module. 
+
+\begin{DoxyAuthor}{Author}
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game__rules_8c_ac657c59bd9d82e017213323a8dd4ed7c}\label{game__rules_8c_ac657c59bd9d82e017213323a8dd4ed7c}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!Random\+Rule@{Random\+Rule}}
+\index{Random\+Rule@{Random\+Rule}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{Random\+Rule()}{RandomRule()}}
+{\footnotesize\ttfamily void Random\+Rule (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules }\end{DoxyParamCaption})}
+
+
+
+set randum rules 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_a0775ffa7b0e38f0d48349413a1dcb9e9}\label{game__rules_8c_a0775ffa7b0e38f0d48349413a1dcb9e9}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!rules\+\_\+callback\+\_\+\+R0@{rules\+\_\+callback\+\_\+\+R0}}
+\index{rules\+\_\+callback\+\_\+\+R0@{rules\+\_\+callback\+\_\+\+R0}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{rules\+\_\+callback\+\_\+\+R0()}{rules\_callback\_R0()}}
+{\footnotesize\ttfamily void rules\+\_\+callback\+\_\+\+R0 (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{game\+Rules }\end{DoxyParamCaption})}
+
+
+
+callback for R0 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_a9f639fea17a6adcd59c71715c9271e37}\label{game__rules_8c_a9f639fea17a6adcd59c71715c9271e37}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!rules\+\_\+callback\+\_\+\+R1@{rules\+\_\+callback\+\_\+\+R1}}
+\index{rules\+\_\+callback\+\_\+\+R1@{rules\+\_\+callback\+\_\+\+R1}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{rules\+\_\+callback\+\_\+\+R1()}{rules\_callback\_R1()}}
+{\footnotesize\ttfamily void rules\+\_\+callback\+\_\+\+R1 (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules }\end{DoxyParamCaption})}
+
+
+
+callback for R1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_a4444290fa5f5e159cfe2848a0713beff}\label{game__rules_8c_a4444290fa5f5e159cfe2848a0713beff}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!rules\+\_\+callback\+\_\+\+R2@{rules\+\_\+callback\+\_\+\+R2}}
+\index{rules\+\_\+callback\+\_\+\+R2@{rules\+\_\+callback\+\_\+\+R2}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{rules\+\_\+callback\+\_\+\+R2()}{rules\_callback\_R2()}}
+{\footnotesize\ttfamily void rules\+\_\+callback\+\_\+\+R2 (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules }\end{DoxyParamCaption})}
+
+
+
+callback for R2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_a93b10462610835ed3cbb7519fb1a795c}\label{game__rules_8c_a93b10462610835ed3cbb7519fb1a795c}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!rules\+\_\+callback\+\_\+\+R3@{rules\+\_\+callback\+\_\+\+R3}}
+\index{rules\+\_\+callback\+\_\+\+R3@{rules\+\_\+callback\+\_\+\+R3}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{rules\+\_\+callback\+\_\+\+R3()}{rules\_callback\_R3()}}
+{\footnotesize\ttfamily void rules\+\_\+callback\+\_\+\+R3 (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules }\end{DoxyParamCaption})}
+
+
+
+callback for R3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_a3dd9a1f29dedcb320ff6b47f510d402c}\label{game__rules_8c_a3dd9a1f29dedcb320ff6b47f510d402c}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!rules\+\_\+callback\+\_\+\+R4@{rules\+\_\+callback\+\_\+\+R4}}
+\index{rules\+\_\+callback\+\_\+\+R4@{rules\+\_\+callback\+\_\+\+R4}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{rules\+\_\+callback\+\_\+\+R4()}{rules\_callback\_R4()}}
+{\footnotesize\ttfamily void rules\+\_\+callback\+\_\+\+R4 (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules }\end{DoxyParamCaption})}
+
+
+
+callback for R4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_a165bb3ce07391907a6e5ecd835e19305}\label{game__rules_8c_a165bb3ce07391907a6e5ecd835e19305}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!rules\+\_\+callback\+\_\+\+R5@{rules\+\_\+callback\+\_\+\+R5}}
+\index{rules\+\_\+callback\+\_\+\+R5@{rules\+\_\+callback\+\_\+\+R5}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{rules\+\_\+callback\+\_\+\+R5()}{rules\_callback\_R5()}}
+{\footnotesize\ttfamily void rules\+\_\+callback\+\_\+\+R5 (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules }\end{DoxyParamCaption})}
+
+
+
+callback for R5 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_aad961700eb0f609e599d442498b318c5}\label{game__rules_8c_aad961700eb0f609e599d442498b318c5}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!Rules\+Create@{Rules\+Create}}
+\index{Rules\+Create@{Rules\+Create}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{Rules\+Create()}{RulesCreate()}}
+{\footnotesize\ttfamily \hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules}$\ast$ Rules\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create a game rule 
+
+\begin{DoxyReturn}{Returns}
+Rule or N\+U\+LL in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_acbd71f0908b3eb7e5ed5958d51b13cab}\label{game__rules_8c_acbd71f0908b3eb7e5ed5958d51b13cab}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!Rules\+Destroy@{Rules\+Destroy}}
+\index{Rules\+Destroy@{Rules\+Destroy}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{Rules\+Destroy()}{RulesDestroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Rules\+Destroy (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules }\end{DoxyParamCaption})}
+
+
+
+destroy rule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK, or E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__rules_8c_aba5baaead34b2b6ac9c8bf5949c0c11c}\label{game__rules_8c_aba5baaead34b2b6ac9c8bf5949c0c11c}} 
+\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!Rules\+Start@{Rules\+Start}}
+\index{Rules\+Start@{Rules\+Start}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection{\texorpdfstring{Rules\+Start()}{RulesStart()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} Rules\+Start (\begin{DoxyParamCaption}\item[{\hyperlink{game__rules_8h_add6e93d3be9e55f9ff3b469e3d24cf13}{Rules} $\ast$}]{rules,  }\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{disable,  }\item[{int}]{rule }\end{DoxyParamCaption})}
+
+
+
+set rules start 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & \\
+\hline
+{\em game} & \\
+\hline
+{\em disable} & \\
+\hline
+{\em rule} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK or E\+R\+R\+OR 
+\end{DoxyReturn}
+

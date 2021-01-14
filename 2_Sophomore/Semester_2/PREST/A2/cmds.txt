@@ -1,0 +1,40 @@
+library(RcmdrMisc)
+
+exercise2<-read.table("Exercise2.txt", header = TRUE, sep = " ", dec = ".")
+sampX<-exercise2$BurnRate[which(exercise2$Type == "Propellant 1")]
+sampY<-exercise2$BurnRate[which(exercise2$Type == "Propellant 2")]
+m<-length(sampX); n<-length(sampY)
+
+numSummary(exercise2[,"BurnRate", drop=FALSE], groups=exercise2$Type, statistics=c("mean","sd","IQR","quantiles","cv"), quantiles=c(0,.25,.5,.75,1))
+
+par(mfrow=c(1,2)) 
+boxplot(sampX,sampY, names=c("Propellant 1","Propellant 2"))
+plotMeans(exercise2$BurnRate, exercise2$Type, error.bars="se", level=0.95, connect=TRUE, ylab="Burning Rate",xlab="Propellant Type")
+layout(1)
+
+xbar<-mean(sampX); qvarx<-var(sampX)
+ybar<-mean(sampY); qvary<-var(sampY)
+nu<-round((qvarx/m+qvary/n)^2/((qvarx/m)^2/(m-1)+(qvary/n)^2/(n-1)))
+alpha<-0.05
+t<-abs(xbar-ybar)/sqrt(qvarx/m+qvary/n)
+
+t.test(x=sampX, y=sampY, alternative = "two.sided", conf.level = 1-alpha, paired = FALSE, var.equal = FALSE)
+p.value<-2*pt(t,df=nu,lower.tail=FALSE)
+
+t<-qt(alpha/2,df=nu,lower.tail=FALSE)
+se <-sqrt(qvarx/m+qvary/n)
+lolim <- xbar-ybar-t*se; uplim <- xbar-ybar+t*se
+
+
+xqsd <-sd(sampX)
+yqsd <-sd(sampY)
+xt <-qt(alpha/2, df=m-1, lower.tail=FALSE)
+yt <-qt(alpha/2, df=n-1, lower.tail=FALSE)
+xse <-xqsd/sqrt(m)
+yse <-yqsd/sqrt(n)
+xlolim <- xbar-xt*xse
+xuplim <- xbar+xt*xse
+ylolim <- ybar-yt*yse
+yuplim <- ybar+yt*yse
+plotMeans(exercise2$BurnRate, exercise2$Type, error.bars="conf.int", level=0.95, connect=TRUE, ylab="Burning Rate",xlab="Propellant Type")
+

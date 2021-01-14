@@ -1,0 +1,93 @@
+#l:1|Link1|1|2|0|
+#l:2|Link2|2|3|0|
+#l:3|Puerta1|3|4|1|
+#l:4|Link4|3|5|0|
+#l:5|Link5|5|6|0|
+#l:6|PuertaCodigo|5|14|1|
+#l:7|Link7|6|7|0|
+#l:8|Link8|7|8|0|
+#l:9|Link9|7|9|0|
+#l:10|Link10|9|10|0|
+#l:11|Link11|11|6|0|
+#l:12|Puerta2|11|12|1|
+#l:13|Puerta4|12|13|1|
+#l:14|Link14|14|15|0|
+#l:15|Link15|15|16|0|
+#l:16|Link16|16|17|0|
+#l:17|Link17|16|19|0|
+#l:18|Link18|16|18|0|
+#l:19|Link19|19|21|0|
+#l:20|Link20|19|20|0|
+#l:21|link21|3|22|0|
+#l:22|link22|22|23|0|
+#l:23|Puerta3|23|24|1|
+#l:24|link24|24|25|0|
+#l:25|link25|25|26|0|
+#l:26|link26|25|27|0|
+#l:27|link27|24|28|0|
+#l:28|link28|28|29|0|
+#l:29|link29|28|30|0|
+#l:30|link30|28|31|0|
+#l:31|link31|31|32|0|
+#l:32|link32|32|33|0|
+#l:33|link33|32|34|0|
+#l:34|link34|17|20|0|
+#l:35|link35|18|21|0|
+#s:1|Inicio|-1|-1|-1|1|-1|-1|1|"Desde este espacio puedes ir al este"|        |        |        |
+#s:2|Casilla 2|-1|1|2|-1|-1|-1|1|"Desde este espacio puedes ir al norte y al oeste"|        |        |        |
+#s:3|Casilla 3|2|3|21|4|-1|-1|1|"Desde este espacio puedes ir al norte, al sur, al este y al oeste"|        |        |        |
+#s:4|Casilla 4|-1|-1|-1|3|-1|-1|1|"Desde este espacio puedes ir al este"|        |        |        |
+#s:5|Casilla 5|-1|4|6|5|-1|-1|1|"Desde este espacio puedes ir al norte, al este y al oeste"|        |        |        |
+#s:6|Casilla 6|11|5|-1|7|-1|-1|1|"Desde este espacio puedes ir al sur, al este y al oeste"|        |        |        |
+#s:7|Casilla 7|-1|7|8|9|-1|-1|1|"Desde este espacio puedes ir al norte, al este y al oeste"|        |        |        |
+#s:8|Casilla 8|8|-1|-1|-1|-1|-1|1|"Desde este espacio puedes ir al sur"|        |        |        |
+#s:9|Casilla 9|-1|9|10|-1|-1|-1|1|"Desde este espacio puedes ir al norte y al oeste"|        |        |        |
+#s:10|Casilla 10|10|-1|-1|-1|-1|-1|1|"Desde este espacio puedes ir al sur"|        |        |        |
+#s:11|Casilla 11|12|-1|11|-1|-1|-1|1|"Desde este espacio puedes ir al norte y al sur"|        |        |        |
+#s:12|Casilla 12|13|-1|12|-1|-1|-1|1|"Desde este espacio puedes ir al norte y al sur|        |        |        |
+#s:13|Exterior (fin)|-1|-1|-1|-1|-1|-1|1| |        |  END   |        |
+#s:14|Escaleras (planta 0 -> sotano)|6|-1|-1|-1|-1|14|1|"Desde este espacio puedes bajar al sotano o ir al sur"|__      |  \__   |     \__|
+#s:15|Escaleras (sotano -> planta 0)|15|-1|-1|-1|14|-1|1|"Desde este espacio puedes subir al piso de arriba o ir al sur"|      __|   __/  |__/     |
+#s:16|Casilla 16 (sotano)|17|16|15|18|-1|-1|0|"Desde este espacio puedes ir al norte, al sur, al este y al oeste"|   /_\  |  /   \ | /_____\|"
+#s:17|Casilla 17 (sotano)|34|-1|-1|16|-1|-1|0|"Desde este espacio puedes ir al sur y al este"|   /_\  |  /   \ | /_____\|
+#s:18|Casilla 18 (sotano)|35|18|-1|-1|-1|-1|0|"Desde este espacio puedes ir al sur y al oeste"|   /_\  |  /   \ | /_____\|
+#s:19|Casilla 19 (sotano)|-1|-1|-1|-1|-1|-1|0|"Para moverte de este espacio debes matar al monstruo"|  ___   |_(O.o)_/|  L L   |
+#s:20|Casilla 20 (sotano)|-1|-1|34|20|-1|-1|0|"Desde este espacio puedes ir al norte y al este"|   /_\  |  /   \ | /_____\|
+#s:21|Casilla 21 (sotano)|-1|19|35|-1|-1|-1|0|"Desde este espacio puedes ir norte y al oeste"|   /_\  |  /   \ | /_____\|
+#s:22|Escaleras (planta 0 -> planta 1)|21|-1|-1|-1|22|-1|1|"Desde este espacio puedes subir al piso de arriba o ir al sur"|      __|   __/  |__/     |
+#s:23|Escaleras (planta1 -> planta 0)|23|-1|-1|-1|-1|22|1|"Desde este espacio puedes bajar al piso de abajo o ir al sur"|__      |  \__   |     \__|
+#s:24|Casilla 24|-1|24|23|27|-1|-1|1|"Desde este espacio puedes ir al norte, al este y al oeste"|        |        |        |
+#s:25|Casilla 25|26|-1|25|24|-1|-1|1|"Desde este espacio puedes ir al norte, al sur y al este"|        |        |        |
+#s:26|Casilla 26|25|-1|-1|-1|-1|-1|1|"Desde este espacio puedes ir al sur"|        |        |        |
+#s:27|Casilla 27|-1|-1|26|-1|-1|-1|1|"Desde este espacio puedes ir al norte"|        |        |        |
+#s:28|Casilla 28|29|27|28|30|-1|-1|1|"Desde este espacio puedes ir al norte, al sur, al este y al oeste"|        |        |        |
+#s:29|Casilla 29|28|-1|-1|-1|-1|-1|1|"Desde este espacio puedes ir al sur"|        |        |        |
+#s:30|Casilla 30|-1|-1|29|-1|-1|-1|1|"Desde este espacio puedes ir al norte"|        |        |        |
+#s:31|Casilla 31|-1|30|-1|31|-1|-1|1|"Desde este espacio puedes ir al este y al oeste"|        |        |        |
+#s:32|Casilla 32|33|31|32|-1|-1|-1|1|"Desde este espacio puedes ir al norte, al sur y al oeste"|        |        |        |
+#s:33|Casilla 33|32|-1|-1|-1|-1|-1|1|"Desde este espacio puedes ir al sur"|        |        |        |
+#s:34|Casilla 34|-1|-1|33|-1|-1|-1|1|"Desde este espacio puedes ir al norte"|        |        |        |
+#o:1|Llave2|4|1|0|12|0|"Tengo que descubrir que abre esta llave"
+#o:2|Llave1|8|1|0|3|1|"Esta llave me acerca más a la salida"
+#o:3|Llave3|12|1|0|23|0|"Con esta llave quiza pueda abrir la puerta del piso de arriba"
+#o:4|Llave4|20|1|0|13|0|"Parece que esta llave abre la puerta al exterior"
+#o:5|Digito1|26|1|0|-1|0|"[ 8 ]"|
+#o:6|Digito2|34|1|0|-1|0|"[ 7 ]"|
+#o:7|Digito3|29|1|0|-1|0|"[ 3 ]"|
+#o:8|Digito4|30|1|0|-1|0|"[ 2 ]"|
+#o:9|Digito5|27|1|0|-1|0|"[ 9 ]"|
+#o:10|Digito6|33|1|1|-1|0|"[ 1 ]"|
+#o:11|Cuchillo|10|1|0|-1|0|0|" )xxx[:::::> "|
+#o:12|Paginadiario1|2|0|0|-1|0|"Me acabo de despertar en esta casa abandonada... las puertas estan cerradas a cal y canto... tengo que salir de aqui"|
+#o:13|Paginadiario2|11|0|0|-1|0|"Tengo que encontrar una maldita llave para abrir la puerta"|
+#o:14|Paginadiario3|23|0|1|-1|0|"He intentado subir al piso de arriba pero necesito una llave para pasar... seguiré buscando abajo"|
+#o:15|Paginadiario4|12|0|0|-1|0|"Puedo oir el exterior... tengo que encontrar el modo de abrir esta puerta... esta casa me pone los pelos de punta..."|
+#o:16|Paginadiario5|15|0|0|-1|0|"Ya he conseguido reunir el codigo que habia en la planta de arriba pero... tengo miedo de enfrentarme a lo que hay aqui dentro..."|
+#o:17|Ropaensangrentada|16|0|0|-1|0|"Esto me huele mal... tengo que escapar de aqui ya..."|
+#o:18|Cabezas|18|0|1|-1|0|" (x_(x_x)_x) -Oh mierda mierda mierda"|
+#o:19|Psicopataarmado|19|0|0|-1|0|" ._(Ò_ó)_/ "|
+#o:20|Motosierra|21|1|0|-1|0|" c[_l_];;;;;;;;; -je je je"|
+#o:21|Linterna|32|1|0|-1|1|" (__=_((O) "|
+#o:22|Antorcha|6|1|1|-1|1|" (__=_((O) "|
+#o:23|Espada|26|1|1|-1|0|")xxx[::::::::::> "|
+

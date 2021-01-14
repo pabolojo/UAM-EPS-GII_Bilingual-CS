@@ -1,0 +1,4 @@
+set term pngcairo 
+set output 'y.png'
+plot "fig" pt 5 ps 8
+set term x11

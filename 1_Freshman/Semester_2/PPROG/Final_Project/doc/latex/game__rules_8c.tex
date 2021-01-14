@@ -1,0 +1,327 @@
+\hypertarget{game__rules_8c}{\section{src/game\+\_\+rules.c File Reference}
+\label{game__rules_8c}\index{src/game\+\_\+rules.\+c@{src/game\+\_\+rules.\+c}}
+}
+
+
+It implements the game\+\_\+rules module.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../include/game\+\_\+rules.\+h\char`\"{}}\\*
+Include dependency graph for game\+\_\+rules.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__rules_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__GameRules}{\+\_\+\+Game\+Rules}
+\begin{DoxyCompactList}\small\item\em Estructura del game\+\_\+rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{game__rules_8c_a4ffabc057b1fee7abd6a3555b03320dd}{N\+\_\+\+R\+U\+L\+E\+S}~10
+\item 
+\#define \hyperlink{game__rules_8c_a27bf69b60db5215665bdd9f4a2cc2cd8}{N\+U\+M\+\_\+\+S\+P\+A\+C\+E\+S}~34
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{game__rules_8c_a7cdec380afc709206002fc63771d77f4}{callback\+\_\+fn} )(\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{game__rules_8c_acdf1abe747a31f9b34e48a882eacfba7}{game\+Rules\+\_\+callback\+\_\+no\+Rule} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla no\+Rule\+: no se ejecuta ninguna regla. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a8b12fda273cc6e13b4eac252dd8fab02}{game\+Rules\+\_\+callback\+\_\+ocult} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla ocult Este comando va a ocultar todos los objetos del juego. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_aab846144b5b45d91bdd5e63ba876b186}{game\+Rules\+\_\+callback\+\_\+on} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla on Este comando va iluminar algún espacio de manera aleatoria. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a984a14fb0de961469a789870df71f0e7}{game\+Rules\+\_\+callback\+\_\+off} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla off Este comando va a apagar algun espacio de manera aleatoria. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_aacc78cc969ec835ff4bbf43984b15db2}{game\+Rules\+\_\+callback\+\_\+close} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla close Cierra alguno de los links entre el 7 y el 11 y crea un objeto que lo abre. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_ac7d97f5e723e16ca13593f9d876311bf}{game\+Rules\+\_\+callback\+\_\+show} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla show Este comando va a mostrar todos los objetos del juego. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_aef0551a735ac3111fa0941c761449da7}{game\+Rules\+\_\+callback\+\_\+change} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla change Este comando va a cambiar alguno de los links del piso de arriba. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a0757b4b28db7cccc28a2225e5c3144b8}{game\+Rules\+\_\+callback\+\_\+eliminate} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla eliminate Este comando va a eliminar el link 34 o el 35 de los espacios. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a8ab93172f581e2dadf9250cff4dd1a13}{game\+Rules\+\_\+callback\+\_\+regenerate} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla regenerate Este comando va a crear el link 34 o el 35 en los espacios. \end{DoxyCompactList}\item 
+void \hyperlink{game__rules_8c_a1f2acb17f78a48746be70f123bc31704}{game\+Rules\+\_\+callback\+\_\+newexit} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion de la regla newexit Este comando va a cambiar la salida de sitio. Puede estar conectada al 12 o al 19. \end{DoxyCompactList}\item 
+\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$ \hyperlink{game__rules_8c_aefc0992f9d3b8228ea705408b535ca5c}{game\+\_\+rules\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Funcion para reservar memoria para el modulo de las reglas. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{game__rules_8c_aeae24b9ec0c75216361ba2363c19847b}{game\+\_\+rules\+\_\+destroy} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules)
+\begin{DoxyCompactList}\small\item\em Funcion que libera memoria. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+U\+S} \hyperlink{game__rules_8c_a84316ec7ab939c928c9a702ba571f90e}{game\+\_\+rules\+\_\+play} (\hyperlink{game__rules_8h_a427dee1046e87ecb0d82e194918d0c4b}{Game\+Rules} $\ast$game\+Rules, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+O\+L} no\+\_\+rules)
+\begin{DoxyCompactList}\small\item\em Funcion para jugar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It implements the game\+\_\+rules module. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+02-\/05-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{game__rules_8c_a4ffabc057b1fee7abd6a3555b03320dd}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!N\+\_\+\+R\+U\+L\+E\+S@{N\+\_\+\+R\+U\+L\+E\+S}}
+\index{N\+\_\+\+R\+U\+L\+E\+S@{N\+\_\+\+R\+U\+L\+E\+S}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{N\+\_\+\+R\+U\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+\_\+\+R\+U\+L\+E\+S~10}}\label{game__rules_8c_a4ffabc057b1fee7abd6a3555b03320dd}
+numero de reglas \hypertarget{game__rules_8c_a27bf69b60db5215665bdd9f4a2cc2cd8}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!N\+U\+M\+\_\+\+S\+P\+A\+C\+E\+S@{N\+U\+M\+\_\+\+S\+P\+A\+C\+E\+S}}
+\index{N\+U\+M\+\_\+\+S\+P\+A\+C\+E\+S@{N\+U\+M\+\_\+\+S\+P\+A\+C\+E\+S}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{N\+U\+M\+\_\+\+S\+P\+A\+C\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+S\+P\+A\+C\+E\+S~34}}\label{game__rules_8c_a27bf69b60db5215665bdd9f4a2cc2cd8}
+numero de espacios en el juego 
+
+\subsection{Typedef Documentation}
+\hypertarget{game__rules_8c_a7cdec380afc709206002fc63771d77f4}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!callback\+\_\+fn@{callback\+\_\+fn}}
+\index{callback\+\_\+fn@{callback\+\_\+fn}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{callback\+\_\+fn}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ callback\+\_\+fn)({\bf Game\+Rules} $\ast$game\+Rules)}}\label{game__rules_8c_a7cdec380afc709206002fc63771d77f4}
+Define the function type for the callbacks 
+
+\subsection{Function Documentation}
+\hypertarget{game__rules_8c_aefc0992f9d3b8228ea705408b535ca5c}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+\_\+rules\+\_\+create@{game\+\_\+rules\+\_\+create}}
+\index{game\+\_\+rules\+\_\+create@{game\+\_\+rules\+\_\+create}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+\_\+rules\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Rules}$\ast$ game\+\_\+rules\+\_\+create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_aefc0992f9d3b8228ea705408b535ca5c}
+
+
+Funcion para reservar memoria para el modulo de las reglas. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+puntero al modulo 
+\end{DoxyReturn}
+\hypertarget{game__rules_8c_aeae24b9ec0c75216361ba2363c19847b}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+\_\+rules\+\_\+destroy@{game\+\_\+rules\+\_\+destroy}}
+\index{game\+\_\+rules\+\_\+destroy@{game\+\_\+rules\+\_\+destroy}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+\_\+rules\+\_\+destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} game\+\_\+rules\+\_\+destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_aeae24b9ec0c75216361ba2363c19847b}
+
+
+Funcion que libera memoria. 
+
+\begin{DoxyAuthor}{Author}
+Julia Simon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & modulo a destruir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok O E\+R\+R\+O\+R si se libera bien o no 
+\end{DoxyReturn}
+\hypertarget{game__rules_8c_a84316ec7ab939c928c9a702ba571f90e}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+\_\+rules\+\_\+play@{game\+\_\+rules\+\_\+play}}
+\index{game\+\_\+rules\+\_\+play@{game\+\_\+rules\+\_\+play}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+\_\+rules\+\_\+play}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} game\+\_\+rules\+\_\+play (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules, }
+\item[{{\bf Game} $\ast$}]{game, }
+\item[{{\bf B\+O\+O\+L}}]{no\+\_\+rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_a84316ec7ab939c928c9a702ba571f90e}
+
+
+Funcion para jugar. 
+
+\begin{DoxyAuthor}{Author}
+Julia S\+Imon 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & modulo de reglas \\
+\hline
+{\em game} & juego \\
+\hline
+{\em no\+\_\+rules} & para indicar que queremos jugar sin reglas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ok O E\+R\+R\+O\+R si se libera bien o no 
+\end{DoxyReturn}
+\hypertarget{game__rules_8c_aef0551a735ac3111fa0941c761449da7}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+change@{game\+Rules\+\_\+callback\+\_\+change}}
+\index{game\+Rules\+\_\+callback\+\_\+change@{game\+Rules\+\_\+callback\+\_\+change}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+change}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+change (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_aef0551a735ac3111fa0941c761449da7}
+
+
+Funcion de la regla change Este comando va a cambiar alguno de los links del piso de arriba. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_aacc78cc969ec835ff4bbf43984b15db2}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+close@{game\+Rules\+\_\+callback\+\_\+close}}
+\index{game\+Rules\+\_\+callback\+\_\+close@{game\+Rules\+\_\+callback\+\_\+close}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+close}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_aacc78cc969ec835ff4bbf43984b15db2}
+
+
+Funcion de la regla close Cierra alguno de los links entre el 7 y el 11 y crea un objeto que lo abre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_a0757b4b28db7cccc28a2225e5c3144b8}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+eliminate@{game\+Rules\+\_\+callback\+\_\+eliminate}}
+\index{game\+Rules\+\_\+callback\+\_\+eliminate@{game\+Rules\+\_\+callback\+\_\+eliminate}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+eliminate}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+eliminate (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_a0757b4b28db7cccc28a2225e5c3144b8}
+
+
+Funcion de la regla eliminate Este comando va a eliminar el link 34 o el 35 de los espacios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_a1f2acb17f78a48746be70f123bc31704}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+newexit@{game\+Rules\+\_\+callback\+\_\+newexit}}
+\index{game\+Rules\+\_\+callback\+\_\+newexit@{game\+Rules\+\_\+callback\+\_\+newexit}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+newexit}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+newexit (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_a1f2acb17f78a48746be70f123bc31704}
+
+
+Funcion de la regla newexit Este comando va a cambiar la salida de sitio. Puede estar conectada al 12 o al 19. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_acdf1abe747a31f9b34e48a882eacfba7}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+no\+Rule@{game\+Rules\+\_\+callback\+\_\+no\+Rule}}
+\index{game\+Rules\+\_\+callback\+\_\+no\+Rule@{game\+Rules\+\_\+callback\+\_\+no\+Rule}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+no\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+no\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_acdf1abe747a31f9b34e48a882eacfba7}
+
+
+Funcion de la regla no\+Rule\+: no se ejecuta ninguna regla. 
+
+List of callbacks for each rule
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_a8b12fda273cc6e13b4eac252dd8fab02}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+ocult@{game\+Rules\+\_\+callback\+\_\+ocult}}
+\index{game\+Rules\+\_\+callback\+\_\+ocult@{game\+Rules\+\_\+callback\+\_\+ocult}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+ocult}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+ocult (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_a8b12fda273cc6e13b4eac252dd8fab02}
+
+
+Funcion de la regla ocult Este comando va a ocultar todos los objetos del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_a984a14fb0de961469a789870df71f0e7}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+off@{game\+Rules\+\_\+callback\+\_\+off}}
+\index{game\+Rules\+\_\+callback\+\_\+off@{game\+Rules\+\_\+callback\+\_\+off}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+off}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+off (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_a984a14fb0de961469a789870df71f0e7}
+
+
+Funcion de la regla off Este comando va a apagar algun espacio de manera aleatoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_aab846144b5b45d91bdd5e63ba876b186}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+on@{game\+Rules\+\_\+callback\+\_\+on}}
+\index{game\+Rules\+\_\+callback\+\_\+on@{game\+Rules\+\_\+callback\+\_\+on}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+on}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+on (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_aab846144b5b45d91bdd5e63ba876b186}
+
+
+Funcion de la regla on Este comando va iluminar algún espacio de manera aleatoria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_a8ab93172f581e2dadf9250cff4dd1a13}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+regenerate@{game\+Rules\+\_\+callback\+\_\+regenerate}}
+\index{game\+Rules\+\_\+callback\+\_\+regenerate@{game\+Rules\+\_\+callback\+\_\+regenerate}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+regenerate}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+regenerate (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_a8ab93172f581e2dadf9250cff4dd1a13}
+
+
+Funcion de la regla regenerate Este comando va a crear el link 34 o el 35 en los espacios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{game__rules_8c_ac7d97f5e723e16ca13593f9d876311bf}{\index{game\+\_\+rules.\+c@{game\+\_\+rules.\+c}!game\+Rules\+\_\+callback\+\_\+show@{game\+Rules\+\_\+callback\+\_\+show}}
+\index{game\+Rules\+\_\+callback\+\_\+show@{game\+Rules\+\_\+callback\+\_\+show}!game\+\_\+rules.\+c@{game\+\_\+rules.\+c}}
+\subsubsection[{game\+Rules\+\_\+callback\+\_\+show}]{\setlength{\rightskip}{0pt plus 5cm}void game\+Rules\+\_\+callback\+\_\+show (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Rules} $\ast$}]{game\+Rules}
+\end{DoxyParamCaption}
+)}}\label{game__rules_8c_ac7d97f5e723e16ca13593f9d876311bf}
+
+
+Funcion de la regla show Este comando va a mostrar todos los objetos del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Rules} & reglas del juego \\
+\hline
+\end{DoxyParams}
